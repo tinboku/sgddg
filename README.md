@@ -1,5 +1,7 @@
 # SGDDG: Schema-Guided Dataset Description Generator
 
+> Master's thesis project (2025). Code extracted and uploaded for reference.
+
 A metadata generation framework for data lake datasets, combining schema-level semantic analysis with knowledge graph-enhanced LLM generation.
 
 ## Overview
