@@ -1,0 +1,46 @@
+[project]
+name = "sgddg"
+version = "0.1.0"
+description = "Schema-Guided Dataset Description Generator: LLM-driven metadata generation via schema matching and semantic profiling"
+authors = [
+    {name = "Mo Chen"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+dependencies = [
+    "pandas>=2.2.3",
+    "numpy>=2.2.2",
+    "scikit-learn>=1.6.1",
+    "rapidfuzz>=3.10.1",
+    "sentence-transformers>=3.3.1",
+    "faiss-cpu>=1.9.0",
+    "pydantic>=2.10.3",
+    "jsonschema>=4.23.0",
+    "openai>=1.61.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.8.0",
+]
+
+gemini = [
+    "google-genai>=0.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]

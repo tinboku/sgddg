@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema-kg-rag.org/schemas/evidence.schema.json",
+  "title": "Schema Evidence",
+  "description": "Evidence records for concepts and aliases (for explainability and audit)",
+  "type": "object",
+  "required": ["evidence_id", "concept_id", "dataset_id", "column_name"],
+  "properties": {
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^ev_[a-z0-9_]+$",
+      "description": "Unique evidence identifier",
+      "examples": ["ev_20250121_001"]
+    },
+    "concept_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Associated concept ID"
+    },
+    "alias_id": {
+      "type": "string",
+      "pattern": "^alias_[a-z0-9_]+$",
+      "description": "Associated alias ID (optional)"
+    },
+    "dataset_id": {
+      "type": "string",
+      "description": "Dataset ID (evidence source)"
+    },
+    "dataset_name": {
+      "type": "string",
+      "description": "Dataset name"
+    },
+    "column_name": {
+      "type": "string",
+      "description": "Column name (evidence field)"
+    },
+    "evidence_type": {
+      "type": "string",
+      "enum": ["column_name", "sample_values", "statistical_profile", "semantic_profile", "metadata", "documentation"],
+      "description": "Evidence type"
+    },
+    "sample_values": {
+      "type": "array",
+      "description": "Sample values (up to 10)",
+      "maxItems": 10,
+      "items": {}
+    },
+    "statistical_profile": {
+      "type": "object",
+      "description": "Statistical profile",
+      "properties": {
+        "count": {"type": "integer"},
+        "unique_count": {"type": "integer"},
+        "null_count": {"type": "integer"},
+        "mean": {"type": "number"},
+        "std": {"type": "number"},
+        "min": {},
+        "max": {},
+        "percentiles": {
+          "type": "object",
+          "properties": {
+            "25": {"type": "number"},
+            "50": {"type": "number"},
+            "75": {"type": "number"}
+          }
+        }
+      }
+    },
+    "semantic_profile": {
+      "type": "object",
+      "description": "Semantic profile",
+      "properties": {
+        "domain": {"type": "string"},
+        "entity_type": {"type": "string"},
+        "usage_context": {"type": "string"}
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Evidence confidence score"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    }
+  },
+  "additionalProperties": false
+}

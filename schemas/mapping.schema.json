@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema-kg-rag.org/schemas/mapping.schema.json",
+  "title": "Schema Mapping Result",
+  "description": "Field matching results (source field to target concept mapping)",
+  "type": "object",
+  "required": ["mapping_id", "source_column", "target_concept_id", "match_method", "confidence", "timestamp"],
+  "properties": {
+    "mapping_id": {
+      "type": "string",
+      "pattern": "^map_[a-z0-9_]+$",
+      "description": "Unique mapping identifier",
+      "examples": ["map_20250121_001", "map_dataset_revenue"]
+    },
+    "dataset_id": {
+      "type": "string",
+      "description": "Source dataset ID"
+    },
+    "source_column": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Source field name (original column name)",
+      "examples": ["Rev", "Sales_2023", "patient_age_in_years"]
+    },
+    "target_concept_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Target concept ID (matched standard concept)",
+      "examples": ["revenue", "patient_age"]
+    },
+    "match_method": {
+      "type": "string",
+      "enum": ["exact_match", "fuzzy_match", "semantic_match", "bm25_retrieval", "splade_retrieval", "dense_retrieval", "colbert_rerank", "cross_encoder_rerank", "rag_decision", "ai_fallback", "manual"],
+      "description": "Matching method"
+    },
+    "match_level": {
+      "type": "string",
+      "enum": ["direct", "semantic", "hierarchical", "ai_fallback"],
+      "description": "Match level (compatible with existing system)"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Match confidence score (0-1)"
+    },
+    "confidence_breakdown": {
+      "type": "object",
+      "description": "Confidence breakdown (scores from each retrieval/reranking stage)",
+      "properties": {
+        "bm25_score": {"type": "number", "minimum": 0.0},
+        "splade_score": {"type": "number", "minimum": 0.0},
+        "dense_score": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "rerank_score": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+        "rag_score": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+      }
+    },
+    "retrieval_trace": {
+      "type": "array",
+      "description": "Retrieval trace (audit log)",
+      "items": {
+        "type": "object",
+        "required": ["stage", "method", "score"],
+        "properties": {
+          "stage": {
+            "type": "string",
+            "enum": ["retrieval", "rerank", "rag_decision", "fallback"],
+            "description": "Processing stage"
+          },
+          "method": {
+            "type": "string",
+            "description": "Specific method"
+          },
+          "candidates": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Candidate concept ID list"
+          },
+          "score": {
+            "type": "number",
+            "description": "Score at this stage"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "description": "Matching evidence (for explainability)",
+      "properties": {
+        "sample_values": {
+          "type": "array",
+          "description": "Sample values",
+          "maxItems": 10
+        },
+        "value_distribution": {
+          "type": "object",
+          "description": "Value distribution statistics"
+        },
+        "matched_aliases": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of matched aliases"
+        },
+        "semantic_similarity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Semantic similarity"
+        }
+      }
+    },
+    "fallback_reasons": {
+      "type": "array",
+      "description": "Fallback reasons (if fallback mechanism was used)",
+      "items": {
+        "type": "string",
+        "enum": ["low_confidence", "no_candidates", "ambiguous_match", "domain_mismatch", "manual_override"]
+      }
+    },
+    "is_validated": {
+      "type": "boolean",
+      "description": "Whether manually validated",
+      "default": false
+    },
+    "validation_feedback": {
+      "type": "object",
+      "description": "Manual validation feedback",
+      "properties": {
+        "is_correct": {"type": "boolean"},
+        "correct_concept_id": {"type": "string"},
+        "feedback_notes": {"type": "string"},
+        "validator": {"type": "string"}
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Matching timestamp"
+    },
+    "model_version": {
+      "type": "string",
+      "description": "Model version used"
+    }
+  },
+  "additionalProperties": false
+}

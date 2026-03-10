@@ -1,0 +1,85 @@
+# SGDDG Configuration
+# Copy this file to config.yaml and fill in your API keys.
+
+# KG Storage
+kg:
+  db_path: "data/schema_kg.db"
+  vector_index_path: "data/vector_index.faiss"
+  vector_dimension: 1024
+
+# Retrieval
+retrieval:
+  use_bm25: true
+  use_dense: true
+  use_splade: false
+
+  dense_model: "BAAI/bge-large-en-v1.5"
+  splade_model: "naver/splade-cocondenser-ensembledistil"
+
+  fusion_method: "rrf"
+  rrf_k: 60
+  bm25_top_k: 50
+  dense_top_k: 50
+  weights:
+    bm25: 0.3
+    dense: 0.7
+    splade: 0.0
+
+# Reranking
+reranking:
+  enabled: true
+  cross_encoder:
+    enabled: true
+    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    top_k: 10
+  llm_rerank:
+    enabled: true
+    top_k: 3
+
+# Context Pruning
+context_pruning:
+  enabled: true
+  confidence_threshold: 0.9
+  novelty_threshold: 0.3
+  require_domain_attributes: true
+
+# API Keys - set via environment variables
+api_keys:
+  openai: "${OPENAI_API_KEY}"
+  gemini: "${GEMINI_API_KEY}"
+
+# RAG Pipeline
+rag:
+  confidence_threshold: 0.7
+  fallback:
+    provider_to_use: "openai"
+
+# Generation
+generation:
+  llm_provider: "openai"
+  llm_model: "gpt-4o-mini"
+  temperature: 0.0
+
+  ufd:
+    min_word_count: 100
+    max_word_count: 500
+    target_readability: 0.8
+
+  sfd:
+    min_word_count: 300
+    max_word_count: 1000
+    max_keywords: 50
+
+# Evaluation
+evaluation:
+  ranking_k_values: [1, 5, 10, 20]
+  language_quality:
+    min_readability: 0.7
+    min_fluency: 0.7
+    min_completeness: 0.8
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "logs/sgddg.log"
+  log_to_console: true

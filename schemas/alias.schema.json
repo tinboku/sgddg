@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schema-kg-rag.org/schemas/alias.schema.json",
+  "title": "Schema Alias",
+  "description": "Alias and synonym mapping for concepts",
+  "type": "object",
+  "required": ["alias_id", "concept_id", "alias_text", "alias_type"],
+  "properties": {
+    "alias_id": {
+      "type": "string",
+      "pattern": "^alias_[a-z0-9_]+$",
+      "description": "Unique alias identifier",
+      "examples": ["alias_revenue_001", "alias_age_002"]
+    },
+    "concept_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$",
+      "description": "Associated concept ID (foreign key)",
+      "examples": ["revenue", "patient_age"]
+    },
+    "alias_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Alias text (the actual name appearing in the data)",
+      "examples": ["Sales", "Rev", "Total Revenue", "Age (years)"]
+    },
+    "alias_type": {
+      "type": "string",
+      "enum": ["exact_synonym", "abbreviation", "plural_form", "case_variant", "translated", "domain_specific", "misspelling"],
+      "description": "Alias type"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$",
+      "description": "Language code (ISO 639-1 + ISO 3166-1)",
+      "examples": ["en", "zh-CN", "es", "fr"]
+    },
+    "similarity_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Similarity score to the canonical name (0-1)"
+    },
+    "frequency": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Occurrence frequency in datasets"
+    },
+    "evidence": {
+      "type": "array",
+      "description": "Evidence list (source datasets)",
+      "items": {
+        "type": "object",
+        "required": ["dataset_id", "column_name"],
+        "properties": {
+          "dataset_id": {
+            "type": "string",
+            "description": "Dataset ID"
+          },
+          "column_name": {
+            "type": "string",
+            "description": "Column name"
+          },
+          "occurrence_count": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Occurrence count"
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Alias confidence score (0-1)"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "description": "Whether manually verified",
+      "default": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "created_by": {
+      "type": "string",
+      "enum": ["auto_extraction", "manual", "ai_inference", "rule_based"],
+      "description": "Creation method"
+    }
+  },
+  "additionalProperties": false
+}
