@@ -5,7 +5,7 @@ from typing import Dict, Any, List, Optional
 from .llm_adapter import LLMAdapter
 
 class UFDGenerator:
-    """Generates a User-Facing Description (UFD) leveraging rich semantic profiles."""
+    """Generates a User-Facing Description (UFD) from semantic profiles."""
 
     def __init__(self, api_key: Optional[str] = None):
         self.llm_adapter = LLMAdapter(api_key=api_key)

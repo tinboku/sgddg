@@ -160,7 +160,7 @@ class UnifiedMetadataGenerator:
         kg_matches: List[Optional[Dict[str, Any]]],
         dataset_context: str = ""
     ) -> str:
-        """Build a comprehensive prompt that produces semantic profiles, UFD, and SFD."""
+        """Build the full prompt that produces semantic profiles, UFD, and SFD."""
 
         # Compress column data for the prompt
         columns_data = []

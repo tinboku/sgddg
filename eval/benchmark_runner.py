@@ -159,7 +159,7 @@ class StandardBenchmarkRunner:
         # Step 3: Retrieve for all queries
         retrieved_results = retriever.batch_search(
             self.benchmark.queries,
-            top_k=max(k_vals) * 5,  # Retrieve extra for robust evaluation
+            top_k=max(k_vals) * 5,  # retrieve more to cover all k values
         )
         print(f"  Retrieved results for {len(retrieved_results)} queries")
 
