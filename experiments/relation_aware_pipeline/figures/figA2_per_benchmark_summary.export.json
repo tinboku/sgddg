@@ -1,0 +1,53 @@
+{
+  "notice": "Export completed with explicit settings. This report does not establish visual, accessibility, scientific-integrity, or journal-submission compliance.",
+  "outputs": [
+    {
+      "format": "pdf",
+      "kind": "vector-container",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA2_per_benchmark_summary.pdf",
+      "size_bytes": 26726
+    },
+    {
+      "format": "png",
+      "kind": "raster",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA2_per_benchmark_summary.png",
+      "size_bytes": 175334
+    }
+  ],
+  "provenance": {
+    "axis_note": "the three panels do NOT share an x range; the dashed line in each is that panel's own Flat-Adaptive level",
+    "colour_is_redundant": "category is carried by marker shape as well as hue; see README",
+    "metric": "query-macro F1, absolute (not a difference)",
+    "naming": "paper-facing names from fig_style.NAMES",
+    "no_intervals_drawn": "this panel shows levels only; the paired intervals are in Figure 2A",
+    "publisher_choices": "PENDING VERIFICATION — IEEE two-column widths assumed, no venue fixed",
+    "raw_data": [
+      "out_santos/discovery_per_query.csv",
+      "out_astro2/discovery_per_query.csv"
+    ],
+    "research_question": "RQ2 — do the two benchmarks point the same way",
+    "style_module": "paper_artifacts/figures/fig_style.py"
+  },
+  "schema_version": "1.0",
+  "settings": {
+    "bbox_inches": null,
+    "dpi": 600.0,
+    "facecolor": "white",
+    "figure_size_inches": [
+      7.12,
+      2.04
+    ],
+    "font_mode": "truetype",
+    "formats": [
+      "pdf",
+      "png"
+    ],
+    "pad_inches": 0.1,
+    "transparent": false
+  },
+  "versions": {
+    "matplotlib": "3.10.7",
+    "pillow": "12.0.0"
+  },
+  "warnings": []
+}

@@ -1,0 +1,53 @@
+{
+  "notice": "Export completed with explicit settings. This report does not establish visual, accessibility, scientific-integrity, or journal-submission compliance.",
+  "outputs": [
+    {
+      "format": "pdf",
+      "kind": "vector-container",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA3_text_generation_secondary.pdf",
+      "size_bytes": 23387
+    },
+    {
+      "format": "png",
+      "kind": "raster",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA3_text_generation_secondary.png",
+      "size_bytes": 130100
+    }
+  ],
+  "provenance": {
+    "colour_is_redundant": "category is carried by marker shape as well as hue; see README",
+    "held_fixed": "generator, judge, sampled tables, every prompt block except the structure block",
+    "naming": "paper-facing names from fig_style.NAMES",
+    "protocol": "AutoDDG's own pointwise prompts, judge gpt-4o, temperature 0.3",
+    "publisher_choices": "PENDING VERIFICATION — IEEE two-column widths assumed, no venue fixed",
+    "raw_data": "out_astro2/structure_arm.json",
+    "research_question": "secondary — does the structure change the generated description",
+    "result_is_a_null": "the overall difference is 0.000; the figure reports that rather than supporting a claim",
+    "scope": "one benchmark (KramaBench), 34 tables; NOT run on SANTOS",
+    "style_module": "paper_artifacts/figures/fig_style.py",
+    "test": "paired sign test",
+    "uncertainty": "95% bootstrap CI clustered by group"
+  },
+  "schema_version": "1.0",
+  "settings": {
+    "bbox_inches": null,
+    "dpi": 600.0,
+    "facecolor": "white",
+    "figure_size_inches": [
+      3.5,
+      1.81
+    ],
+    "font_mode": "truetype",
+    "formats": [
+      "pdf",
+      "png"
+    ],
+    "pad_inches": 0.1,
+    "transparent": false
+  },
+  "versions": {
+    "matplotlib": "3.10.7",
+    "pillow": "12.0.0"
+  },
+  "warnings": []
+}

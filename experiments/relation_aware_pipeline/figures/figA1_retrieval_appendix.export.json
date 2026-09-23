@@ -1,0 +1,55 @@
+{
+  "notice": "Export completed with explicit settings. This report does not establish visual, accessibility, scientific-integrity, or journal-submission compliance.",
+  "outputs": [
+    {
+      "format": "pdf",
+      "kind": "vector-container",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA1_retrieval_appendix.pdf",
+      "size_bytes": 64959
+    },
+    {
+      "format": "png",
+      "kind": "raster",
+      "path": "/Users/mo/Desktop/sgddg-github/experiments/relation_aware_pipeline/figures/figA1_retrieval_appendix.png",
+      "size_bytes": 823799
+    }
+  ],
+  "provenance": {
+    "arm_order": "as listed, not by effect size, so the main and appendix versions place the same method comparably",
+    "metric": "query-macro F1 over the returned dataset set",
+    "panel_C_net_gain_denominator": "sum of all 245 signed differences, negatives included; against a positive-only denominator the share is 0.530",
+    "publisher_choices": "PENDING VERIFICATION — IEEE double-column width assumed, no venue fixed",
+    "raw_data": [
+      "out_santos/discovery_per_query.csv",
+      "out_astro2/discovery_per_query.csv"
+    ],
+    "reference_arm": "Flat-Adaptive",
+    "reference_arm_f1": 0.2699,
+    "retriever": "dense_chunked; bm25 rows excluded",
+    "significance_rule": "CI excludes zero AND sign-test p < 0.05",
+    "test": "paired sign test, ties discarded",
+    "uncertainty": "95% bootstrap CI, 1000 resamples, seed 20260921, clusters = (benchmark, parent task)"
+  },
+  "schema_version": "1.0",
+  "settings": {
+    "bbox_inches": null,
+    "dpi": 600.0,
+    "facecolor": "white",
+    "figure_size_inches": [
+      7.12,
+      6.61
+    ],
+    "font_mode": "truetype",
+    "formats": [
+      "pdf",
+      "png"
+    ],
+    "pad_inches": 0.1,
+    "transparent": false
+  },
+  "versions": {
+    "matplotlib": "3.10.7",
+    "pillow": "12.0.0"
+  },
+  "warnings": []
+}
