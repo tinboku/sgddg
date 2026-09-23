@@ -2,3 +2,4 @@ src/superseded/
 *.aux
 *.log
 __pycache__/
+*.png
