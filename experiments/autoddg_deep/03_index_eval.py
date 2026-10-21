@@ -21,6 +21,7 @@ Settings, identical across arms:
   pool    per_query: rank only the query's judged datasets (AutoDDG NTCIR protocol)
           global:    rank the whole corpus
   subset  all | with_table (queries re-scored on datasets that have a usable table)
+          | listed (queries re-scored on the ids in --dataset-ids; added automatically)
 
 Writes results/eval/<tag>.json (per-query scores) and results/eval/<tag>_summary.csv.
 """
@@ -149,6 +150,8 @@ def main() -> None:
     ap.add_argument("--subsets", default="all,with_table")
     ap.add_argument("--corpus", default="csv", choices=["csv", "all"],
                     help="csv: judged datasets with a CSV file; all: every judged dataset")
+    ap.add_argument("--dataset-ids", type=Path, default=None,
+                    help="file with one dataset id per line; adds the 'listed' subset")
     ap.add_argument("--tag", default=None)
     ap.add_argument("--ntcir-dir", type=Path, default=DEFAULT_NTCIR_DIR)
     ap.add_argument("--split", default="test")
@@ -168,6 +171,11 @@ def main() -> None:
     )
     manifest = {r["dataset_id"]: r for r in read_jsonl(MANIFEST)}
     with_table = {d for d in corpus if manifest.get(d, {}).get("status") in {"ok", "truncated"}}
+    listed: set[str] = set()
+    if args.dataset_ids:
+        listed = {l.strip() for l in args.dataset_ids.read_text(encoding="utf-8").splitlines() if l.strip()}
+        if "listed" not in subsets:
+            subsets.append("listed")
     qids = sorted(queries)
     print(f"queries={len(qids)} corpus={len(corpus)} with_table={len(with_table)} corpus_mode={args.corpus}")
 
@@ -187,7 +195,7 @@ def main() -> None:
                 dvecs = dict(zip(ids, encoder.passages([docs[d] for d in ids])))
             for pool in pools:
                 for subset in subsets:
-                    allowed = with_table if subset == "with_table" else set(corpus)
+                    allowed = {"with_table": with_table, "listed": listed & set(corpus)}.get(subset, set(corpus))
                     global_ids = sorted(allowed)
                     for retriever in retrievers:
                         key = f"{name}|{retriever}|{pool}|{subset}"
@@ -213,7 +221,8 @@ def main() -> None:
     settings = {
         "split": args.split, "min_relevant": args.min_relevant, "min_total": args.min_total,
         "corpus": args.corpus, "n_queries": len(qids), "n_corpus": len(corpus),
-        "n_with_table": len(with_table), "bm25": {"k1": BM25_K1, "b": BM25_B, "tokenizer": "lower().split()"},
+        "n_with_table": len(with_table), "dataset_ids": str(args.dataset_ids) if args.dataset_ids else None,
+        "n_listed": len(listed), "bm25": {"k1": BM25_K1, "b": BM25_B, "tokenizer": "lower().split()"},
         "dense_model": DENSE_MODEL, "rrf_k": RRF_K, "gain": "2^rel-1", "ks": ks,
     }
     (out_dir / f"{tag}.json").write_text(
