@@ -1,4 +1,4 @@
-"""spacetime: sentinel-proof spans, two kinds of resolution, place wording."""
+"""spacetime: full / core / suspect spans, two kinds of resolution, place wording."""
 
 from __future__ import annotations
 
@@ -30,14 +30,21 @@ def test_real_tables_valid_and_roundtrip(real_table):
     assert fs.by_kind("temporal_span")
 
 
-def test_year_span_ignores_sentinels(toy):
+def test_year_span_tiers(toy):
+    # REVIEW_codex_M2 #1: 9999 (outside 1800-2100) is left out and named; 1900 is a
+    # plausible year far from the rest: it stays in the span and is only flagged
     fs = _factset(toy)
     span = _get(fs, "temporal_span", "year")
-    assert (span.value["start"], span.value["end"]) == ("2001", "2020")
+    assert (span.value["start"], span.value["end"]) == ("1900", "2020")
+    assert (span.value["core"]["start"], span.value["core"]["end"]) == ("2001", "2020")
+    sus = span.value["suspect"]
+    assert (sus["n_implausible"], sus["n_far"]) == (3, 1)
+    assert [e["value"] for e in sus["implausible_examples"]] == ["9999"]
+    assert [e["value"] for e in sus["far_examples"]] == ["1900"]
     v = span.evidence.violations
-    assert (v["n_sentinel"], v["n_outside_fence"], v["n_rows"]) == (3, 1, 4)
-    assert {e["value"] for e in v["examples"]} == {"9999", "1900"}
-    assert span.evidence.support == {"n_ok": 196, "n_checked": 200, "rate": 0.98}
+    assert (v["n_implausible"], v["n_far_flagged"], v["n_rows"]) == (3, 1, 3)
+    assert span.evidence.support == {"n_ok": 197, "n_checked": 200, "rate": 0.985}
+    assert span.value["partial"] is True and span.status == "inferred"
 
 
 def test_date_string_sentinels():
@@ -45,10 +52,12 @@ def test_date_string_sentinels():
     dates += ["9999-12-31"] * 5 + ["1900-01-01"] * 3 + ["0001-01-01"]
     fs = _factset(pd.DataFrame({"closed_on": dates}))
     span = _get(fs, "temporal_span", "closed_on")
-    assert (span.value["start"], span.value["end"]) == ("2015-01-01", "2016-12-31")
+    # 1900-01-01 is a possible date: in the span, flagged as far from the core
+    assert (span.value["start"], span.value["end"]) == ("1900-01-01", "2016-12-31")
+    assert (span.value["core"]["start"], span.value["core"]["end"]) == ("2015-01-05", "2016-12-24")
     v = span.evidence.violations
-    assert v["n_sentinel"] == 6 and v["n_outside_fence"] == 3 and v["n_unparsed"] == 0
-    assert span.value["years_present"] == [2015, 2016]
+    assert v["n_implausible"] == 6 and v["n_far_flagged"] == 3 and v["n_unparsed"] == 0
+    assert span.value["years_present"] == [1900, 2015, 2016]
 
 
 def test_mixed_formats_and_two_resolutions(toy):

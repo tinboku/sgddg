@@ -92,7 +92,8 @@ def test_restated_facts_suppressed():
         _fact("measure_range", ["county_fips"], {"min": 1001, "max": 56045}, sup=support(100, 100)),
         _fact("spatial_places", ["county"], {"level": "county", "n_distinct": 2, "complete_list": True,
                                              "places": [{"value": "Kings", "count": 3},
-                                                        {"value": "Erie", "count": 1}], "claim": "includes"}),
+                                                        {"value": "Erie", "count": 1}], "claim": "includes",
+                                             "confirmed": {"basis": "test", "match_rate": 1.0}}),
         _fact("category_values", ["county"], {"basis": "top_values", "top": [{"value": "Kings", "count": 3}]}),
     ]
     _run(facts)
@@ -138,12 +139,12 @@ def test_budget_respects_tokens_priority_and_caps():
     chosen = fs.budget["selected_ufd"]
     assert by_id[chosen[0]].kind == "temporal_span"  # priority 2 before category_values (5)
     assert sum(by_id[i].tokens["ufd"] for i in chosen) == fs.budget["used_ufd_tokens"] <= 40
-    assert any(d["reason"] == "ufd:budget" for d in fs.budget["dropped"])
+    assert any(d["reason"] == "budget" for d in fs.budget["dropped"])
     # with a large budget the per-kind cap (4 category facts) binds
     fs = _run([Fact.from_dict({**f.to_dict(), "fact_id": "", "render": None}) for f in facts],
               SelectConfig(ufd_max_tokens=10_000))
     assert sum(fs.facts[int(i[1:]) - 1].kind == "category_values" for i in fs.budget["selected_ufd"]) == 4
-    assert sum(d["reason"] == "ufd:kind_cap" for d in fs.budget["dropped"]) == 2
+    assert sum(d["reason"] == "kind_cap" for d in fs.budget["dropped"]) == 2
 
 
 # --- render: empty slots --------------------------------------------------------
@@ -167,19 +168,25 @@ def test_missing_slots_stay_empty():
 
 
 def test_places_wording_and_sfd_terms():
-    places = _fact("spatial_places", ["County"], {
-        "level": "county", "n_distinct": 62, "complete_list": False, "claim": "includes",
-        "places": [{"value": v, "count": 1} for v in ["Kings", "Queens", "Erie", "Bronx", "Albany", "Monroe"]]})
-    fs = _run([places])
+    value = {"level": "county", "n_distinct": 62, "complete_list": False, "claim": "includes",
+             "places": [{"value": v, "count": 1} for v in ["Kings", "Queens", "Erie", "Bronx", "Albany", "Monroe"]],
+             "confirmed": {"basis": "test", "match_rate": 1.0}}
+    fs = _run([_fact("spatial_places", ["County"], value)])
     assert render.slots(fs, "ufd")["geographic_scope"] == (
         "County (county) includes Kings, Queens, Erie, Bronx, Albany and others (62 distinct)")
     assert render.slots(fs, "sfd")["geographic_scope"].endswith("(county-level, by county)")
+    # an unconfirmed candidate names only the likely level, UFD only
+    fs = _run([_fact("spatial_places", ["County"], {**value, "confirmed": None}, status="uncertain")])
+    assert render.slots(fs, "ufd")["geographic_scope"] == "County: probably county names (not confirmed)"
+    assert render.slots(fs, "sfd")["geographic_scope"] == ""
 
 
 def test_toy_frame_limitations(toy):
     fs = build_factset(toy, "toy")
     lim = render.slots(fs, "ufd")["limitations"]
-    assert "year: 4 rows with out-of-range dates" in lim
+    # exclusions are part of the span fact itself, not a limitation line
+    assert "year" not in lim
+    assert "excluding 3 values outside 1800-2100" in render.slots(fs, "ufd")["temporal_scope"]
     assert "county: 15% missing" not in lim  # 30/200 = 15% < missingness_min_rate
     assert fs.validate() == []
 
@@ -190,9 +197,11 @@ def test_build_factset_on_real_tables(real_table):
     assert fs.validate() == []
     assert FactSet.from_json(fs.to_json()).to_dict() == fs.to_dict()
     texts = fact_texts(fs)
-    assert texts["ufd_facts"].startswith("- Identity: ")
+    assert texts["ufd_facts"].startswith("- ")
+    size = [f.fact_id for f in fs.by_kind("table_size")]
+    assert size[0] in fs.budget["selected_ufd"] or {"id": size[0], "reason": "budget"} in fs.budget["dropped"]
     assert fs.budget["used_ufd_tokens"] <= fs.budget["ufd_max_tokens"]
-    assert fs.budget["used_sfd_tokens"] <= fs.budget["sfd_max_tokens"]
+    assert set(fs.budget["selected_sfd"]) <= set(fs.budget["selected_ufd"])
     prompted = set(fs.budget["selected_ufd"]) | set(fs.budget["selected_sfd"])
     assert not any(f.status == "suppressed" for f in fs.facts if f.fact_id in prompted)
     assert all(fs.facts[int(i[1:]) - 1].status in select.SFD_STATUSES for i in fs.budget["selected_sfd"])

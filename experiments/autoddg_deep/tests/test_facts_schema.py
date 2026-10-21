@@ -1,4 +1,4 @@
-"""factset/1.0 containers: required fields, enums, validation, JSON round trip."""
+"""factset/1.1 containers: required fields, enums, validation, JSON round trip."""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ FACT_KEYS = {
 EVIDENCE_KEYS = {"method", "source", "scan", "support", "violations", "upstream"}
 FACTSET_KEYS = {
     "schema_version", "dataset_id", "table", "provenance",
-    "domain", "columns", "facts", "budget",
+    "domain", "columns", "facts", "budget", "module_runs", "unresolved",
 }
 
 
@@ -99,3 +99,30 @@ def test_jsonable_numpy_pandas():
     assert out == {"a": 3, "b": 0.5, "c": [None, None], "d": "2020-01-02T00:00:00",
                    "e": None, "f": True}
     json.dumps(out, allow_nan=False)
+
+
+def test_module_runs_and_unresolved(monkeypatch):
+    import pandas as pd
+
+    from autoddg.profiling_v2 import pipeline, spacetime
+
+    df = pd.DataFrame({"amount": [1, 2, 3, 4]})
+    fs = pipeline.build_factset(df, "m")
+    assert fs.module_runs["stats"]["status"] == "ok"
+    assert fs.module_runs["relations"]["status"] == "not_run"
+    by_slot = {u["slot"]: u["status"] for u in fs.unresolved}
+    # spacetime ran and found nothing: unknown, not "no temporal coverage"
+    assert by_slot["temporal_scope"] == "unknown" and by_slot["observation_unit"] == "not_run"
+    assert "measures_and_units" not in by_slot
+    assert fs.validate() == []
+
+    def boom(*a, **k):
+        raise RuntimeError("x")
+
+    monkeypatch.setattr(spacetime, "facts", boom)
+    fs = pipeline.build_factset(df, "m")
+    assert fs.module_runs["spacetime"]["status"] == "failed"
+    assert {u["slot"]: u["status"] for u in fs.unresolved}["temporal_scope"] == "failed"
+    assert fs.by_kind("measure_range")  # the other modules still ran
+    bad = FactSet("x", module_runs={"stats": {"status": "weird"}})
+    assert any("module_runs" in e for e in bad.validate())
