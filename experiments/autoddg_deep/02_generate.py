@@ -4,10 +4,17 @@ Usage:
     python -I 02_generate.py --arm configs/arm_baseline.yaml --run-id r1 --provider openai   # needs OPENAI_API_KEY
     python -I 02_generate.py --arm configs/arm_bugfix.yaml --stages profile          # offline, no LLM
     python -I 02_generate.py --arm configs/arm_baseline.yaml --dry-run --limit 5     # fake LLM, offline
+    python -I 02_generate.py --arm configs/arm_bugfix.yaml --run-id r1 --provider openai \
+        --dataset-ids configs/subset30.txt                                           # fixed small subset
 
 Per dataset the call sequence follows examples/quick_start.ipynb:
     sample (100 rows, random_state=9) -> profile_dataframe(full table) -> generate_topic
     -> analyze_semantics(sample, sequential) -> describe_dataset (UFD) -> expand_description_for_search (SFD)
+
+F1 / F2 arms (config key ``facts``): the profile stage also builds the factset
+(profiling_v2.pipeline) and renders the UFD / SFD fact blocks; describe_dataset gets
+``ufd_facts`` and, with ``facts.mode: ufd_sfd``, expand_description_for_search gets
+``sfd_facts``. Everything else is the bug-fix arm.
 
 Outputs
     cache/profile/<arm>/<dataset_id>.json          profile stage (no LLM, shared by run ids)
@@ -51,6 +58,7 @@ from tables import load_table  # noqa: E402
 import autoddg  # noqa: E402
 from autoddg import AutoDDG  # noqa: E402
 from autoddg.autoddg_deep import AutoDDGDeep  # noqa: E402
+from autoddg.profiling_v2.pipeline import build_factset, fact_texts  # noqa: E402
 from autoddg.utils import get_sample  # noqa: E402
 
 LLM_STAGES = ("topic", "semantic", "ufd", "sfd")
@@ -63,7 +71,7 @@ def autoddg_commit() -> str:
             ["git", "-C", str(AUTODDG_SRC), "rev-parse", "HEAD"], capture_output=True, text=True
         ).stdout.strip()
         dirty = subprocess.run(
-            ["git", "-C", str(AUTODDG_SRC), "status", "--porcelain", "src"],
+            ["git", "-C", str(AUTODDG_SRC), "status", "--porcelain", "."],
             capture_output=True,
             text=True,
         ).stdout.strip()
@@ -82,6 +90,10 @@ def config_hash(cfg: dict) -> str:
     return sha256_text(json.dumps(cfg, sort_keys=True))[:16]
 
 
+def fact_mode(cfg: dict) -> str:
+    return (cfg.get("facts") or {}).get("mode", "none")
+
+
 class _NoClient:
     """Placeholder passed to AutoDDG's constructor; replaced before any call."""
 
@@ -93,12 +105,15 @@ def build_pipe(cfg: dict, client: CachingClient) -> AutoDDG:
         "topic_temperature": float(cfg["topic_temperature"]),
     }
     if cfg["pipeline"] == "autoddg":
+        if fact_mode(cfg) != "none":
+            raise ValueError("the original pipeline has no fact slots")
         if cfg.get("sfd_temperature") is not None:
             raise ValueError("the original pipeline cannot pass an SFD temperature")
         pipe = AutoDDG(_NoClient(), cfg["model"], **kwargs)
     elif cfg["pipeline"] == "autoddg_deep":
         pipe = AutoDDGDeep(
-            _NoClient(), cfg["model"], sfd_temperature=float(cfg["sfd_temperature"]), **kwargs
+            _NoClient(), cfg["model"], sfd_temperature=float(cfg["sfd_temperature"]),
+            fact_mode=fact_mode(cfg), **kwargs
         )
     else:
         raise ValueError(f"unknown pipeline {cfg['pipeline']!r}")
@@ -131,6 +146,13 @@ def run_profile(pipe: AutoDDG, cfg: dict, dataset_id: str, table_sha: str, cfg_h
         "structural_profile": structural_profile,
         "profile_seconds": round(time.time() - started, 2),
     }
+    if fact_mode(cfg) != "none":
+        started = time.time()
+        fs = build_factset(df, dataset_id, cfg["facts"].get("select"),
+                           table={"sha256": table_sha, "read_status": read_info.get("read_status")})
+        record.update(fact_texts(fs))
+        record["factset"] = fs.to_dict()
+        record["facts_seconds"] = round(time.time() - started, 2)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
     return record
@@ -179,7 +201,8 @@ def generate_one(
         pipe = build_pipe(cfg, client)
         prof = run_profile(pipe, cfg, dataset_id, manifest_row["sha256"], meta["config_hash"])
         record.update(read=prof["read"], basic_profile=prof["basic_profile"],
-                      structural_profile=prof["structural_profile"])
+                      structural_profile=prof["structural_profile"], fact_mode=fact_mode(cfg),
+                      ufd_facts=prof.get("ufd_facts"), sfd_facts=prof.get("sfd_facts"))
         if not want_llm:
             record["status"] = "ok"
             return record
@@ -207,10 +230,13 @@ def generate_one(
             use_semantic_profile=True,
             data_topic=topic,
             use_topic=True,
+            **({"ufd_facts": prof.get("ufd_facts")} if fact_mode(cfg) != "none" else {}),
         )
         record["calls"]["ufd"] = client.drain_log()
 
-        sfd_prompt, sfd = pipe.expand_description_for_search(ufd, topic)
+        sfd_prompt, sfd = pipe.expand_description_for_search(
+            ufd, topic, **({"sfd_facts": prof.get("sfd_facts")} if fact_mode(cfg) != "none" else {})
+        )
         record["calls"]["sfd"] = client.drain_log()
 
         sfd_calls = record["calls"]["sfd"]
@@ -220,6 +246,8 @@ def generate_one(
             semantic_details=semantic_details,
             ufd_prompt_sha256=sha256_text(ufd_prompt),
             sfd_prompt_sha256=sha256_text(sfd_prompt),
+            ufd_prompt=ufd_prompt,
+            sfd_prompt=sfd_prompt,
             ufd=ufd,
             sfd=sfd,
             sfd_temperature_passed=sfd_calls[-1]["temperature_passed"] if sfd_calls else None,
@@ -252,6 +280,9 @@ def main() -> None:
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--ids", default=None, help="comma-separated dataset ids (debug)")
+    ap.add_argument("--dataset-ids", type=Path, default=None,
+                    help="file with one dataset id per line (e.g. configs/subset30.txt); only these "
+                         "are run, output goes to <arm>__<run_id>__<file stem>.jsonl")
     args = ap.parse_args()
     args.stages = tuple(s.strip() for s in args.stages.split(","))
 
@@ -274,6 +305,12 @@ def main() -> None:
     ids = sorted(corpus)
     if args.ids:
         ids = [i for i in args.ids.split(",") if i in corpus]
+    if args.dataset_ids:
+        listed = [l.strip() for l in args.dataset_ids.read_text(encoding="utf-8").splitlines() if l.strip()]
+        missing = [i for i in listed if i not in corpus]
+        if missing:
+            raise SystemExit(f"{len(missing)} ids in {args.dataset_ids} are not in the corpus: {missing[:3]}")
+        ids = [i for i in ids if i in set(listed)]
     if args.limit:
         usable = [i for i in ids if manifest.get(i, {}).get("status") in {"ok", "truncated"}]
         ids = usable[: args.limit]
@@ -299,9 +336,11 @@ def main() -> None:
     if not any(s in args.stages for s in LLM_STAGES):
         return  # profile-only runs never overwrite a descriptions file
     keep = ("dataset_id", "arm", "run_id", "status", "download_status", "topic", "ufd", "sfd",
-            "sfd_temperature_passed", "sfd_temperature_effective", "config_hash", "prompt_hash",
+            "sfd_temperature_passed", "sfd_temperature_effective", "fact_mode", "ufd_facts", "sfd_facts",
+            "config_hash", "prompt_hash",
             "autoddg_commit", "error")
-    out = RESULTS_DIR / "descriptions" / f"{meta['arm_tag']}__{args.run_id}.jsonl"
+    suffix = f"__{args.dataset_ids.stem}" if args.dataset_ids else ""
+    out = RESULTS_DIR / "descriptions" / f"{meta['arm_tag']}__{args.run_id}{suffix}.jsonl"
     write_jsonl(out, [{k: r.get(k) for k in keep} for r in rows])
     print(f"wrote {out}")
 

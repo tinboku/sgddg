@@ -1,4 +1,4 @@
-# AutoDDG-Deep experiments (M0 + M1)
+# AutoDDG-Deep experiments (M0, M1, M2)
 
 Plan: `IMPL_claude_profiler.md` (repo root). This directory holds the experiment
 scripts; the library code lives in `external/AutoDDG` (own git repo, branch
@@ -61,3 +61,25 @@ $PY -I 02_generate.py --arm configs/arm_bugfix.yaml   --run-id r1 --provider ope
 
 Re-running the same command resumes: finished datasets come from `cache/gen`,
 LLM calls from `cache/llm`.
+
+## M2: fact arms F1 / F2
+
+`configs/arm_F1.yaml` = bugfix + verified facts in the UFD prompt (`facts.mode: ufd`);
+`configs/arm_F2.yaml` = F1 + the same facts in the SFD prompt (`facts.mode: ufd_sfd`).
+The two configs differ only in `facts.mode`; F1 differs from bugfix only by the `facts` block.
+
+The profile stage builds the factset with `autoddg.profiling_v2.pipeline.build_factset`
+(datamart + stats + spacetime -> `select` -> `render` -> budget) and stores it in
+`cache/profile/<arm>/<id>.json` together with the rendered `ufd_facts` / `sfd_facts`.
+Status thresholds, token budgets and per-kind caps are under `facts.select`
+(defaults, to be frozen before the test run). UFD gets verified / inferred / uncertain
+facts ("likely" prefix), SFD only verified / inferred. The full UFD / SFD prompts are
+kept in `cache/gen/<arm>/<run>/<id>.json`.
+
+Smoke run (3 tables in `configs/smoke3.txt`, run id `r1` so topic and semantic calls are
+cache hits from the bugfix subset30 run):
+
+```bash
+$PY -I 02_generate.py --arm configs/arm_F1.yaml --run-id r1 --provider openai --dataset-ids configs/smoke3.txt
+$PY -I 02_generate.py --arm configs/arm_F2.yaml --run-id r1 --provider openai --dataset-ids configs/smoke3.txt
+```
