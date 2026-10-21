@@ -1,0 +1,23 @@
+# Bug-fix arm (M1): summary_fixed coverage range, semantic prompt without
+# 'Data Format', SFD temperature passed explicitly. Everything else = baseline.
+arm: Q1
+pipeline: autoddg_deep
+model: gpt-4o-mini
+description_words: 100
+description_temperature: 0.0
+topic_temperature: 0.0
+sfd_temperature: 0.0
+sample_size: 100
+sample_random_state: 9
+semantic_mode: sequential
+topic_uses_original_description: true
+read_max_rows: null
+
+query_expansion:
+  source_arm: bugfix
+  source_run: r1
+  fact_source: F2/r1
+  temperature: 0.0
+  max_expressions: 6
+  max_words: 60
+  filter_evidence: true

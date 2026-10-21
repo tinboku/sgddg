@@ -1,0 +1,35 @@
+arm: L1
+pipeline: autoddg_deep
+model: gpt-4o-mini
+description_words: 100
+description_temperature: 0.0
+topic_temperature: 0.0
+sfd_temperature: 0.0
+sample_size: 100
+sample_random_state: 9
+semantic_mode: sequential
+topic_uses_original_description: true
+read_max_rows: null
+facts:
+  mode: ufd_sfd
+  profile_from: F1
+  select:
+    verified_min_rate: 0.95
+    inferred_min_rate: 0.8
+    uncertain_min_rate: 0.5
+    missingness_min_rate: 0.2
+    ufd_max_tokens: 160
+    max_per_kind:
+      temporal_span: 3
+      temporal_resolution: 3
+      spatial_places: 3
+      spatial_bbox: 1
+      measure_range: 4
+      measure_unit: 4
+      category_values: 4
+      missingness: 3
+locked_sfd:
+  source_arm: F2
+  source_run: r1
+  coverage_repair: false
+  budget: source_sfd_words
