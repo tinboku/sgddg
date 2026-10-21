@@ -14,7 +14,21 @@ Per dataset the call sequence follows examples/quick_start.ipynb:
 F1 / F2 arms (config key ``facts``): the profile stage also builds the factset
 (profiling_v2.pipeline) and renders the UFD / SFD fact blocks; describe_dataset gets
 ``ufd_facts`` and, with ``facts.mode: ufd_sfd``, expand_description_for_search gets
-``sfd_facts``. Everything else is the bug-fix arm.
+``sfd_facts``. Everything else is the bug-fix arm. F1 and F2 use one fact set
+(E3: the same selected fact ids, F2 only adds the SFD channel): ``facts.profile_from``
+points F2 at F1's profile cache, and the profile key covers only what the
+profile stage depends on. ``facts.sfd_constraints`` (F2c ablation) adds the
+expansion constraints to the SFD fact block.
+
+Caches are bound to the code that produced them (REVIEW_codex_M2 #6):
+    profile cache   valid iff table sha256 and ``profile_key`` match; the key
+                    hashes the profile-relevant config and ``extractor_version``
+                    (AutoDDG git commit, factset schema version, sha256 of the
+                    profiler sources, datamart-profiler version)
+    generation      valid iff config / prompt hashes, table sha256 and
+                    ``fact_input_sha256`` (the fact blocks actually passed to the
+                    prompts) match. Caches written before this change have no
+                    such keys and are recomputed.
 
 Outputs
     cache/profile/<arm>/<dataset_id>.json          profile stage (no LLM, shared by run ids)
@@ -30,8 +44,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+import threading
 import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -58,6 +74,7 @@ from tables import load_table  # noqa: E402
 import autoddg  # noqa: E402
 from autoddg import AutoDDG  # noqa: E402
 from autoddg.autoddg_deep import AutoDDGDeep  # noqa: E402
+from autoddg.profiling_v2.facts import SCHEMA_VERSION  # noqa: E402
 from autoddg.profiling_v2.pipeline import build_factset, fact_texts  # noqa: E402
 from autoddg.utils import get_sample  # noqa: E402
 
@@ -94,6 +111,77 @@ def fact_mode(cfg: dict) -> str:
     return (cfg.get("facts") or {}).get("mode", "none")
 
 
+def extractor_sources(cfg: dict) -> list[Path]:
+    """Source files the profile stage of this arm runs."""
+    dirs = [AUTODDG_SRC / "profiling"]
+    if cfg["pipeline"] == "autoddg_deep":
+        dirs.append(AUTODDG_SRC / "profiling_v2")
+    return sorted(p for d in dirs for p in d.glob("*.py"))
+
+
+def extractor_version(cfg: dict) -> dict:
+    try:
+        import datamart_profiler
+        dm = getattr(datamart_profiler, "__version__", None)
+    except ImportError:
+        dm = None
+    blob = "\n".join(f"{p.name}\n{p.read_text(encoding='utf-8')}" for p in extractor_sources(cfg))
+    return {
+        "commit": autoddg_commit(),
+        "schema": SCHEMA_VERSION,
+        "src_sha256": sha256_text(blob)[:16],
+        "datamart_profiler": dm,
+    }
+
+
+def profile_key(cfg: dict) -> str:
+    """Hash of everything the profile stage depends on (not the arm name or fact mode)."""
+    facts = cfg.get("facts") or {}
+    relevant = {
+        "pipeline": cfg["pipeline"],
+        "read_max_rows": cfg.get("read_max_rows"),
+        "facts": fact_mode(cfg) != "none",
+        "select": facts.get("select") if fact_mode(cfg) != "none" else None,
+        "extractor": extractor_version(cfg),
+    }
+    return sha256_text(json.dumps(relevant, sort_keys=True))[:16]
+
+
+def profile_dir(cfg: dict) -> Path:
+    return CACHE_DIR / "profile" / ((cfg.get("facts") or {}).get("profile_from") or cfg["arm"])
+
+
+def profile_cache_valid(cached: dict, table_sha: str, key: str) -> bool:
+    return cached.get("table_sha256") == table_sha and cached.get("profile_key") == key
+
+
+def fact_input_sha(prof: dict, mode: str = "ufd_sfd") -> str:
+    """Hash of the fact blocks the prompts actually receive in this fact mode."""
+    used = {
+        "ufd": prof.get("ufd_facts") if mode != "none" else None,
+        "sfd": prof.get("sfd_facts") if mode == "ufd_sfd" else None,
+    }
+    return sha256_text(json.dumps(used, sort_keys=True))
+
+
+def gen_cache_valid(cached: dict, meta: dict, table_sha: str, fact_sha: str, want_llm: bool) -> bool:
+    return (
+        cached.get("config_hash") == meta["config_hash"]
+        and cached.get("prompt_hash") == meta["prompt_hash"]
+        and cached.get("table_sha256") == table_sha
+        and cached.get("fact_input_sha256") == fact_sha
+        and cached.get("status") == "ok"
+        and (cached.get("ufd") is not None or not want_llm)
+    )
+
+
+def _write_json(path: Path, record: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(f".{os.getpid()}.{threading.get_ident()}.tmp")
+    tmp.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(path)  # atomic: F1 and F2 may share a profile file
+
+
 class _NoClient:
     """Placeholder passed to AutoDDG's constructor; replaced before any call."""
 
@@ -113,7 +201,9 @@ def build_pipe(cfg: dict, client: CachingClient) -> AutoDDG:
     elif cfg["pipeline"] == "autoddg_deep":
         pipe = AutoDDGDeep(
             _NoClient(), cfg["model"], sfd_temperature=float(cfg["sfd_temperature"]),
-            fact_mode=fact_mode(cfg), **kwargs
+            fact_mode=fact_mode(cfg),
+            sfd_fact_constraints=bool((cfg.get("facts") or {}).get("sfd_constraints", False)),
+            **kwargs
         )
     else:
         raise ValueError(f"unknown pipeline {cfg['pipeline']!r}")
@@ -127,11 +217,11 @@ def build_pipe(cfg: dict, client: CachingClient) -> AutoDDG:
     return pipe
 
 
-def run_profile(pipe: AutoDDG, cfg: dict, dataset_id: str, table_sha: str, cfg_hash: str) -> dict:
-    out = CACHE_DIR / "profile" / cfg["arm"] / f"{dataset_id}.json"
+def run_profile(pipe: AutoDDG, cfg: dict, dataset_id: str, table_sha: str, key: str) -> dict:
+    out = profile_dir(cfg) / f"{dataset_id}.json"
     if out.exists():
         cached = json.loads(out.read_text(encoding="utf-8"))
-        if cached.get("table_sha256") == table_sha and cached.get("config_hash") == cfg_hash:
+        if profile_cache_valid(cached, table_sha, key):
             return cached
     df, read_info = load_table(TABLES_DIR / f"{dataset_id}.csv", cfg.get("read_max_rows"))
     started = time.time()
@@ -139,7 +229,8 @@ def run_profile(pipe: AutoDDG, cfg: dict, dataset_id: str, table_sha: str, cfg_h
     record = {
         "dataset_id": dataset_id,
         "arm": cfg["arm"],
-        "config_hash": cfg_hash,
+        "profile_key": key,
+        "extractor_version": extractor_version(cfg),
         "table_sha256": table_sha,
         "read": read_info,
         "basic_profile": basic_profile,
@@ -153,8 +244,7 @@ def run_profile(pipe: AutoDDG, cfg: dict, dataset_id: str, table_sha: str, cfg_h
         record.update(fact_texts(fs))
         record["factset"] = fs.to_dict()
         record["facts_seconds"] = round(time.time() - started, 2)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+    _write_json(out, record)
     return record
 
 
@@ -168,17 +258,6 @@ def generate_one(
 
     out = CACHE_DIR / "gen" / meta["arm_tag"] / args.run_id / f"{dataset_id}.json"
     want_llm = any(s in args.stages for s in LLM_STAGES)
-    if out.exists():
-        cached = json.loads(out.read_text(encoding="utf-8"))
-        if (
-            cached.get("config_hash") == meta["config_hash"]
-            and cached.get("prompt_hash") == meta["prompt_hash"]
-            and cached.get("table_sha256") == manifest_row["sha256"]
-            and cached.get("status") == "ok"
-            and (cached.get("ufd") is not None or not want_llm)
-        ):
-            return cached
-
     client = CachingClient(
         make_inner_client(meta["provider"]),
         CACHE_DIR / "llm",
@@ -199,10 +278,21 @@ def generate_one(
     }
     try:
         pipe = build_pipe(cfg, client)
-        prof = run_profile(pipe, cfg, dataset_id, manifest_row["sha256"], meta["config_hash"])
+        # the profile (cached, no LLM) comes first: the generation cache depends on its facts
+        prof = run_profile(pipe, cfg, dataset_id, manifest_row["sha256"], meta["profile_key"])
+        fact_sha = fact_input_sha(prof, fact_mode(cfg))
+        if out.exists():
+            cached = json.loads(out.read_text(encoding="utf-8"))
+            if gen_cache_valid(cached, meta, manifest_row["sha256"], fact_sha, want_llm):
+                return cached
+        fs_budget = (prof.get("factset") or {}).get("budget") or {}
         record.update(read=prof["read"], basic_profile=prof["basic_profile"],
                       structural_profile=prof["structural_profile"], fact_mode=fact_mode(cfg),
-                      ufd_facts=prof.get("ufd_facts"), sfd_facts=prof.get("sfd_facts"))
+                      ufd_facts=prof.get("ufd_facts"), sfd_facts=prof.get("sfd_facts"),
+                      profile_key=prof["profile_key"], extractor_version=prof.get("extractor_version"),
+                      profile_cache=str(profile_dir(cfg).relative_to(CACHE_DIR.parent) / f"{dataset_id}.json"),
+                      fact_input_sha256=fact_sha,
+                      selected_ufd=fs_budget.get("selected_ufd"), selected_sfd=fs_budget.get("selected_sfd"))
         if not want_llm:
             record["status"] = "ok"
             return record
@@ -255,8 +345,7 @@ def generate_one(
         )
     except Exception as e:
         record.update(status="error", error=f"{type(e).__name__}: {e}", traceback=traceback.format_exc()[-2000:])
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+    _write_json(out, record)
     return record
 
 
@@ -294,6 +383,7 @@ def main() -> None:
         "config_hash": config_hash(cfg),
         "prompt_hash": prompt_hash(),
         "autoddg_commit": autoddg_commit(),
+        "profile_key": profile_key(cfg),
     }
     if any(s in args.stages for s in LLM_STAGES) and provider == "openai" and not args.offline:
         make_inner_client(provider)  # fail fast when the API key is missing
@@ -315,7 +405,8 @@ def main() -> None:
         usable = [i for i in ids if manifest.get(i, {}).get("status") in {"ok", "truncated"}]
         ids = usable[: args.limit]
     print(f"arm={meta['arm_tag']} run={args.run_id} stages={args.stages} datasets={len(ids)} "
-          f"autoddg={meta['autoddg_commit']} config={meta['config_hash']} prompts={meta['prompt_hash']}")
+          f"autoddg={meta['autoddg_commit']} config={meta['config_hash']} prompts={meta['prompt_hash']} "
+          f"profile_key={meta['profile_key']} profile_dir={profile_dir(cfg).name}")
 
     rows = []
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -337,7 +428,7 @@ def main() -> None:
         return  # profile-only runs never overwrite a descriptions file
     keep = ("dataset_id", "arm", "run_id", "status", "download_status", "topic", "ufd", "sfd",
             "sfd_temperature_passed", "sfd_temperature_effective", "fact_mode", "ufd_facts", "sfd_facts",
-            "config_hash", "prompt_hash",
+            "selected_ufd", "selected_sfd", "fact_input_sha256", "profile_key", "config_hash", "prompt_hash",
             "autoddg_commit", "error")
     suffix = f"__{args.dataset_ids.stem}" if args.dataset_ids else ""
     out = RESULTS_DIR / "descriptions" / f"{meta['arm_tag']}__{args.run_id}{suffix}.jsonl"

@@ -66,15 +66,33 @@ LLM calls from `cache/llm`.
 
 `configs/arm_F1.yaml` = bugfix + verified facts in the UFD prompt (`facts.mode: ufd`);
 `configs/arm_F2.yaml` = F1 + the same facts in the SFD prompt (`facts.mode: ufd_sfd`).
-The two configs differ only in `facts.mode`; F1 differs from bugfix only by the `facts` block.
+The two configs differ only in `facts.mode` (and `facts.profile_from: F1`, so F2 reads
+F1's profile cache); F1 differs from bugfix only by the `facts` block.
+E3 (M2c): one selection serves both arms. `selected_ufd` is the common fact set,
+`selected_sfd` its verified / inferred subset; the SFD fact block adds no expansion
+constraint. `configs/arm_F2c.yaml` (`facts.sfd_constraints: true`) is the separate
+ablation that adds "keep verbatim, add synonyms, do not extend"; compare it with F2 only.
 
 The profile stage builds the factset with `autoddg.profiling_v2.pipeline.build_factset`
 (datamart + stats + spacetime -> `select` -> `render` -> budget) and stores it in
 `cache/profile/<arm>/<id>.json` together with the rendered `ufd_facts` / `sfd_facts`.
-Status thresholds, token budgets and per-kind caps are under `facts.select`
+Status thresholds, the token budget and per-kind caps are under `facts.select`
 (defaults, to be frozen before the test run). UFD gets verified / inferred / uncertain
 facts ("likely" prefix), SFD only verified / inferred. The full UFD / SFD prompts are
 kept in `cache/gen/<arm>/<run>/<id>.json`.
+
+Cache validity (M2c): a profile cache entry is reused only if its `profile_key` matches
+(AutoDDG commit, factset schema, sha256 of the profiler sources, datamart-profiler
+version, profile-relevant config); a generation entry only if `fact_input_sha256` (the
+fact blocks the prompts actually got) matches too. Entries written before M2c have
+neither key and are recomputed; LLM calls with unchanged prompts still come from
+`cache/llm`.
+
+Fact audit (no LLM): `$PY -I 05_fact_audit.py --arms F1,F2 --run-id r1 --dataset-ids configs/smoke3.txt`
+reports UFD / SFD retention of the selected facts (writing variants such as
+"2023-Q1" / "2023 Q1" count as kept), years and numbers not found in the call's own
+prompt, facts crowded out by the budget, and whether F1 and F2 share topic, semantic
+notes, UFD prompt, UFD text and selected fact ids. Output: `results/audit/`.
 
 Smoke run (3 tables in `configs/smoke3.txt`, run id `r1` so topic and semantic calls are
 cache hits from the bugfix subset30 run):

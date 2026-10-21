@@ -19,8 +19,7 @@ facts:
     inferred_min_rate: 0.80
     uncertain_min_rate: 0.50
     missingness_min_rate: 0.20
-    ufd_max_tokens: 160
-    sfd_max_tokens: 200
+    ufd_max_tokens: 160         # one common fact set for F1 and F2; SFD gets its verified/inferred subset
     max_per_kind:
       temporal_span: 3
       temporal_resolution: 3
