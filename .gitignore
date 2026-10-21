@@ -20,3 +20,7 @@ config_cost_optimization.yaml
 dist/
 build/
 .pytest_cache/
+
+# AutoDDG-Deep: local venv and the pinned AutoDDG clone (own git repo, branch autoddg-deep)
+.venvs/
+external/
