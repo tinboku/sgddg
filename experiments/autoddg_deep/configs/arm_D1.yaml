@@ -1,0 +1,38 @@
+# D1 (#5 discriminative generation): F2 with only the SFD prompt changed -- the most
+# confusable neighbour table is shown and the SFD must say why to pick this table.
+arm: D1
+pipeline: autoddg_deep
+model: gpt-4o-mini
+description_words: 100
+description_temperature: 0.0
+topic_temperature: 0.0
+sfd_temperature: 0.0
+sample_size: 100
+sample_random_state: 9
+semantic_mode: sequential
+topic_uses_original_description: true
+read_max_rows: null
+facts:
+  mode: ufd_sfd            # none = bugfix, ufd = F1, ufd_sfd = F2
+  profile_from: F1         # reuse F1's profile cache: the very same factset and selection
+  select:                    # profiling_v2.select.SelectConfig; defaults, freeze before the test run
+    verified_min_rate: 0.95
+    inferred_min_rate: 0.80
+    uncertain_min_rate: 0.50
+    missingness_min_rate: 0.20
+    ufd_max_tokens: 160         # one common fact set for F1 and F2; SFD gets its verified/inferred subset
+    max_per_kind:
+      temporal_span: 3
+      temporal_resolution: 3
+      spatial_places: 3
+      spatial_bbox: 1
+      measure_range: 4
+      measure_unit: 4
+      category_values: 4
+      missingness: 3
+discriminative_sfd:
+  source_arm: F2           # profile, facts, topic, UFD and the F2 SFD prompt are read from F2/r1
+  source_run: r1
+  neighbours: configs/confusion_pairs.json
+  neighbour_text: ufd+sfd_facts   # neighbour's F2 UFD and SFD facts; title+description if F2 failed
+  budget: source_sfd_words
