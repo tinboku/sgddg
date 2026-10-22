@@ -1,0 +1,159 @@
+{
+ "dataset_id": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+ "topic": "Voluntary Expenditure Ceilings",
+ "struct_stats": {
+  "dict_refs": 0,
+  "columns": 4,
+  "columns_with_facts": 4,
+  "table_fact_entries": 1,
+  "table_profile_entries": 0
+ },
+ "shared_calls": {
+  "topic": [
+   {
+    "key": "bb4edf7727aeb8774585e39b5158c42f6c476ce2ea751fb3d05a3e6a3e880dad",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": 0.0,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 564,
+     "completion_tokens": 7,
+     "total_tokens": 571
+    }
+   }
+  ],
+  "semantic": [
+   {
+    "key": "814803bc7daf65dcf8035b1e86f05cd8e39cc6786d6c1cafa20098cc686db09b",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 467,
+     "completion_tokens": 72,
+     "total_tokens": 539
+    }
+   },
+   {
+    "key": "b21f23aa466d5d82e739258ba5a17333a74fce40824e28a9fec67e785e44f738",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 449,
+     "completion_tokens": 71,
+     "total_tokens": 520
+    }
+   },
+   {
+    "key": "47fa535b994295a9572307a68b28cf0bf73c00014d01ea5b7bc07089ec7c0702",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 464,
+     "completion_tokens": 71,
+     "total_tokens": 535
+    }
+   },
+   {
+    "key": "7d5d0af0ff4d742c4adb393b2b492ac281fe2b87cf2d7a572ac04d46a7f3f147",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 469,
+     "completion_tokens": 62,
+     "total_tokens": 531
+    }
+   }
+  ]
+ },
+ "lossless_ufd": {
+  "missing": {},
+  "n_atoms": 93,
+  "n_missing": 0
+ },
+ "lossless_sfd": {
+  "missing": {},
+  "n_atoms": 59,
+  "n_missing": 0
+ },
+ "orig": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nElection Date,City Elective Office,Amount of VEC,Status of VEC\n2016 November 08,Board of Education,104000.0,The ceiling is not in place.\n2016 November 08,Community College Board,104000.0,The ceiling is not in place.\n2015 November 03,City Attorney,243000.0,The ceiling is not in place.\n2015 November 03,Community College Board,104000.0,The ceiling is not in place.\n2015 November 03,District Attorney,243000.0,The ceiling is not in place.\n2015 November 03,Sheriff,243000.0,The ceiling is not in place.\n2015 November 03,Treasurer,243000.0,The ceiling is not in place.\n2014 November 04,Assessor,243000.0,The ceiling is not in place.\n2014 November 04,Board of Education,104000.0,The ceiling is in place.\n2014 November 04,Community College Board,104000.0,The ceiling is not in place.\n2014 November 04,Public Defender,243000.0,The ceiling is not in place.\n2013 November 05,Treasurer,243000.0,The ceiling is not in place.\n2013 November 05,City Attorney,243000.0,The ceiling is not in place.\n2013 November 05,Assessor,243000.0,The ceiling is not in place.\n2012 November 06,Board of Education,104000.0,The Ceiling is in place.\n2012 November 06,Community College Board,104000.0,\"The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\"\n\n\nAdditionally, the dataset profile is as follows:\n\nThe key data profile information for this dataset includes:\n**Election Date**: Data is of type text. There are 5 unique values. \n**City Elective Office**: Data is of type text. There are 8 unique values. \n**Amount of VEC**: Data is of type integer. There are 2 unique values. Coverage spans from 104000.0 to 243000.0. \n**Status of VEC**: Data is of type text. \n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n**Temporal coverage** for columns Election Date with resolution year, covering from 2012-11-06 to 2016-11-08.\nThe key semantic information for this dataset includes:\n**Election Date**: Represents temporal entity. Contains temporal data (resolution: Day). Domain-specific type: general. Function/Usage context: aggregation key. \n**City Elective Office**: Represents position. Contains spatial data (resolution: City). Domain-specific type: political. Function/Usage context: role identification. \n**Amount of VEC**: Represents monetary value. Domain-specific type: financial. Function/Usage context: measurement. \n**Status of VEC**: \n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Voluntary Expenditure Ceilings. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n- Identity: 16 rows, 4 columns\n- Temporal scope: Election Date: 2012-11-06 to 2016-11-08\n- Geographic scope: City Elective Office: probably city names (not confirmed)\n- Measures and units: Amount of VEC: 104000 to 243000 (median 243000)\n- Representative categories: City Elective Office: Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values); Amount of VEC: 243000.0 (56%), 104000.0; Status of VEC: The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset contains 16 rows and 4 columns, focusing on Voluntary Expenditure Ceilings (VEC) for various city elective offices from November 6, 2012, to November 8, 2016. It includes information on the election date, the specific city elective office, the monetary amount of the VEC, and the status of the VEC. The dataset features 8 unique city elective offices and two distinct monetary values, ranging from 104,000 to 243,000. The status of the VEC indicates whether the ceiling is in place or has been lifted, providing insights into campaign finance regulations and their implications for electoral candidates.",
+  "sfd_prompt": "You are given a dataset about the topic Voluntary Expenditure Ceilings, with the following initial description:\n\nThis dataset contains 16 rows and 4 columns, focusing on Voluntary Expenditure Ceilings (VEC) for various city elective offices from November 6, 2012, to November 8, 2016. It includes information on the election date, the specific city elective office, the monetary amount of the VEC, and the status of the VEC. The dataset features 8 unique city elective offices and two distinct monetary values, ranging from 104,000 to 243,000. The status of the VEC indicates whether the ceiling is in place or has been lifted, providing insights into campaign finance regulations and their implications for electoral candidates.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\n- Identity: 16 rows, 4 columns\n- Temporal scope: Election Date: 2012-11-06 to 2016-11-08\n- Measures and units: Amount of VEC: 104000 to 243000 (median 243000)\n- Representative categories: City Elective Office: Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values); Amount of VEC: 243000.0 (56%), 104000.0; Status of VEC: The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\n- This dataset contains 16 rows and 4 columns, focusing on Voluntary Expenditure Ceilings (VEC) for various city elective offices from November 6, 2012, to November 8, 2016. It includes information on the election date, the specific city elective office, the monetary amount of the VEC, and the status of the VEC. The dataset features 8 unique city elective offices and two distinct monetary values, ranging from 104,000 to 243,000. The status of the VEC indicates whether the ceiling is in place or has been lifted, providing insights into campaign finance regulations and their implications for electoral candidates.\n\nVerified Coverage and Measures:\n- Identity: 16 rows, 4 columns\n- Temporal scope: Election Date: 2012-11-06 to 2016-11-08\n- Measures and units: Amount of VEC: 104000 to 243000 (median 243000)\n- Representative categories: City Elective Office: Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values); Amount of VEC: 243000.0 (56%), 104000.0; Status of VEC: The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nKey Themes or Topics:\n- Campaign finance regulation\n- Electoral candidate funding\n- Political finance compliance\n- City governance and electoral processes\n- Public policy and election law\n- Local government election dynamics\n\nApplications and Use Cases:\n- Facilitates analysis for campaign finance professionals, policymakers, researchers, or stakeholders in electoral processes.\n- Useful for specific applications, such as campaign strategy development, electoral policy formulation, and compliance monitoring.\n- Enables insights into patterns, trends, and relationships relevant to campaign finance regulations and their impact on electoral outcomes.\n\nConcepts and Synonyms:\n- Voluntary Expenditure Ceilings (VEC)/Campaign finance limits\n- City elective offices/Electoral positions\n- Election date/Voting day\n- Monetary ceiling/Funding cap\n- Campaign finance regulations/Electoral finance laws\n- Status of VEC/Condition of expenditure ceilings\n\nKeywords and Themes:\n- Voluntary Expenditure Ceilings\n- Campaign finance\n- City elections\n- Electoral regulations\n- Funding limits\n- Political contributions\n- Election compliance\n- Local government finance\n\nAdditional Context:\n- Highlights the dataset's relevance to understanding the implications of campaign finance regulations on electoral competitiveness and candidate behavior.\n- May emphasize its value for interdisciplinary applications, including political science, public administration, and law.\n- Provides insights into how changes in VEC status can affect campaign strategies and funding dynamics in local elections.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "1a60ec7fef68a0cbaa2f335f25effe34ed2c8370c68e0acc42b9bc5f7dfa95a8",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 1175,
+      "completion_tokens": 135,
+      "total_tokens": 1310
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "5a265b10be74781aed056797802addbd1cffb0f916b6479f6fb2c83eafba517a",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 842,
+      "completion_tokens": 594,
+      "total_tokens": 1436
+     }
+    }
+   ]
+  }
+ },
+ "struct": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nElection Date,City Elective Office,Amount of VEC,Status of VEC\n2016 November 08,Board of Education,104000.0,The ceiling is not in place.\n2016 November 08,Community College Board,104000.0,The ceiling is not in place.\n2015 November 03,City Attorney,243000.0,The ceiling is not in place.\n2015 November 03,Community College Board,104000.0,The ceiling is not in place.\n2015 November 03,District Attorney,243000.0,The ceiling is not in place.\n2015 November 03,Sheriff,243000.0,The ceiling is not in place.\n2015 November 03,Treasurer,243000.0,The ceiling is not in place.\n2014 November 04,Assessor,243000.0,The ceiling is not in place.\n2014 November 04,Board of Education,104000.0,The ceiling is in place.\n2014 November 04,Community College Board,104000.0,The ceiling is not in place.\n2014 November 04,Public Defender,243000.0,The ceiling is not in place.\n2013 November 05,Treasurer,243000.0,The ceiling is not in place.\n2013 November 05,City Attorney,243000.0,The ceiling is not in place.\n2013 November 05,Assessor,243000.0,The ceiling is not in place.\n2012 November 06,Board of Education,104000.0,The Ceiling is in place.\n2012 November 06,Community College Board,104000.0,\"The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\"\n\n\nAdditionally, the dataset profile is as follows:\n\nStructured profile, one block per column. Keys: profile = data profile, semantic = semantic profile of the column, facts = facts computed from the full table (values separated by \" | \"). TABLE holds table-level entries. &n refers to VALUES.\nTABLE\n  facts: size=16 rows, 4 columns\n[Election Date]\n  profile: type=text; unique_values=5; temporal_coverage=resolution year, 2012-11-06 to 2016-11-08\n  semantic: represents=temporal entity; temporal_resolution=Day; domain=general; usage=aggregation key\n  facts: span=2012-11-06 to 2016-11-08\n[City Elective Office]\n  profile: type=text; unique_values=8\n  semantic: represents=position; spatial_resolution=City; domain=political; usage=role identification\n  facts: top_values=Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values) | places=probably city names (not confirmed)\n[Amount of VEC]\n  profile: type=integer; unique_values=2; coverage=104000.0 to 243000.0\n  semantic: represents=monetary value; domain=financial; usage=measurement\n  facts: range=104000 to 243000 (median 243000) | top_values=243000.0 (56%), 104000.0\n[Status of VEC]\n  profile: type=text\n  facts: top_values=The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n(Given as the \"semantic\" entries of each column in the structured profile above.)\n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Voluntary Expenditure Ceilings. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n(Given as the \"facts\" entries of TABLE and of each column in the structured profile above.)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset focuses on Voluntary Expenditure Ceilings (VEC) and includes 16 entries detailing election dates, city elective offices, amounts of VEC, and their statuses from November 6, 2012, to November 8, 2016. The dataset captures various political positions, with the Community College Board and Board of Education being the most frequently represented. The monetary values range from 104,000 to 243,000, with a significant majority indicating that the ceiling is not in place. This dataset can be used to analyze campaign finance regulations and the impact of VEC on electoral processes. Each column is structured to represent temporal entities, positions, monetary values, and their statuses, providing a comprehensive view of VEC dynamics in the political landscape.",
+  "sfd_prompt": "You are given a dataset about the topic Voluntary Expenditure Ceilings, with the following initial description:\n\nThis dataset focuses on Voluntary Expenditure Ceilings (VEC) and includes 16 entries detailing election dates, city elective offices, amounts of VEC, and their statuses from November 6, 2012, to November 8, 2016. The dataset captures various political positions, with the Community College Board and Board of Education being the most frequently represented. The monetary values range from 104,000 to 243,000, with a significant majority indicating that the ceiling is not in place. This dataset can be used to analyze campaign finance regulations and the impact of VEC on electoral processes. Each column is structured to represent temporal entities, positions, monetary values, and their statuses, providing a comprehensive view of VEC dynamics in the political landscape.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\nTABLE\n  facts: size=16 rows, 4 columns\n[Election Date]\n  facts: span=2012-11-06 to 2016-11-08\n[City Elective Office]\n  facts: top_values=Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values)\n[Amount of VEC]\n  facts: range=104000 to 243000 (median 243000) | top_values=243000.0 (56%), 104000.0\n[Status of VEC]\n  facts: top_values=The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\n- This dataset focuses on Voluntary Expenditure Ceilings (VEC) and includes 16 entries detailing election dates, city elective offices, amounts of VEC, and their statuses from November 6, 2012, to November 8, 2016. The dataset captures various political positions, with the Community College Board and Board of Education being the most frequently represented. The monetary values range from 104,000 to 243,000, with a significant majority indicating that the ceiling is not in place. This dataset can be used to analyze campaign finance regulations and the impact of VEC on electoral processes. Each column is structured to represent temporal entities, positions, monetary values, and their statuses, providing a comprehensive view of VEC dynamics in the political landscape.\n\nVerified Coverage and Measures:\n- size=16 rows, 4 columns\n- Election Date: span=2012-11-06 to 2016-11-08\n- City Elective Office: top_values=Community College Board (25%), Board of Education, City Attorney, Treasurer, Assessor (8 distinct values)\n- Amount of VEC: range=104000 to 243000 (median 243000) | top_values=243000.0 (56%), 104000.0\n- Status of VEC: top_values=The ceiling is not in place. (81%), The ceiling is in place., The Ceiling is in place., The ceiling is lifted. On June 27, 2012, the Ethics Commission lifted the VEC when a candidate for the College Board reported receiving contributions in excess of the VEC.\n\nKey Themes or Topics:\n- Campaign finance regulation\n- Political expenditure limits\n- Electoral processes and dynamics\n- Local government elections\n- Political accountability and transparency\n- Influence of VEC on candidate funding\n\nApplications and Use Cases:\n- Facilitates analysis for campaign finance researchers, political analysts, and policymakers.\n- Useful for evaluating the impact of expenditure ceilings on electoral outcomes and candidate competitiveness.\n- Enables insights into compliance with campaign finance laws and regulations.\n- Assists in understanding the relationship between VEC and voter behavior or election results.\n\nConcepts and Synonyms:\n- Voluntary Expenditure Ceilings/VEC\n- Campaign finance limits/expenditure limits\n- Political contributions/electoral contributions\n- Election financing/campaign funding\n- Local elections/city elections\n- Political offices/elective offices\n- Expenditure ceilings/funding ceilings\n\nKeywords and Themes:\n- Voluntary Expenditure Ceilings\n- Campaign finance\n- Election dates\n- City elective offices\n- Political contributions\n- Expenditure limits\n- Electoral regulations\n- Community College Board\n- Board of Education\n\nAdditional Context:\n- The dataset is relevant for understanding the implications of voluntary expenditure ceilings on local electoral campaigns and the broader context of campaign finance reform.\n- It provides valuable insights into how expenditure ceilings may affect candidate strategies and voter engagement in local elections.\n- The dataset can be integrated with other political finance datasets to enhance analysis and understanding of trends in campaign financing across different jurisdictions.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "83c16036fc247d791e7139a30a100e7900780a914415524456596a74a86de081",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 1170,
+      "completion_tokens": 155,
+      "total_tokens": 1325
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "46019dbcf070be81baa2244b3bc2441832f5d4a2830136755e0ac94f254ebcbc",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 874,
+      "completion_tokens": 624,
+      "total_tokens": 1498
+     }
+    }
+   ]
+  }
+ }
+}
