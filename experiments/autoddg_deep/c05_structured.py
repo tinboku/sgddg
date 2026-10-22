@@ -371,3 +371,50 @@ def check_lossless(basic: str, structural: str, semantic_details: str, factset: 
         if lost:
             missing[col] = lost
     return {"missing": missing, "n_atoms": n_atoms, "n_missing": sum(len(v) for v in missing.values())}
+
+
+# --- position-aligned variant ---------------------------------------------------------
+# Each evidence block stays in its own original prompt slot with the original slot text
+# around it; only the lines about columns are rewritten from sentences to key=value lines
+# grouped by column. No source keys (one source per slot), no VALUES dictionary, no header.
+
+def _group_lines(groups: list[tuple[str | None, list[tuple[str, str]]]], sep: str = "; ") -> list[str]:
+    out = []
+    for col, fields in groups:
+        if fields:
+            out += ["TABLE" if col is None else f"[{col}]", "  " + _kv(fields, sep)]
+    return out
+
+
+def aligned_profile(basic: str) -> str:
+    """Basic-profile slot: non-column lines verbatim, each column line -> [col] + key=value line."""
+    _, fields = parse_basic(basic)
+    out = []
+    for line in basic.split("\n"):
+        m = LINE.match(line.strip())
+        out += _group_lines([(m.group(1), fields[m.group(1)])]) if m else [line]
+    return "\n".join(out)
+
+
+def aligned_semantic(basic: str, structural: str, semantic_details: str) -> str:
+    """Semantic-profile slot (= structural profile + semantic details in the original):
+    the semantic header verbatim, then TABLE (multi-column structural lines) and one
+    group per column with its structural and semantic entries."""
+    order, _ = parse_basic(basic)
+    sem = parse_semantic(semantic_details)
+    st_col, st_table = parse_structural(structural, order)
+    head = [l for l in semantic_details.split("\n") if l.strip() and not LINE.match(l.strip())]
+    groups = [(None, st_table)] + [(c, st_col.get(c, []) + sem.get(c, [])) for c in order]
+    body = _group_lines(groups)
+    # columns that the semantic profile lists with no content stay listed, as in the original
+    listed = set(sem) | set(st_col)
+    for c in order:
+        if c in listed and not (st_col.get(c) or sem.get(c)):
+            body.append(f"[{c}]")
+    return "\n".join(head + body)
+
+
+def aligned_facts(factset: dict, target: str, columns: list[str]) -> str:
+    """Fact slot: TABLE + one group per column, facts separated by ' | '."""
+    fc, ft = fact_entries(factset, target, columns)
+    return "\n".join(_group_lines([(None, ft)] + [(c, fc.get(c, [])) for c in columns], " | "))
