@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+<defs>
+  <marker id="arrow" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0 0L16 8L0 16Z" fill="#5f6d79"/></marker>
+  <marker id="amberArrow" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto"><path d="M0 0L16 8L0 16Z" fill="#c57a18"/></marker>
+  <style>
+    text{font-family:Verdana;fill:#263746} .title{font-size:34px;font-weight:700}.zone{font-size:25px;font-weight:700;letter-spacing:.6px}.head{font-size:23px;font-weight:700}.body{font-size:19px}.label{font-size:18px;font-weight:700}.micro{font-size:16px}.muted{fill:#687986}.amberText{fill:#a96512}.line{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.soft{stroke:#9aa9b3}.amber{stroke:#c57a18}.dash{stroke-dasharray:14 10}.smallDash{stroke-dasharray:9 8}
+  </style>
+</defs>
+<rect width="2400" height="1350" fill="#fff"/>
+<text x="70" y="68" class="title">Track A — Evidence-aware description generation</text>
+<text x="70" y="108" class="body muted">Existing pipeline in gray  ·  research mechanisms in amber dashed frames  ·  solid arrows show data flow</text>
+<!-- four aligned columns -->
+<rect x="45" y="150" width="420" height="1010" rx="28" fill="#f8fbfd" stroke="#d5e0e7" stroke-width="3"/>
+<rect x="500" y="150" width="420" height="1010" rx="28" fill="#f7fafc" stroke="#d5e0e7" stroke-width="3"/>
+<rect x="955" y="150" width="760" height="1010" rx="28" fill="#fff9ef" stroke="#d5e0e7" stroke-width="3"/>
+<rect x="1750" y="150" width="605" height="1010" rx="28" fill="#f8fbfd" stroke="#d5e0e7" stroke-width="3"/>
+<text x="80" y="205" class="zone">INPUT</text><text x="535" y="205" class="zone">EXTRACTION</text><text x="990" y="205" class="zone amberText">EVIDENCE PREPARATION</text><text x="1785" y="205" class="zone">GENERATION</text>
+<!-- input -->
+<rect x="82" y="270" width="346" height="230" rx="20" fill="#fff" stroke="#387fae" stroke-width="4"/>
+<rect x="105" y="315" width="300" height="145" fill="#eef6fa" stroke="#387fae" stroke-width="3"/>
+<rect x="105" y="315" width="300" height="30" fill="#cfe5ef"/><path d="M105 345h300M105 383h300M105 421h300M165 315v145M245 315v145M325 315v145" stroke="#7b9aaa" stroke-width="3"/>
+<text x="105" y="292" class="label">Tabular dataset</text><text x="82" y="548" class="head">columns · rows · values</text>
+<rect x="82" y="650" width="346" height="250" rx="18" fill="#fff" stroke="#bacbd5" stroke-width="3"/><text x="108" y="693" class="label">Schema + sample values</text>
+<rect x="108" y="720" width="294" height="30" fill="#d9eaf1"/><path d="M108 750h294M108 790h294M108 830h294M108 870h294M170 720v150M245 720v150M320 720v150" stroke="#a4bac6" stroke-width="3"/><rect x="108" y="750" width="294" height="40" fill="#f3f7f9"/><rect x="108" y="830" width="294" height="40" fill="#f3f7f9"/>
+<!-- extraction -->
+<rect x="535" y="270" width="350" height="410" rx="20" fill="#fff" stroke="#93a5b1" stroke-width="4"/><text x="565" y="320" class="head">Evidence Extraction</text><text x="565" y="352" class="body muted">inherited AutoDDG path</text>
+<rect x="565" y="390" width="290" height="115" rx="12" fill="#f2f6f8" stroke="#a7b7c1" stroke-width="2"/><path d="M600 470v-30M640 470v-60M680 470v-85M720 470v-45M760 470v-72" stroke="#6c9bb3" stroke-width="22"/><path d="M590 480h235" class="line soft"/><text x="570" y="540" class="label">Content profiling</text><text x="570" y="570" class="micro muted">size · missing · time · geo</text>
+<rect x="565" y="600" width="290" height="55" rx="12" fill="#f2f6f8" stroke="#a7b7c1" stroke-width="2"/><circle cx="615" cy="627" r="17" fill="none" stroke="#6c9bb3" stroke-width="5"/><path d="M628 640l18 14" class="line soft"/><text x="660" y="634" class="label">Semantic profiling</text>
+<!-- prep outer research frame -->
+<rect x="985" y="240" width="700" height="820" rx="26" fill="#fff8e9" stroke="#c57a18" stroke-width="5" class="dash"/>
+<text x="1025" y="290" class="head amberText">Research mechanisms</text><text x="1025" y="322" class="body amberText">What evidence survives a fixed prompt budget?</text>
+<!-- card 1 -->
+<rect x="1025" y="355" width="620" height="190" rx="18" fill="#fff" stroke="#d29a4b" stroke-width="3"/><circle cx="1065" cy="395" r="24" fill="#fff0cf" stroke="#c57a18" stroke-width="3"/><text x="1058" y="403" class="label amberText">1</text><text x="1110" y="395" class="head">Information Selection</text><text x="1110" y="426" class="micro">FactSet slots under a fixed budget</text>
+<text x="1050" y="470" class="micro muted">FactSet</text><rect x="1110" y="450" width="82" height="25" rx="5" fill="#f0b24d"/><rect x="1200" y="450" width="82" height="25" rx="5" fill="#fff" stroke="#c57a18" stroke-width="2"/><rect x="1290" y="450" width="82" height="25" rx="5" fill="#f0b24d"/><rect x="1380" y="450" width="82" height="25" rx="5" fill="#d9dee1"/><rect x="1470" y="450" width="82" height="25" rx="5" fill="#d9dee1"/><path d="M1110 485h442" stroke="#b9c4ca" stroke-width="2"/><text x="1110" y="515" class="micro amberText">selected</text><text x="1380" y="515" class="micro muted">dropped</text>
+<!-- card 2 -->
+<rect x="1025" y="575" width="620" height="190" rx="18" fill="#fff" stroke="#d29a4b" stroke-width="3"/><circle cx="1065" cy="615" r="24" fill="#fff0cf" stroke="#c57a18" stroke-width="3"/><text x="1058" y="623" class="label amberText">2</text><text x="1110" y="615" class="head">Context Organization</text><text x="1110" y="646" class="micro">reorder and group grounded evidence</text>
+<rect x="1055" y="690" width="48" height="22" rx="4" fill="#b6c6cf"/><rect x="1111" y="690" width="70" height="22" rx="4" fill="#7fa7ba"/><rect x="1189" y="690" width="38" height="22" rx="4" fill="#d7a14d"/><path d="M1265 701h75" class="line amber" marker-end="url(#amberArrow)"/><rect x="1380" y="690" width="38" height="22" rx="4" fill="#d7a14d"/><rect x="1426" y="690" width="70" height="22" rx="4" fill="#7fa7ba"/><rect x="1504" y="690" width="48" height="22" rx="4" fill="#b6c6cf"/><text x="1055" y="742" class="micro muted">unordered evidence</text><text x="1380" y="742" class="micro muted">ordered context</text>
+<!-- card 3 -->
+<rect x="1025" y="795" width="620" height="190" rx="18" fill="#fff" stroke="#d29a4b" stroke-width="3"/><circle cx="1065" cy="835" r="24" fill="#fff0cf" stroke="#c57a18" stroke-width="3"/><text x="1058" y="843" class="label amberText">3</text><text x="1110" y="835" class="head">Dataset-adaptive policy</text><text x="1110" y="866" class="micro">strategy changes with dataset signals</text>
+<rect x="1055" y="895" width="250" height="65" fill="#fff" stroke="#b78a43" stroke-width="2"/><rect x="1055" y="895" width="250" height="22" fill="#f4e4c6"/><path d="M1055 917h250M1055 939h250M1135 895v65M1215 895v65" stroke="#c5aa78" stroke-width="2"/><text x="1070" y="912" class="micro">signal</text><text x="1150" y="912" class="micro">A</text><text x="1230" y="912" class="micro">B</text><text x="1070" y="934" class="micro">sparse</text><text x="1150" y="934" class="micro">high</text><text x="1230" y="934" class="micro">low</text><text x="1070" y="956" class="micro">dense</text><text x="1150" y="956" class="micro">low</text><text x="1230" y="956" class="micro">high</text>
+<path d="M1335 927h48" class="line amber" marker-end="url(#amberArrow)"/><rect x="1410" y="895" width="180" height="65" fill="#fff" stroke="#b78a43" stroke-width="2"/><text x="1425" y="917" class="micro">strategy A</text><text x="1425" y="941" class="micro">strategy B</text><path d="M1425 926h125M1425 950h95" stroke="#d29a4b" stroke-width="6"/>
+<!-- generation -->
+<rect x="1790" y="270" width="525" height="485" rx="20" fill="#fff" stroke="#93a5b1" stroke-width="4"/><text x="1830" y="320" class="head">Description Generation</text><text x="1830" y="352" class="body muted">existing LLM engine</text>
+<rect x="1830" y="390" width="445" height="150" rx="16" fill="#f4f8fa" stroke="#a7b7c1" stroke-width="3"/>
+<!-- layered LLM icon --> <rect x="1870" y="438" width="72" height="55" fill="#d7e8ef" stroke="#4d88a5" stroke-width="3"/><rect x="1882" y="426" width="72" height="55" fill="#b6d4e2" stroke="#4d88a5" stroke-width="3"/><rect x="1894" y="414" width="72" height="55" fill="#8fb9ce" stroke="#4d88a5" stroke-width="3"/><path d="M1908 429h44M1908 440h32M1908 451h40" stroke="#4d88a5" stroke-width="3"/><text x="2000" y="440" class="head">LLM</text><text x="2000" y="472" class="body">prompt + prepared evidence</text><path d="M2000 500h220" stroke="#a7b7c1" stroke-width="2" stroke-dasharray="8 7"/><text x="2000" y="525" class="micro muted">grounded prose</text>
+<path d="M2050 540v80" class="line soft" marker-end="url(#arrow)"/>
+<!-- branches --> <rect x="1815" y="635" width="220" height="180" rx="16" fill="#fff" stroke="#93a5b1" stroke-width="3"/><rect x="1850" y="670" width="150" height="85" fill="#f7fafb" stroke="#4d88a5" stroke-width="3"/><path d="M1870 690h110M1870 710h90M1870 730h105" stroke="#4d88a5" stroke-width="4"/><path d="M1850 670l20-18h130l-20 18" fill="#e4eef2" stroke="#4d88a5" stroke-width="3"/><text x="1850" y="785" class="label">SFD</text><text x="1885" y="785" class="micro muted">search-focused</text>
+<rect x="2070" y="635" width="220" height="180" rx="16" fill="#fff" stroke="#93a5b1" stroke-width="3"/><rect x="2108" y="670" width="144" height="85" fill="#f7fafb" stroke="#4d88a5" stroke-width="3"/><path d="M2140 690q40-30 80 0M2140 710q40-30 80 0M2140 730q40-30 80 0" fill="none" stroke="#4d88a5" stroke-width="4"/><text x="2108" y="785" class="label">UFD</text><text x="2145" y="785" class="micro muted">user-focused</text>
+<!-- flow arrows, strong and explicit -->
+<path d="M465 385H525" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/><path d="M885 470H975" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/><path d="M1685 575H1780" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/>
+<path d="M525 385l-18-13v26zM975 470l-18-13v26zM1780 575l-18-13v26z" fill="#5f6d79"/>
+<path d="M2050 755V625H2038" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/><path d="M2050 625H2070" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/>
+<!-- feedback loop back to extraction -->
+<path d="M2290 835V1085H720V700" class="line amber smallDash" fill="none"/><path d="M720 700l-16 24h32z" fill="#c57a18"/><text x="1320" y="1068" class="micro amberText">feedback loop (candidate mechanism)</text>
+<!-- legend --> <line x1="80" y1="1230" x2="145" y2="1230" class="line" stroke="#5f6d79" marker-end="url(#arrow)"/><text x="160" y="1237" class="micro muted">data flow</text><line x1="280" y1="1230" x2="345" y2="1230" class="line amber dash"/><text x="360" y="1237" class="micro amberText">research mechanism</text>
+</svg>
