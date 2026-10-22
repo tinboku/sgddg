@@ -1,0 +1,216 @@
+{
+  "table": "3e23114a-2657-4880-8add-f3c24425f937",
+  "rows": 2703,
+  "cols": 18,
+  "columns": [
+    {
+      "name": "Year",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 17,
+      "min": 1999,
+      "max": 2015,
+      "time_range": [
+        "1970-01-01 00:00:00.000001999",
+        "1970-01-01 00:00:00.000002015"
+      ]
+    },
+    {
+      "name": "Sex",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 3,
+      "top3": {
+        "Both Sexes": 1479,
+        "Male": 612,
+        "Female": 612
+      }
+    },
+    {
+      "name": "Age",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 9,
+      "top3": {
+        "All Ages": 1071,
+        "15-24 years": 204,
+        "Less than 15 years": 204
+      }
+    },
+    {
+      "name": "Race and Hispanic Origin",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 4,
+      "top3": {
+        "All Races-All Origins": 1326,
+        "Hispanic": 459,
+        "Non-Hispanic White": 459
+      }
+    },
+    {
+      "name": "State",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 52,
+      "top3": {
+        "United States": 1836,
+        "Texas": 17,
+        "New Hampshire": 17
+      }
+    },
+    {
+      "name": "Deaths",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 1522,
+      "min": 1,
+      "max": 52404,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000052404"
+      ]
+    },
+    {
+      "name": "Population",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2703,
+      "min": 238163,
+      "max": 321418820,
+      "time_range": [
+        "1970-01-01 00:00:00.000238163",
+        "1970-01-01 00:00:00.321418820"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Crude Death Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 331,
+      "min": 0.0,
+      "max": 53.5,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000053"
+      ]
+    },
+    {
+      "name": "Standard Error for Crude Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 19,
+      "min": 0.0,
+      "max": 1.8,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "Low Confidence Limit for Crude Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 331,
+      "min": 0.0,
+      "max": 52.2,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000052"
+      ]
+    },
+    {
+      "name": "Upper Confidence Limit for Crude Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 345,
+      "min": 0.1,
+      "max": 54.8,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000054"
+      ]
+    },
+    {
+      "name": "Age-adjusted Rate",
+      "dtype": "float64",
+      "missing_rate": 0.6037735849056604,
+      "unique": 220,
+      "min": 1.8,
+      "max": 41.5
+    },
+    {
+      "name": "Standard Error Age-adjusted Rate",
+      "dtype": "float64",
+      "missing_rate": 0.6037735849056604,
+      "unique": 20,
+      "min": 0.0,
+      "max": 1.9
+    },
+    {
+      "name": "Lower Confidence Limit for Age-adjusted rate",
+      "dtype": "float64",
+      "missing_rate": 0.6037735849056604,
+      "unique": 220,
+      "min": 0.9,
+      "max": 38.4
+    },
+    {
+      "name": "Upper Confidence Limit for Age-adjusted Rate",
+      "dtype": "float64",
+      "missing_rate": 0.6037735849056604,
+      "unique": 236,
+      "min": 2.2,
+      "max": 44.6
+    },
+    {
+      "name": "State Crude Rate in Range",
+      "dtype": "object",
+      "missing_rate": 0.6037735849056604,
+      "unique": 60,
+      "top3": {
+        "7–9.8": 177,
+        "12.3–15.2": 177,
+        "15.2–41.5": 177
+      }
+    },
+    {
+      "name": "US Crude Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 16,
+      "min": 6.0,
+      "max": 16.3,
+      "time_range": [
+        "1970-01-01 00:00:00.000000006",
+        "1970-01-01 00:00:00.000000016"
+      ]
+    },
+    {
+      "name": "US Age-adjusted Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 15,
+      "min": 6.1,
+      "max": 16.3,
+      "time_range": [
+        "1970-01-01 00:00:00.000000006",
+        "1970-01-01 00:00:00.000000016"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "Year",
+      "right": "Crude Death Rate"
+    },
+    {
+      "type": "ge",
+      "left": "Year",
+      "right": "Standard Error for Crude Rate"
+    }
+  ],
+  "facts_count": 92
+}

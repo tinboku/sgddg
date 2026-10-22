@@ -1,0 +1,232 @@
+{
+  "table": "201460a5-ac75-422c-99ec-3bceef8d195c",
+  "rows": 530090,
+  "cols": 18,
+  "columns": [
+    {
+      "name": "DR Number",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 530090,
+      "min": 100100007,
+      "max": 252104048,
+      "time_range": [
+        "1970-01-01 00:00:00.100100007",
+        "1970-01-01 00:00:00.252104048"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Date Reported",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 5421,
+      "top3": {
+        "02/03/2020": 208,
+        "10/20/2016": 206,
+        "12/08/2014": 205
+      },
+      "time_range": [
+        "2010-01-01 00:00:00",
+        "2025-02-05 00:00:00"
+      ]
+    },
+    {
+      "name": "Date Occurred",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 5438,
+      "top3": {
+        "12/17/2010": 219,
+        "02/17/2016": 218,
+        "12/15/2016": 218
+      },
+      "time_range": [
+        "2010-01-01 00:00:00",
+        "2025-02-05 00:00:00"
+      ]
+    },
+    {
+      "name": "Time Occurred",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 1439,
+      "min": 1,
+      "max": 2359,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000002359"
+      ]
+    },
+    {
+      "name": "Area ID",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 21,
+      "min": 1,
+      "max": 21,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000021"
+      ]
+    },
+    {
+      "name": "Area Name",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 21,
+      "top3": {
+        "77th Street": 35780,
+        "Southwest": 31426,
+        "Wilshire": 29832
+      }
+    },
+    {
+      "name": "Reporting District",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 1329,
+      "min": 100,
+      "max": 2198,
+      "time_range": [
+        "1970-01-01 00:00:00.000000100",
+        "1970-01-01 00:00:00.000002198"
+      ]
+    },
+    {
+      "name": "Crime Code",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "min": 997,
+      "max": 997,
+      "time_range": [
+        "1970-01-01 00:00:00.000000997",
+        "1970-01-01 00:00:00.000000997"
+      ]
+    },
+    {
+      "name": "Crime Code Description",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "top3": {
+        "TRAFFIC COLLISION": 530090
+      }
+    },
+    {
+      "name": "MO Codes",
+      "dtype": "object",
+      "missing_rate": 0.1614518289347092,
+      "unique": 106259,
+      "top3": {
+        "0605": 14269,
+        "3101 3401 3701 3006 3030": 6997,
+        "3101 3401 3701 3004 3030": 6411
+      }
+    },
+    {
+      "name": "Victim Age",
+      "dtype": "float64",
+      "missing_rate": 0.14120998321039824,
+      "unique": 90,
+      "min": 10.0,
+      "max": 99.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000010",
+        "1970-01-01 00:00:00.000000099"
+      ]
+    },
+    {
+      "name": "Victim Sex",
+      "dtype": "object",
+      "missing_rate": 0.016583976305910318,
+      "unique": 5,
+      "top3": {
+        "M": 313089,
+        "F": 193931,
+        "X": 14112
+      }
+    },
+    {
+      "name": "Victim Descent",
+      "dtype": "object",
+      "missing_rate": 0.01790073383765021,
+      "unique": 20,
+      "top3": {
+        "H": 199609,
+        "W": 122420,
+        "O": 76967
+      }
+    },
+    {
+      "name": "Premise Code",
+      "dtype": "float64",
+      "missing_rate": 0.0017864890867588523,
+      "unique": 120,
+      "min": 101.0,
+      "max": 970.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000101",
+        "1970-01-01 00:00:00.000000970"
+      ]
+    },
+    {
+      "name": "Premise Description",
+      "dtype": "object",
+      "missing_rate": 0.0017883755588673621,
+      "unique": 119,
+      "top3": {
+        "STREET": 504823,
+        "PARKING LOT": 15776,
+        "SIDEWALK": 3612
+      }
+    },
+    {
+      "name": "Address",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 27379,
+      "top3": {
+        "WESTERN                      AV": 7001,
+        "VENTURA                      BL": 6078,
+        "SHERMAN                      WY": 6046
+      }
+    },
+    {
+      "name": "Cross Street",
+      "dtype": "object",
+      "missing_rate": 0.047467411194325494,
+      "unique": 20138,
+      "top3": {
+        "FIGUEROA                     ST": 3870,
+        "VERMONT                      AV": 3869,
+        "WESTERN                      AV": 3740
+      }
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 52466,
+      "top3": {
+        "(0.0, 0.0)": 952,
+        "(33.9892, -118.3089)": 533,
+        "(33.9601, -118.2827)": 490
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "DR Number",
+      "right": "Time Occurred"
+    },
+    {
+      "type": "ge",
+      "left": "DR Number",
+      "right": "Area ID"
+    }
+  ],
+  "facts_count": 80
+}

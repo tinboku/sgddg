@@ -1,0 +1,64 @@
+{
+  "table": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+  "rows": 16,
+  "cols": 4,
+  "columns": [
+    {
+      "name": "Election Date",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 5,
+      "top3": {
+        "2015 November 03": 5,
+        "2014 November 04": 4,
+        "2013 November 05": 3
+      },
+      "time_range": [
+        "2012-11-06 00:00:00",
+        "2016-11-08 00:00:00"
+      ]
+    },
+    {
+      "name": "City Elective Office",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 8,
+      "top3": {
+        "Community College Board": 4,
+        "Board of Education": 3,
+        "City Attorney": 2
+      }
+    },
+    {
+      "name": "Amount of VEC",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 104000.0,
+      "max": 243000.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000104",
+        "1970-01-01 00:00:00.000243"
+      ]
+    },
+    {
+      "name": "Status of VEC",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 4,
+      "top3": {
+        "The ceiling is not in place.": 13,
+        "The ceiling is in place.": 1,
+        "The Ceiling is in place.": 1
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "distinct_pair",
+      "left": "Election Date",
+      "right": "City Elective Office"
+    }
+  ],
+  "facts_count": 17
+}

@@ -1,0 +1,263 @@
+{
+  "table": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+  "rows": 435416,
+  "cols": 21,
+  "columns": [
+    {
+      "name": "NOPD_Item",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 435416,
+      "top3": {
+        "A0000214": 1,
+        "H2621514": 1,
+        "H2621314": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Type_",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 145,
+      "top3": {
+        "21": 113479,
+        "18": 61402,
+        "62A": 47025
+      }
+    },
+    {
+      "name": "TypeText",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 146,
+      "top3": {
+        "COMPLAINT OTHER": 113479,
+        "TRAFFIC INCIDENT": 61402,
+        "BURGLAR ALARM, SILENT": 47025
+      }
+    },
+    {
+      "name": "Priority",
+      "dtype": "object",
+      "missing_rate": 4.593308468223492e-06,
+      "unique": 30,
+      "top3": {
+        "1H": 160738,
+        "2A": 54550,
+        "1A": 45817
+      }
+    },
+    {
+      "name": "InitialType",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 156,
+      "top3": {
+        "21": 101832,
+        "18": 60954,
+        "62A": 47357
+      }
+    },
+    {
+      "name": "InitialTypeText",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 157,
+      "top3": {
+        "COMPLAINT OTHER": 101832,
+        "TRAFFIC INCIDENT": 60954,
+        "BURGLAR ALARM, SILENT": 47357
+      }
+    },
+    {
+      "name": "InitialPriority",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 29,
+      "top3": {
+        "1H": 147052,
+        "2A": 64317,
+        "2C": 50728
+      }
+    },
+    {
+      "name": "MapX",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 43290,
+      "min": 0,
+      "max": 37369000,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.037369"
+      ]
+    },
+    {
+      "name": "MapY",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 41284,
+      "min": 0,
+      "max": 3513814,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.003513814"
+      ]
+    },
+    {
+      "name": "TimeCreate",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 431223,
+      "top3": {
+        "04/15/2014 10:53:19 AM": 14,
+        "01/22/2014 11:42:31 AM": 13,
+        "08/24/2014 04:27:05 PM": 12
+      },
+      "time_range": [
+        "2014-01-01 00:00:14",
+        "2014-12-31 11:13:56"
+      ]
+    },
+    {
+      "name": "TimeDispatch",
+      "dtype": "object",
+      "missing_rate": 0.3568771014386242,
+      "unique": 278813,
+      "top3": {
+        "03/17/2014 02:58:19 AM": 4,
+        "02/23/2014 12:07:52 AM": 4,
+        "06/08/2014 10:08:09 PM": 3
+      }
+    },
+    {
+      "name": "TimeArrive",
+      "dtype": "object",
+      "missing_rate": 0.21489334337736785,
+      "unique": 339843,
+      "top3": {
+        "06/24/2014 06:08:18 PM": 4,
+        "03/31/2014 06:16:24 PM": 3,
+        "04/17/2014 06:01:31 AM": 3
+      }
+    },
+    {
+      "name": "TimeClosed",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 430502,
+      "top3": {
+        "01/22/2014 11:42:29 AM": 25,
+        "04/15/2014 10:53:17 AM": 25,
+        "08/11/2014 10:53:37 AM": 22
+      },
+      "time_range": [
+        "2014-01-01 00:05:32",
+        "2014-12-31 20:27:55"
+      ]
+    },
+    {
+      "name": "Disposition",
+      "dtype": "object",
+      "missing_rate": 4.593308468223492e-06,
+      "unique": 6,
+      "top3": {
+        "NAT": 258524,
+        "RTF": 83840,
+        "UNF": 42316
+      }
+    },
+    {
+      "name": "DispositionText",
+      "dtype": "object",
+      "missing_rate": 4.593308468223492e-06,
+      "unique": 6,
+      "top3": {
+        "Necessary Action Taken": 258524,
+        "REPORT TO FOLLOW": 83840,
+        "UNFOUNDED": 42316
+      }
+    },
+    {
+      "name": "SelfInitiated",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "top3": {
+        "N": 295516,
+        "Y": 139900
+      }
+    },
+    {
+      "name": "Beat",
+      "dtype": "object",
+      "missing_rate": 0.0010748341815642972,
+      "unique": 490,
+      "top3": {
+        "1K01": 8350,
+        "3D02": 5847,
+        "8D05": 5203
+      }
+    },
+    {
+      "name": "BLOCK_ADDRESS",
+      "dtype": "object",
+      "missing_rate": 0.0001148327117055873,
+      "unique": 34911,
+      "top3": {
+        "007XX S Dupre St": 4503,
+        "003XX Royal St": 2620,
+        "024XX Sanctuary Dr": 1697
+      }
+    },
+    {
+      "name": "Zip",
+      "dtype": "float64",
+      "missing_rate": 0.03528120234442464,
+      "unique": 18,
+      "min": 70112.0,
+      "max": 70148.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000070112",
+        "1970-01-01 00:00:00.000070148"
+      ]
+    },
+    {
+      "name": "PoliceDistrict",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 9,
+      "min": 0,
+      "max": 8,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000008"
+      ]
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "missing_rate": 0.00028708177926396825,
+      "unique": 89158,
+      "top3": {
+        "(0.0, 0.0)": 12140,
+        "(29.96149899, -90.09453035)": 3350,
+        "(29.95542795, -90.06687158)": 1461
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "MapX",
+      "right": "MapY"
+    },
+    {
+      "type": "ge",
+      "left": "MapX",
+      "right": "Zip"
+    }
+  ],
+  "facts_count": 80
+}

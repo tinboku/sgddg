@@ -1,0 +1,66 @@
+{
+  "table": "2a3cc123-f9f6-4e1d-a03f-3e33056e5021",
+  "rows": 1068,
+  "cols": 4,
+  "columns": [
+    {
+      "name": "Year",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 38,
+      "min": 1970,
+      "max": 2015,
+      "time_range": [
+        "1970-01-01 00:00:00.000001970",
+        "1970-01-01 00:00:00.000002015"
+      ]
+    },
+    {
+      "name": "Age Group",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "top3": {
+        "35-39 years": 178,
+        "40-44 years": 178,
+        "20-24 years": 178
+      }
+    },
+    {
+      "name": "Race or Hispanic Origin",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "top3": {
+        "All Races": 228,
+        "Black total": 216,
+        "White total": 216
+      }
+    },
+    {
+      "name": "Birth Rate",
+      "dtype": "float64",
+      "missing_rate": 0.017790262172284643,
+      "unique": 647,
+      "min": 1.8,
+      "max": 161.1,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000161"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "Year",
+      "right": "Birth Rate"
+    },
+    {
+      "type": "distinct_pair",
+      "left": "Year",
+      "right": "Age Group"
+    }
+  ],
+  "facts_count": 20
+}

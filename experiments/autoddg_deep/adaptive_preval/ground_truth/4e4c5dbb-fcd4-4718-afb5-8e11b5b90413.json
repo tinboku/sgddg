@@ -1,0 +1,93 @@
+{
+  "table": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+  "rows": 10,
+  "cols": 7,
+  "columns": [
+    {
+      "name": "Metric Nbr",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "min": 1.1,
+      "max": 2.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000002"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Metric",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "top3": {
+        "Universal Access Customers Served": 1,
+        "WorkSource Adult Placements": 1,
+        "WorkSource Average Wage at Placement": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Annual Goal",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "top3": {
+        "150,000": 1,
+        "1,586": 1,
+        "$11.78": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "2 Quarter Cumulative Goal: July 1 - Dec 31 ",
+      "dtype": "float64",
+      "missing_rate": 0.4,
+      "unique": 6,
+      "min": 79.0,
+      "max": 75000.0
+    },
+    {
+      "name": "2 Quarter Cumulative Actual:July 1 - Dec 31",
+      "dtype": "float64",
+      "missing_rate": 0.1,
+      "unique": 9,
+      "min": 14.17,
+      "max": 85200.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000014",
+        "1970-01-01 00:00:00.000085200"
+      ]
+    },
+    {
+      "name": "Percentage of 2 Quarter Goal",
+      "dtype": "float64",
+      "missing_rate": 0.4,
+      "unique": 5,
+      "min": 25.0,
+      "max": 290.0
+    },
+    {
+      "name": "% of Annual Goal Completed",
+      "dtype": "float64",
+      "missing_rate": 0.4,
+      "unique": 6,
+      "min": 2.0,
+      "max": 145.0
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "2 Quarter Cumulative Actual:July 1 - Dec 31",
+      "right": "% of Annual Goal Completed"
+    },
+    {
+      "type": "ge",
+      "left": "Percentage of 2 Quarter Goal",
+      "right": "% of Annual Goal Completed"
+    }
+  ],
+  "facts_count": 38
+}

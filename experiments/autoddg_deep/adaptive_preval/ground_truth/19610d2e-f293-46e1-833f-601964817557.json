@@ -1,0 +1,809 @@
+{
+  "table": "19610d2e-f293-46e1-833f-601964817557",
+  "rows": 190,
+  "cols": 68,
+  "columns": [
+    {
+      "name": "Project ID",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 190,
+      "top3": {
+        "2021-022": 1,
+        "2019-017": 1,
+        "2025-006": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Project Name",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 190,
+      "top3": {
+        "3832 18th St": 1,
+        "3314 Cesar Chavez": 1,
+        "1035 Van Ness": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Project Status",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 4,
+      "top3": {
+        "Pre-Construction": 105,
+        "Construction": 63,
+        "Building Rehabilitation (Construction)": 14
+      }
+    },
+    {
+      "name": "Construction Status",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "top3": {
+        "(3) Design with Entitlements Approved": 78,
+        "(5) First Construction Document Issued": 39,
+        "(4) Site Work Permit Issued": 38
+      }
+    },
+    {
+      "name": "Plannning Approval Address",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 171,
+      "top3": {
+        "Multiphase Project Address not Assigned": 14,
+        "Address not yet assigned": 6,
+        "3711 19th Ave": 2
+      }
+    },
+    {
+      "name": "Zip Code",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 24,
+      "min": 94102,
+      "max": 94158,
+      "time_range": [
+        "1970-01-01 00:00:00.000094102",
+        "1970-01-01 00:00:00.000094158"
+      ]
+    },
+    {
+      "name": "Block",
+      "dtype": "object",
+      "missing_rate": 0.10526315789473684,
+      "unique": 139,
+      "top3": {
+        "4591D": 5,
+        "3753": 3,
+        "3725": 3
+      }
+    },
+    {
+      "name": "Lot",
+      "dtype": "object",
+      "missing_rate": 0.10526315789473684,
+      "unique": 90,
+      "top3": {
+        "1": 13,
+        "2": 8,
+        "8": 6
+      }
+    },
+    {
+      "name": "Supervisor District",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 11,
+      "min": 1,
+      "max": 11,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000011"
+      ]
+    },
+    {
+      "name": "City Analysis Neighborhood",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 30,
+      "top3": {
+        "Bayview Hunters Point": 30,
+        "Mission": 29,
+        "South of Market": 23
+      }
+    },
+    {
+      "name": "Planning Neighborhood",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 27,
+      "top3": {
+        "South of Market": 37,
+        "Bayview": 29,
+        "Mission": 26
+      }
+    },
+    {
+      "name": "Lead Agency",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "top3": {
+        "MOHCD": 151,
+        "OCII": 30,
+        "SFRA": 4
+      }
+    },
+    {
+      "name": "General Housing Program",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 4,
+      "top3": {
+        "Inclusionary Housing": 116,
+        "MOHCD 100% Affordable (New Development)": 57,
+        "MOHCD 100% Affordable (Preservation)": 9
+      }
+    },
+    {
+      "name": "Specific Program Area",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 11,
+      "top3": {
+        "Inclusionary Housing Program": 110,
+        "Multifamily Rental Program": 52,
+        "Limited Equity Program": 8
+      }
+    },
+    {
+      "name": "Multiphase or Multisite Project Name",
+      "dtype": "object",
+      "missing_rate": 0.7894736842105263,
+      "unique": 14,
+      "top3": {
+        "Treasure Island": 6,
+        "Transbay": 6,
+        "Hunters Point Ship Yard II/Candlestick Point": 5
+      }
+    },
+    {
+      "name": "Redevelopment Project Area",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "top3": {
+        "Not in an OCII Project Area": 151,
+        "Candlestick Point": 8,
+        "HP Shipyard Phase 1": 7
+      }
+    },
+    {
+      "name": "Project Type",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 3,
+      "top3": {
+        "New Construction": 167,
+        "Rehabilitation": 22,
+        "Adaptive Reuse": 1
+      }
+    },
+    {
+      "name": "Housing Tenure",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "top3": {
+        "Rental": 136,
+        "Ownership": 54
+      }
+    },
+    {
+      "name": "SSP Acquisition Date",
+      "dtype": "object",
+      "missing_rate": 0.9,
+      "unique": 19,
+      "top3": {
+        "10/11/2023": 1,
+        "01/31/2025": 1,
+        "06/15/2023": 1
+      }
+    },
+    {
+      "name": "Issuance of Notice to Proceed Date",
+      "dtype": "object",
+      "missing_rate": 0.631578947368421,
+      "unique": 57,
+      "top3": {
+        "06/01/2028": 5,
+        "07/01/2023": 3,
+        "07/01/2025": 2
+      }
+    },
+    {
+      "name": "Issuance of Building Permit Date",
+      "dtype": "object",
+      "missing_rate": 0.5894736842105263,
+      "unique": 76,
+      "top3": {
+        "06/01/2026": 2,
+        "12/05/2018": 2,
+        "05/09/2022": 1
+      }
+    },
+    {
+      "name": "Issuance of First Construction Document Date",
+      "dtype": "object",
+      "missing_rate": 0.8631578947368421,
+      "unique": 26,
+      "top3": {
+        "06/30/2021": 1,
+        "05/29/2025": 1,
+        "03/16/2023": 1
+      }
+    },
+    {
+      "name": "Estimated/Actual Construction Start Date",
+      "dtype": "object",
+      "missing_rate": 0.4789473684210526,
+      "unique": 86,
+      "top3": {
+        "06/01/2028": 5,
+        "07/01/2025": 3,
+        "06/14/2024": 2
+      }
+    },
+    {
+      "name": "Estimated Construction Completion Date",
+      "dtype": "object",
+      "missing_rate": 0.5,
+      "unique": 84,
+      "top3": {
+        "06/01/2030": 3,
+        "03/01/2028": 2,
+        "12/31/2030": 2
+      }
+    },
+    {
+      "name": "Project Lead Sponsor",
+      "dtype": "object",
+      "missing_rate": 0.07368421052631578,
+      "unique": 97,
+      "top3": {
+        "Reuben, Junius & Rose, LLP": 16,
+        "Multiphase Project Sponsor not Assigned": 14,
+        "Mercy Housing CA": 8
+      }
+    },
+    {
+      "name": "Project Co-Sponsor",
+      "dtype": "object",
+      "missing_rate": 0.8210526315789474,
+      "unique": 13,
+      "top3": {
+        "Multiphase Project Sponsor not Assigned": 14,
+        "Mission Economic Development Agency": 3,
+        "Tabernacle Community Development Corporation": 2
+      }
+    },
+    {
+      "name": "Project Owner",
+      "dtype": "object",
+      "missing_rate": 0.7157894736842105,
+      "unique": 33,
+      "top3": {
+        "Multiphase Project Owner not Assigned": 14,
+        "Chinatown Community Development Center": 4,
+        "Entity to be formed": 2
+      }
+    },
+    {
+      "name": "Planning  Case Number",
+      "dtype": "object",
+      "missing_rate": 0.1736842105263158,
+      "unique": 131,
+      "top3": {
+        "Not Applicable": 24,
+        "2008.0021": 4,
+        "2016-008651PRJ": 1
+      }
+    },
+    {
+      "name": "Planning Entitlements",
+      "dtype": "object",
+      "missing_rate": 0.6368421052631579,
+      "unique": 66,
+      "top3": {
+        "2008.0021C,2008.0021E,2008.0021E_11,2008.0021E_3,2008.0021E_5,2008.0021E_7,2008.0021E_9,2008.0021K,2008.0021M,2008.0021P,2008.0021T,2008.0021U,2008.0021U_3,2008.0021W,2008.0021Z": 4,
+        "2019-013276PRJ, 2019-013276ENV, 2019-013276ENX,": 1,
+        "2015-008058CUA,2015-008058DNX,2015-008058ENV,2015-008058PPA,2015-008058SHD": 1
+      }
+    },
+    {
+      "name": "Entitlement Approval Date",
+      "dtype": "object",
+      "missing_rate": 0.26842105263157895,
+      "unique": 116,
+      "top3": {
+        "02/10/2011": 4,
+        "03/03/2015": 4,
+        "10/05/2017": 3
+      }
+    },
+    {
+      "name": "Section 415 Declaration",
+      "dtype": "object",
+      "missing_rate": 0.42105263157894735,
+      "unique": 4,
+      "top3": {
+        "On-site BMR Project": 69,
+        "On-site BMR Project; Fee Payment": 39,
+        "Units for Off-site Project": 1
+      }
+    },
+    {
+      "name": "Total Project Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 122,
+      "min": 0,
+      "max": 3522,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000003522"
+      ]
+    },
+    {
+      "name": "MOHCD Affordable Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 92,
+      "min": 0,
+      "max": 425,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000425"
+      ]
+    },
+    {
+      "name": "% Affordable",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 32,
+      "min": 0,
+      "max": 100,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000100"
+      ]
+    },
+    {
+      "name": "SRO Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 16,
+      "min": 0,
+      "max": 109,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000109"
+      ]
+    },
+    {
+      "name": "Studio Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 37,
+      "min": 0,
+      "max": 425,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000425"
+      ]
+    },
+    {
+      "name": "1bd Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 47,
+      "min": 0,
+      "max": 158,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000158"
+      ]
+    },
+    {
+      "name": "2bd Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 40,
+      "min": 0,
+      "max": 156,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000156"
+      ]
+    },
+    {
+      "name": "3bd Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 27,
+      "min": 0,
+      "max": 88,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000088"
+      ]
+    },
+    {
+      "name": "4bd Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "min": 0,
+      "max": 29,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000029"
+      ]
+    },
+    {
+      "name": "5+ bd Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 4,
+      "min": 0,
+      "max": 6,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000006"
+      ]
+    },
+    {
+      "name": "Bedroom Undeclared Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 27,
+      "min": 0,
+      "max": 316,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000316"
+      ]
+    },
+    {
+      "name": "Mobility Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 22,
+      "min": 0,
+      "max": 158,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000158"
+      ]
+    },
+    {
+      "name": "Family Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 62,
+      "min": 0,
+      "max": 314,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000314"
+      ]
+    },
+    {
+      "name": "Senior Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 13,
+      "min": 0,
+      "max": 197,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000197"
+      ]
+    },
+    {
+      "name": "TAY Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 5,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000005"
+      ]
+    },
+    {
+      "name": "Homeless Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 22,
+      "min": 0,
+      "max": 136,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000136"
+      ]
+    },
+    {
+      "name": "Disabled Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "min": 0,
+      "max": 0,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00"
+      ]
+    },
+    {
+      "name": "LOSP Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 17,
+      "min": 0,
+      "max": 136,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000136"
+      ]
+    },
+    {
+      "name": "Public Housing Replacement Units",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 30,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000030"
+      ]
+    },
+    {
+      "name": "20% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 5,
+      "min": 0,
+      "max": 37,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000037"
+      ]
+    },
+    {
+      "name": "30% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 22,
+      "min": 0,
+      "max": 124,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000124"
+      ]
+    },
+    {
+      "name": "40% AMi",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 14,
+      "min": 0,
+      "max": 77,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000077"
+      ]
+    },
+    {
+      "name": "50% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 43,
+      "min": 0,
+      "max": 177,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000177"
+      ]
+    },
+    {
+      "name": "55% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 21,
+      "min": 0,
+      "max": 61,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000061"
+      ]
+    },
+    {
+      "name": "60% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 29,
+      "min": 0,
+      "max": 175,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000175"
+      ]
+    },
+    {
+      "name": "80% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 31,
+      "min": 0,
+      "max": 150,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000150"
+      ]
+    },
+    {
+      "name": "90% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 15,
+      "min": 0,
+      "max": 72,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000072"
+      ]
+    },
+    {
+      "name": "100% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 10,
+      "min": 0,
+      "max": 217,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000217"
+      ]
+    },
+    {
+      "name": "105% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "min": 0,
+      "max": 17,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000017"
+      ]
+    },
+    {
+      "name": "110% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 12,
+      "min": 0,
+      "max": 18,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000018"
+      ]
+    },
+    {
+      "name": "120% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 8,
+      "min": 0,
+      "max": 20,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000020"
+      ]
+    },
+    {
+      "name": "130% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 6,
+      "min": 0,
+      "max": 33,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000033"
+      ]
+    },
+    {
+      "name": "150% AMI",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 3,
+      "min": 0,
+      "max": 30,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000030"
+      ]
+    },
+    {
+      "name": "AMI Undeclared",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 24,
+      "min": 0,
+      "max": 316,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000316"
+      ]
+    },
+    {
+      "name": "Latitude",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 188,
+      "min": 37.71003156,
+      "max": 37.8216998,
+      "time_range": [
+        "1970-01-01 00:00:00.000000037",
+        "1970-01-01 00:00:00.000000037"
+      ]
+    },
+    {
+      "name": "Longitude",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 190,
+      "min": -122.5096946,
+      "max": -122.3650334,
+      "time_range": [
+        "1969-12-31 23:59:59.999999878",
+        "1969-12-31 23:59:59.999999878"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 190,
+      "top3": {
+        "(37.76151497, -122.4291743)": 1,
+        "(37.74852121, -122.4164258)": 1,
+        "(37.78538939, -122.4216114)": 1
+      },
+      "primary_key_candidate": true
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "Zip Code",
+      "right": "Supervisor District"
+    },
+    {
+      "type": "ge",
+      "left": "Zip Code",
+      "right": "Total Project Units"
+    }
+  ],
+  "facts_count": 324
+}

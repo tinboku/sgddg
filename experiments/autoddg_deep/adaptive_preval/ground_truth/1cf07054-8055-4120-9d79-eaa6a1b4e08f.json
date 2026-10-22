@@ -1,0 +1,73 @@
+{
+  "table": "1cf07054-8055-4120-9d79-eaa6a1b4e08f",
+  "rows": 267,
+  "cols": 5,
+  "columns": [
+    {
+      "name": "Month",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 12,
+      "top3": {
+        "July": 23,
+        "August": 23,
+        "September": 23
+      }
+    },
+    {
+      "name": "Sort",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 12,
+      "min": 1,
+      "max": 12,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000012"
+      ]
+    },
+    {
+      "name": "Year",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 23,
+      "min": 2003,
+      "max": 2025,
+      "time_range": [
+        "1970-01-01 00:00:00.000002003",
+        "1970-01-01 00:00:00.000002025"
+      ]
+    },
+    {
+      "name": "Page Views",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 266,
+      "min": 318355,
+      "max": 1075594920,
+      "time_range": [
+        "1970-01-01 00:00:00.000318355",
+        "1970-01-01 00:00:01.075594920"
+      ]
+    },
+    {
+      "name": "Page Visits",
+      "dtype": "object",
+      "missing_rate": 0.07865168539325842,
+      "unique": 240,
+      "top3": {
+        "1484766": 2,
+        "1807820": 2,
+        "1926503": 2
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "distinct_pair",
+      "left": "Month",
+      "right": "Sort"
+    }
+  ],
+  "facts_count": 25
+}

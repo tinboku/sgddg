@@ -1,0 +1,132 @@
+{
+  "table": "10811fc1-8ad0-4d8b-bdcd-cde9b43c86e6",
+  "rows": 926,
+  "cols": 10,
+  "columns": [
+    {
+      "name": "rep_file_num",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 925,
+      "top3": {
+        "811-06660": 2,
+        "811-00041": 1,
+        "811-22603": 1
+      }
+    },
+    {
+      "name": "CIK",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 926,
+      "min": 2230,
+      "max": 1745846,
+      "time_range": [
+        "1970-01-01 00:00:00.000002230",
+        "1970-01-01 00:00:00.001745846"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "entity_name",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 926,
+      "top3": {
+        "GENERAL AMERICAN INVESTORS CO INC": 1,
+        "Center Coast Brookfield Core MLP Fund I, LLC": 1,
+        "Multi-Strategy Growth & Income Fund": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "street1",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 346,
+      "top3": {
+        "100 BELLEVUE PARKWAY": 75,
+        "333 WEST WACKER DRIVE": 45,
+        "TWO INTERNATIONAL PLACE": 43
+      }
+    },
+    {
+      "name": "street2",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 177,
+      "top3": {
+        "[NULL]": 513,
+        "49TH FLOOR": 24,
+        "SUITE 1800": 18
+      }
+    },
+    {
+      "name": "city",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 97,
+      "top3": {
+        "NEW YORK": 254,
+        "CHICAGO": 116,
+        "BOSTON": 108
+      }
+    },
+    {
+      "name": "state_code",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 33,
+      "top3": {
+        "NY": 275,
+        "IL": 147,
+        "MA": 119
+      }
+    },
+    {
+      "name": "zip",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 185,
+      "top3": {
+        "60606": 98,
+        "19809": 71,
+        "02110": 59
+      }
+    },
+    {
+      "name": "filing_date",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 214,
+      "top3": {
+        "07/17/18": 61,
+        "07/13/18": 57,
+        "07/18/18": 45
+      },
+      "time_range": [
+        "1994-08-05 00:00:00",
+        "2018-07-18 00:00:00"
+      ]
+    },
+    {
+      "name": "doc_type_code",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 72,
+      "top3": {
+        "N-Q": 187,
+        "N-CSRS": 106,
+        "N-2": 66
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "distinct_pair",
+      "left": "rep_file_num",
+      "right": "CIK"
+    }
+  ],
+  "facts_count": 37
+}

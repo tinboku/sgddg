@@ -1,0 +1,116 @@
+{
+  "table": "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+  "rows": 96,
+  "cols": 10,
+  "columns": [
+    {
+      "name": "Year and Quarter",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 12,
+      "top3": {
+        "2023 Q1": 8,
+        "2023 Q2": 8,
+        "2023 Q3": 8
+      }
+    },
+    {
+      "name": "Topic",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "top3": {
+        "Rates by Cause": 60,
+        "Rates by Age": 36
+      }
+    },
+    {
+      "name": "Indicator",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 8,
+      "top3": {
+        "Infant mortality": 12,
+        "Neonatal mortality": 12,
+        "Postneonatal mortality": 12
+      }
+    },
+    {
+      "name": "Time Period",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "top3": {
+        "12 Month-ending": 96
+      }
+    },
+    {
+      "name": "Rate",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 86,
+      "min": 1.81,
+      "max": 113.14,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000113"
+      ]
+    },
+    {
+      "name": "Unit",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "top3": {
+        "per 100,000 births": 60,
+        "per 1,000 births": 36
+      }
+    },
+    {
+      "name": "Significant",
+      "dtype": "object",
+      "missing_rate": 0.9583333333333334,
+      "unique": 1,
+      "top3": {
+        "*": 4
+      }
+    },
+    {
+      "name": "Standard Error",
+      "dtype": "float64",
+      "missing_rate": 1.0,
+      "unique": 0,
+      "min": null,
+      "max": null
+    },
+    {
+      "name": "Footnote Symbol",
+      "dtype": "float64",
+      "missing_rate": 1.0,
+      "unique": 0,
+      "min": null,
+      "max": null
+    },
+    {
+      "name": "Footnote",
+      "dtype": "float64",
+      "missing_rate": 1.0,
+      "unique": 0,
+      "min": null,
+      "max": null
+    }
+  ],
+  "relationships": [
+    {
+      "type": "equal",
+      "left": "Standard Error",
+      "right": "Footnote Symbol"
+    },
+    {
+      "type": "equal",
+      "left": "Standard Error",
+      "right": "Footnote"
+    }
+  ],
+  "facts_count": 41
+}

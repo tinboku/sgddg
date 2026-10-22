@@ -1,0 +1,368 @@
+{
+  "table": "1ff67fc2-ff44-48ea-8b9b-d19bc71c9e08",
+  "rows": 78300,
+  "cols": 30,
+  "columns": [
+    {
+      "name": "ADDRESS",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 73220,
+      "top3": {
+        "101 N Main St": 39,
+        "101 S Main St": 34,
+        "101 E Main St": 33
+      }
+    },
+    {
+      "name": "BKCLASS",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 7,
+      "top3": {
+        "N": 36055,
+        "NM": 23565,
+        "SM": 14300
+      }
+    },
+    {
+      "name": "CBSA",
+      "dtype": "object",
+      "missing_rate": 0.12363984674329502,
+      "unique": 933,
+      "top3": {
+        "New York-Newark-Jersey City, NY-NJ-PA": 4177,
+        "Chicago-Naperville-Elgin, IL-IN-WI": 2219,
+        "Los Angeles-Long Beach-Anaheim, CA": 1968
+      }
+    },
+    {
+      "name": "CBSA_DIV",
+      "dtype": "object",
+      "missing_rate": 0.7753512132822478,
+      "unique": 31,
+      "top3": {
+        "New York-Jersey City-White Plains, NY-NJ": 2329,
+        "Chicago-Naperville-Evanston, IL": 1658,
+        "Los Angeles-Long Beach-Glendale, CA": 1416
+      }
+    },
+    {
+      "name": "CBSA_DIV_FLG",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 1,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "CBSA_DIV_NO",
+      "dtype": "float64",
+      "missing_rate": 0.6517113665389528,
+      "unique": 32,
+      "min": 0.0,
+      "max": 48864.0
+    },
+    {
+      "name": "CBSA_METRO",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 389,
+      "min": 0,
+      "max": 49740,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000049740"
+      ]
+    },
+    {
+      "name": "CBSA_METRO_FLG",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 1,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "CBSA_METRO_NAME",
+      "dtype": "object",
+      "missing_rate": 0.23466155810983397,
+      "unique": 388,
+      "top3": {
+        "New York-Newark-Jersey City, NY-NJ-PA": 4177,
+        "Chicago-Naperville-Elgin, IL-IN-WI": 2219,
+        "Los Angeles-Long Beach-Anaheim, CA": 1968
+      }
+    },
+    {
+      "name": "CBSA_MICRO_FLG",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 1,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "CBSA_NO",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 934,
+      "min": 0,
+      "max": 49820,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000049820"
+      ]
+    },
+    {
+      "name": "CERT",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 4379,
+      "min": 14,
+      "max": 91325,
+      "time_range": [
+        "1970-01-01 00:00:00.000000014",
+        "1970-01-01 00:00:00.000091325"
+      ]
+    },
+    {
+      "name": "CITY",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 10271,
+      "top3": {
+        "Houston": 620,
+        "Chicago": 493,
+        "New York": 434
+      }
+    },
+    {
+      "name": "COUNTY",
+      "dtype": "object",
+      "missing_rate": 0.010421455938697317,
+      "unique": 1918,
+      "top3": {
+        "Los Angeles": 1416,
+        "Cook": 1148,
+        "Orange": 962
+      }
+    },
+    {
+      "name": "CSA",
+      "dtype": "object",
+      "missing_rate": 0.2935249042145594,
+      "unique": 174,
+      "top3": {
+        "New York-Newark, NY-NJ-CT-PA": 4521,
+        "Los Angeles-Long Beach, CA": 2546,
+        "Chicago-Naperville, IL-IN-WI": 2353
+      }
+    },
+    {
+      "name": "CSA_FLG",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 1,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "CSA_NO",
+      "dtype": "float64",
+      "missing_rate": 0.16988505747126437,
+      "unique": 175,
+      "min": 0.0,
+      "max": 566.0,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000566"
+      ]
+    },
+    {
+      "name": "ESTYMD",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 21387,
+      "top3": {
+        "01/01/1889": 306,
+        "01/01/1934": 251,
+        "01/01/1890": 240
+      },
+      "time_range": [
+        "1784-01-01 00:00:00",
+        "2025-10-16 00:00:00"
+      ]
+    },
+    {
+      "name": "FI_UNINUM",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 4379,
+      "min": 6,
+      "max": 663156,
+      "time_range": [
+        "1970-01-01 00:00:00.000000006",
+        "1970-01-01 00:00:00.000663156"
+      ]
+    },
+    {
+      "name": "MAINOFF",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": 0,
+      "max": 1,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000001"
+      ]
+    },
+    {
+      "name": "NAME",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 3850,
+      "top3": {
+        "JPMorgan Chase Bank, National Association": 5255,
+        "Wells Fargo Bank, National Association": 4218,
+        "Bank of America, National Association": 3860
+      }
+    },
+    {
+      "name": "OFFNAME",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 47324,
+      "top3": {
+        "BANK OF ENGLAND MORTGAGE": 79,
+        "DRIVE-IN BRANCH": 74,
+        "SPRINGFIELD BRANCH": 60
+      }
+    },
+    {
+      "name": "OFFNUM",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 9739,
+      "min": 0,
+      "max": 10568,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000010568"
+      ]
+    },
+    {
+      "name": "RUNDATE",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "top3": {
+        "07/17/2026": 78300
+      },
+      "time_range": [
+        "2026-07-17 00:00:00",
+        "2026-07-17 00:00:00"
+      ]
+    },
+    {
+      "name": "SERVTYPE",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 15,
+      "min": 0,
+      "max": 99,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000099"
+      ]
+    },
+    {
+      "name": "STALP",
+      "dtype": "object",
+      "missing_rate": 0.010242656449553002,
+      "unique": 58,
+      "top3": {
+        "TX": 6360,
+        "CA": 5589,
+        "FL": 4346
+      }
+    },
+    {
+      "name": "STCNTY",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 3204,
+      "min": 0,
+      "max": 78030,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000078030"
+      ]
+    },
+    {
+      "name": "STNAME",
+      "dtype": "object",
+      "missing_rate": 0.010242656449553002,
+      "unique": 58,
+      "top3": {
+        "Texas": 6360,
+        "California": 5589,
+        "Florida": 4346
+      }
+    },
+    {
+      "name": "UNINUM",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 78300,
+      "min": 3,
+      "max": 677932,
+      "time_range": [
+        "1970-01-01 00:00:00.000000003",
+        "1970-01-01 00:00:00.000677932"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "ZIP",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 18108,
+      "top3": {
+        "00000": 791,
+        "10022": 50,
+        "33134": 47
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "CBSA_DIV_NO",
+      "right": "CBSA_METRO_FLG"
+    },
+    {
+      "type": "ge",
+      "left": "CBSA_DIV_NO",
+      "right": "CBSA_MICRO_FLG"
+    }
+  ],
+  "facts_count": 139
+}

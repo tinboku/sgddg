@@ -1,0 +1,489 @@
+{
+  "table": "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+  "rows": 49029,
+  "cols": 47,
+  "columns": [
+    {
+      "name": "Eviction ID",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 49029,
+      "top3": {
+        "M111613": 1,
+        "M162552": 1,
+        "M070762": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Address",
+      "dtype": "object",
+      "missing_rate": 0.0002855452895225275,
+      "unique": 7302,
+      "top3": {
+        "1100 Block Of Market Street": 433,
+        "1300 Block Of Market Street": 336,
+        "200 Block Of Fremont Street": 289
+      }
+    },
+    {
+      "name": "City",
+      "dtype": "object",
+      "missing_rate": 6.118827632625589e-05,
+      "unique": 21,
+      "top3": {
+        "San Francisco": 48997,
+        "San Franicsco": 5,
+        "San Franisco": 3
+      }
+    },
+    {
+      "name": "State",
+      "dtype": "object",
+      "missing_rate": 6.118827632625589e-05,
+      "unique": 3,
+      "top3": {
+        "CA": 49021,
+        "Ca": 4,
+        "CA`": 1
+      }
+    },
+    {
+      "name": "Eviction Notice Source Zipcode",
+      "dtype": "object",
+      "missing_rate": 0.013175875502253768,
+      "unique": 56,
+      "top3": {
+        "94110": 5689,
+        "94109": 3678,
+        "94102": 3323
+      }
+    },
+    {
+      "name": "File Date",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 7269,
+      "top3": {
+        "08/16/2012": 240,
+        "02/05/2016": 232,
+        "09/24/2010": 112
+      },
+      "time_range": [
+        "1997-01-02 00:00:00",
+        "2026-10-09 00:00:00"
+      ]
+    },
+    {
+      "name": "Non Payment",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Breach",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Nuisance",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Illegal Use",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Failure to Sign Renewal",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Access Denial",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Unapproved Subtenant",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Owner Move In",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Demolition",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Capital Improvement",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Substantial Rehab",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Ellis Act WithDrawal",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Condo Conversion",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Roommate Same Unit",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Other Cause",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Late Payments",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Lead Remediation",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Development",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Good Samaritan Ends",
+      "dtype": "bool",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "min": false,
+      "max": true
+    },
+    {
+      "name": "Constraints Date",
+      "dtype": "object",
+      "missing_rate": 0.9088702604580963,
+      "unique": 2874,
+      "top3": {
+        "06/20/2021": 9,
+        "08/01/2005": 9,
+        "05/01/2018": 7
+      }
+    },
+    {
+      "name": "Supervisor District",
+      "dtype": "float64",
+      "missing_rate": 0.0017948561055701727,
+      "unique": 11,
+      "min": 1.0,
+      "max": 11.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000011"
+      ]
+    },
+    {
+      "name": "Neighborhoods - Analysis Boundaries",
+      "dtype": "object",
+      "missing_rate": 0.0019376287503314366,
+      "unique": 41,
+      "top3": {
+        "Mission": 5573,
+        "Tenderloin": 3573,
+        "Sunset/Parkside": 2976
+      }
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "missing_rate": 0.0015704990923739012,
+      "unique": 10583,
+      "top3": {
+        "(37.779530959, -122.413542707)": 433,
+        "(37.777083316, -122.416979514)": 336,
+        "(37.78832457, -122.393911345)": 290
+      }
+    },
+    {
+      "name": "Shape",
+      "dtype": "object",
+      "missing_rate": 0.0015704990923739012,
+      "unique": 10583,
+      "top3": {
+        "POINT (-122.413542707 37.779530959)": 433,
+        "POINT (-122.416979514 37.777083316)": 336,
+        "POINT (-122.393911345 37.78832457)": 290
+      }
+    },
+    {
+      "name": "data_as_of",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "top3": {
+        "2026/10/20 12:00:00 AM": 49029
+      },
+      "time_range": [
+        "2026-10-20 00:00:00",
+        "2026-10-20 00:00:00"
+      ]
+    },
+    {
+      "name": "data_loaded_at",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 1,
+      "top3": {
+        "2026/10/20 05:22:37 AM": 49029
+      },
+      "time_range": [
+        "2026-10-20 05:22:37",
+        "2026-10-20 05:22:37"
+      ]
+    },
+    {
+      "name": "SF Find Neighborhoods",
+      "dtype": "float64",
+      "missing_rate": 0.0019376287503314366,
+      "unique": 116,
+      "min": 1.0,
+      "max": 117.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000117"
+      ]
+    },
+    {
+      "name": "Current Police Districts",
+      "dtype": "float64",
+      "missing_rate": 0.002141589671418956,
+      "unique": 10,
+      "min": 1.0,
+      "max": 10.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000010"
+      ]
+    },
+    {
+      "name": "Current Supervisor Districts",
+      "dtype": "float64",
+      "missing_rate": 0.0019376287503314366,
+      "unique": 11,
+      "min": 1.0,
+      "max": 11.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000011"
+      ]
+    },
+    {
+      "name": "Analysis Neighborhoods",
+      "dtype": "float64",
+      "missing_rate": 0.0019580248424401884,
+      "unique": 41,
+      "min": 1.0,
+      "max": 41.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000041"
+      ]
+    },
+    {
+      "name": "DELETE - Neighborhoods",
+      "dtype": "float64",
+      "missing_rate": 0.0019580248424401884,
+      "unique": 41,
+      "min": 1.0,
+      "max": 41.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000041"
+      ]
+    },
+    {
+      "name": "DELETE - Police Districts",
+      "dtype": "float64",
+      "missing_rate": 0.0021211935793102044,
+      "unique": 10,
+      "min": 1.0,
+      "max": 10.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000010"
+      ]
+    },
+    {
+      "name": "DELETE - Supervisor Districts",
+      "dtype": "float64",
+      "missing_rate": 0.0019376287503314366,
+      "unique": 11,
+      "min": 1.0,
+      "max": 11.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000011"
+      ]
+    },
+    {
+      "name": "DELETE - Fire Prevention Districts",
+      "dtype": "float64",
+      "missing_rate": 0.003936445776989129,
+      "unique": 15,
+      "min": 1.0,
+      "max": 15.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000015"
+      ]
+    },
+    {
+      "name": "DELETE - Zip Codes",
+      "dtype": "float64",
+      "missing_rate": 0.0015704990923739012,
+      "unique": 28,
+      "min": 54.0,
+      "max": 29492.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000054",
+        "1970-01-01 00:00:00.000029492"
+      ]
+    },
+    {
+      "name": "CBD, BID and GBD Boundaries as of 2017",
+      "dtype": "float64",
+      "missing_rate": 0.8887189214546493,
+      "unique": 15,
+      "min": 1.0,
+      "max": 15.0
+    },
+    {
+      "name": "Central Market/Tenderloin Boundary",
+      "dtype": "float64",
+      "missing_rate": 0.9034856921413857,
+      "unique": 1,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "name": "Areas of Vulnerability, 2016",
+      "dtype": "float64",
+      "missing_rate": 0.0019580248424401884,
+      "unique": 2,
+      "min": 1.0,
+      "max": 2.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000002"
+      ]
+    },
+    {
+      "name": "Central Market/Tenderloin Boundary Polygon - Updated",
+      "dtype": "float64",
+      "missing_rate": 0.9034448999571683,
+      "unique": 1,
+      "min": 1.0,
+      "max": 1.0
+    },
+    {
+      "name": "Fix It Zones as of 2018-02-07",
+      "dtype": "float64",
+      "missing_rate": 0.8625711313712293,
+      "unique": 25,
+      "min": 1.0,
+      "max": 25.0
+    },
+    {
+      "name": "Neighborhoods",
+      "dtype": "float64",
+      "missing_rate": 0.0019376287503314366,
+      "unique": 116,
+      "min": 1.0,
+      "max": 117.0,
+      "time_range": [
+        "1970-01-01 00:00:00.000000001",
+        "1970-01-01 00:00:00.000000117"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "Non Payment",
+      "right": "Failure to Sign Renewal"
+    },
+    {
+      "type": "ge",
+      "left": "Non Payment",
+      "right": "Access Denial"
+    }
+  ],
+  "facts_count": 229
+}

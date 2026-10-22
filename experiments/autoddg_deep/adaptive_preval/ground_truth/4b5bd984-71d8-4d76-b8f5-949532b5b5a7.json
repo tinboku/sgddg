@@ -1,0 +1,243 @@
+{
+  "table": "4b5bd984-71d8-4d76-b8f5-949532b5b5a7",
+  "rows": 371479,
+  "cols": 19,
+  "columns": [
+    {
+      "name": "Service Request #",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 371479,
+      "top3": {
+        "2021-847416": 1,
+        "2019-614376": 1,
+        "2019-614378": 1
+      },
+      "primary_key_candidate": true
+    },
+    {
+      "name": "Request Type",
+      "dtype": "object",
+      "missing_rate": 0.004729742461888828,
+      "unique": 40,
+      "top3": {
+        "Trash/Recycling": 169981,
+        "Property Maintenance": 38257,
+        "Roads/Drainage": 36121
+      }
+    },
+    {
+      "name": "Request Reason",
+      "dtype": "object",
+      "missing_rate": 0.0047862732482859055,
+      "unique": 184,
+      "top3": {
+        "Request a Large Item Pick Up": 45990,
+        "Property Maintenance": 38334,
+        "Abandoned/Junk Vehicles": 32934
+      }
+    },
+    {
+      "name": "Date Created",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 289854,
+      "top3": {
+        "01/02/2019 11:43:09 AM": 13482,
+        "01/02/2019 03:01:27 PM": 11769,
+        "01/02/2019 03:01:26 PM": 11762
+      },
+      "time_range": [
+        "2019-01-01 21:33:04",
+        "2026-10-20 23:46:58"
+      ]
+    },
+    {
+      "name": "Date Modified",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 206617,
+      "top3": {
+        "03/23/2020 09:59:29 PM": 21851,
+        "03/23/2020 09:59:33 PM": 16458,
+        "03/23/2020 09:59:18 PM": 15692
+      },
+      "time_range": [
+        "2019-01-03 16:28:02",
+        "2026-10-20 23:47:01"
+      ]
+    },
+    {
+      "name": "Date Closed",
+      "dtype": "object",
+      "missing_rate": 0.42959628942685857,
+      "unique": 110031,
+      "top3": {
+        "10/15/2013 07:00:00 PM": 1426,
+        "11/07/2012 06:00:00 PM": 1346,
+        "02/24/2013 06:00:00 PM": 919
+      }
+    },
+    {
+      "name": "Request Status",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 2,
+      "top3": {
+        "Closed": 340784,
+        "Pending": 30695
+      }
+    },
+    {
+      "name": "Responsible Agency",
+      "dtype": "object",
+      "missing_rate": 0.01873322583510777,
+      "unique": 28,
+      "top3": {
+        "Department of Sanitation": 169087,
+        "Department of Public Works": 109958,
+        "Department of Code Enforcement": 39949
+      }
+    },
+    {
+      "name": "Address",
+      "dtype": "object",
+      "missing_rate": 0.03206372365598055,
+      "unique": 167367,
+      "top3": {
+        "New Orleans,LA": 1559,
+        "1300 Perdido St": 348,
+        "801 Bourbon St, New Orleans, Louisiana, 70116": 136
+      }
+    },
+    {
+      "name": "Council District",
+      "dtype": "object",
+      "missing_rate": 0.2499414502569459,
+      "unique": 5,
+      "top3": {
+        "B": 66493,
+        "A": 61737,
+        "D": 60530
+      }
+    },
+    {
+      "name": "Status",
+      "dtype": "object",
+      "missing_rate": 0.6424400840962746,
+      "unique": 49,
+      "top3": {
+        "Resolved": 78279,
+        "Pending": 14384,
+        "Assigned to Contractor": 12124
+      }
+    },
+    {
+      "name": "Contractor",
+      "dtype": "object",
+      "missing_rate": 0.8371913351764164,
+      "unique": 9,
+      "top3": {
+        "Richards Disposal": 23159,
+        "Metro Disposal": 21599,
+        "IV Waste": 7487
+      }
+    },
+    {
+      "name": "Contractor Action",
+      "dtype": "object",
+      "missing_rate": 0.9516042629596828,
+      "unique": 11,
+      "top3": {
+        "Completed": 15992,
+        "Invalid": 676,
+        "Invalid Request": 514
+      }
+    },
+    {
+      "name": "RowID",
+      "dtype": "int64",
+      "missing_rate": 0.0,
+      "unique": 371479,
+      "min": 194451,
+      "max": 1330219,
+      "time_range": [
+        "1970-01-01 00:00:00.000194451",
+        "1970-01-01 00:00:00.001330219"
+      ],
+      "primary_key_candidate": true
+    },
+    {
+      "name": "X",
+      "dtype": "float64",
+      "missing_rate": 0.05817287114480226,
+      "unique": 159713,
+      "min": 537828.658377,
+      "max": 3785502.38648,
+      "time_range": [
+        "1970-01-01 00:00:00.000537828",
+        "1970-01-01 00:00:00.003785502"
+      ]
+    },
+    {
+      "name": "Y",
+      "dtype": "float64",
+      "missing_rate": 0.05817287114480226,
+      "unique": 162770,
+      "min": 508696.4919,
+      "max": 609487.194123,
+      "time_range": [
+        "1970-01-01 00:00:00.000508696",
+        "1970-01-01 00:00:00.000609487"
+      ]
+    },
+    {
+      "name": "Longitude",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 203676,
+      "min": -99.98085714927984,
+      "max": 0.0,
+      "time_range": [
+        "1969-12-31 23:59:59.999999901",
+        "1970-01-01 00:00:00"
+      ]
+    },
+    {
+      "name": "Latitude",
+      "dtype": "float64",
+      "missing_rate": 0.0,
+      "unique": 205903,
+      "min": 0.0,
+      "max": 30.16636101765537,
+      "time_range": [
+        "1970-01-01 00:00:00",
+        "1970-01-01 00:00:00.000000030"
+      ]
+    },
+    {
+      "name": "Location",
+      "dtype": "object",
+      "missing_rate": 0.0,
+      "unique": 206471,
+      "top3": {
+        "(0.0, 0.0)": 21610,
+        "(29.9520282971, -90.0770085988)": 305,
+        "(29.95958639638354, -90.06488875731974)": 136
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "ge",
+      "left": "RowID",
+      "right": "Longitude"
+    },
+    {
+      "type": "ge",
+      "left": "RowID",
+      "right": "Latitude"
+    }
+  ],
+  "facts_count": 78
+}
