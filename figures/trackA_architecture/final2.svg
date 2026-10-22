@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+<defs>
+  <marker id="arrow" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M0 0L16 8L0 16Z" fill="#526575"/></marker>
+  <marker id="amberArrow" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M0 0L16 8L0 16Z" fill="#d39322"/></marker>
+  <style>
+    text{fill:#213746}.title{font-size:34px;font-weight:700}.zone{font-size:24px;font-weight:700;letter-spacing:1px}.name{font-size:25px;font-weight:700}.sub{font-size:18px}.micro{font-size:15px}.muted{fill:#6e7e89}.blue{fill:#4A90E2}.amberText{fill:#a96812}.flow{fill:none;stroke:#526575;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.amberFlow{fill:none;stroke:#d39322;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.dash{stroke-dasharray:14 10}
+  </style>
+</defs>
+<rect width="2400" height="1350" fill="#fff"/>
+<text x="70" y="68" class="title">Track A — Evidence-aware description generation</text>
+<text x="70" y="108" class="sub muted">Existing pipeline in gray  ·  research mechanisms in amber dashed frames  ·  blue icons show the system modules</text>
+
+<!-- four aligned columns -->
+<rect x="45" y="150" width="420" height="1010" rx="28" fill="#f7fbff" stroke="#d5e2ec" stroke-width="3"/>
+<rect x="500" y="150" width="420" height="1010" rx="28" fill="#f7fbff" stroke="#d5e2ec" stroke-width="3"/>
+<rect x="955" y="150" width="760" height="1010" rx="28" fill="#fffaf0" stroke="#d5e2ec" stroke-width="3"/>
+<rect x="1750" y="150" width="605" height="1010" rx="28" fill="#f7fbff" stroke="#d5e2ec" stroke-width="3"/>
+<text x="80" y="205" class="zone blue">INPUT</text><text x="535" y="205" class="zone blue">EXTRACTION</text><text x="990" y="205" class="zone amberText">EVIDENCE PREPARATION</text><text x="1785" y="205" class="zone blue">GENERATION</text>
+
+<!-- input: big table icon -->
+<rect x="110" y="270" width="290" height="230" rx="22" fill="#fff" stroke="#4A90E2" stroke-width="4"/>
+<rect x="138" y="310" width="234" height="145" rx="5" fill="#f7fbff" stroke="#4A90E2" stroke-width="4"/>
+<rect x="138" y="310" width="234" height="32" fill="#4A90E2"/><path d="M138 375h234M138 408h234M138 441h234M195 310v145M273 310v145M331 310v145" stroke="#9bc4ee" stroke-width="3"/>
+<circle cx="157" cy="326" r="5" fill="#fff"/><circle cx="214" cy="326" r="5" fill="#fff"/><circle cx="292" cy="326" r="5" fill="#fff"/><circle cx="350" cy="326" r="5" fill="#fff"/>
+<text x="120" y="550" class="name">Tabular Dataset</text><text x="125" y="582" class="sub muted">columns · rows · values</text>
+<rect x="86" y="660" width="338" height="245" rx="20" fill="#fff" stroke="#b7cad9" stroke-width="3"/>
+<text x="112" y="708" class="sub blue" font-weight="700">Schema + samples</text>
+<rect x="112" y="735" width="286" height="132" rx="5" fill="#f7fbff" stroke="#8fb8dc" stroke-width="3"/><rect x="112" y="735" width="286" height="28" fill="#dcecfb"/><path d="M112 790h286M112 819h286M182 735v132M270 735v132M340 735v132" stroke="#abc9e3" stroke-width="3"/>
+<path d="M130 778h38M200 778h46M286 778h38M130 807h28M200 807h50M286 807h42M130 836h40M200 836h34M286 836h36" stroke="#4A90E2" stroke-width="5" stroke-linecap="round"/>
+
+<!-- extraction: profiler icon -->
+<rect x="535" y="270" width="350" height="505" rx="22" fill="#fff" stroke="#b6c6d1" stroke-width="4"/>
+<g transform="translate(585 305)"><rect x="0" y="0" width="250" height="185" rx="18" fill="#eef6ff" stroke="#4A90E2" stroke-width="3"/><path d="M28 144h190" stroke="#9ebfe3" stroke-width="3"/><path d="M48 144V92M82 144V58M116 144V78" stroke="#ef6b64" stroke-width="20"/><path d="M150 144V42M184 144V100" stroke="#f2ba38" stroke-width="20"/><path d="M28 35a38 38 0 0 1 45 66l-45-66" fill="#4A90E2"/><path d="M28 35a38 38 0 0 0 45 66" fill="none" stroke="#fff" stroke-width="6"/><circle cx="204" cy="50" r="23" fill="none" stroke="#7a9fc1" stroke-width="7"/><path d="M220 67l18 18" stroke="#7a9fc1" stroke-width="7" stroke-linecap="round"/><circle cx="208" cy="120" r="18" fill="none" stroke="#4A90E2" stroke-width="6"/><path d="M208 120l11-8M208 120v-10" stroke="#4A90E2" stroke-width="4" stroke-linecap="round"/><path d="M44 175h16M72 175h16M100 175h16M128 175h16" stroke="#ef6b64" stroke-width="7" stroke-linecap="round"/></g>
+<text x="565" y="540" class="name">Content Profiler</text><text x="565" y="572" class="sub muted">size · missing · time · geo</text>
+<g transform="translate(565 620)"><rect width="290" height="105" rx="15" fill="#f8fbfd" stroke="#c9d8e3" stroke-width="2"/><circle cx="42" cy="46" r="22" fill="#ef6b64"/><path d="M30 56h24M34 47h16M38 38h8" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="116" cy="46" r="22" fill="#f2ba38"/><path d="M116 29v18l10 7" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="190" cy="46" r="22" fill="#4A90E2"/><path d="M190 28v36M172 46h36" stroke="#fff" stroke-width="4"/><path d="M256 30c0 20-18 36-36 36 0-20 18-36 36-36Z" fill="#70c49b"/><circle cx="256" cy="30" r="4" fill="#fff"/></g>
+<text x="577" y="748" class="micro muted">statistical · temporal · spatial</text>
+
+<!-- research preparation -->
+<rect x="985" y="240" width="700" height="820" rx="26" fill="#fff8e9" stroke="#d39322" stroke-width="5" class="dash"/>
+<text x="1025" y="290" class="name amberText">Research Mechanisms</text><text x="1025" y="322" class="sub amberText">select · organize · adapt</text>
+<rect x="1025" y="355" width="620" height="190" rx="18" fill="#fff" stroke="#e0b36c" stroke-width="3"/><circle cx="1065" cy="397" r="25" fill="#fff1d2" stroke="#d39322" stroke-width="3"/><text x="1057" y="405" class="sub amberText" font-weight="700">1</text><text x="1110" y="401" class="name">Information Selection</text>
+<g transform="translate(1060 455)"><text x="0" y="22" class="micro muted">FactSet</text><rect x="90" y="0" width="78" height="28" rx="6" fill="#f2ba38"/><rect x="178" y="0" width="78" height="28" rx="6" fill="#fff" stroke="#d39322" stroke-width="3"/><rect x="266" y="0" width="78" height="28" rx="6" fill="#ef6b64"/><rect x="354" y="0" width="78" height="28" rx="6" fill="#dfe5e9"/><path d="M96 52h420" stroke="#c6d0d7" stroke-width="3"/><path d="M108 68h34M196 68h34M284 68h34" stroke="#d39322" stroke-width="7" stroke-linecap="round"/></g>
+<rect x="1025" y="575" width="620" height="190" rx="18" fill="#fff" stroke="#e0b36c" stroke-width="3"/><circle cx="1065" cy="617" r="25" fill="#fff1d2" stroke="#d39322" stroke-width="3"/><text x="1057" y="625" class="sub amberText" font-weight="700">2</text><text x="1110" y="621" class="name">Context Organization</text>
+<g transform="translate(1060 687)"><rect width="62" height="29" rx="6" fill="#91b4cc"/><rect x="72" width="90" height="29" rx="6" fill="#4A90E2"/><rect x="172" width="52" height="29" rx="6" fill="#f2ba38"/><path d="M248 14h70" class="amberFlow" marker-end="url(#amberArrow)"/><rect x="344" width="52" height="29" rx="6" fill="#f2ba38"/><rect x="406" width="90" height="29" rx="6" fill="#4A90E2"/><rect x="506" width="62" height="29" rx="6" fill="#91b4cc"/></g><text x="1060" y="750" class="micro muted">unordered evidence → ordered context</text>
+<rect x="1025" y="795" width="620" height="190" rx="18" fill="#fff" stroke="#e0b36c" stroke-width="3"/><circle cx="1065" cy="837" r="25" fill="#fff1d2" stroke="#d39322" stroke-width="3"/><text x="1057" y="845" class="sub amberText" font-weight="700">3</text><text x="1110" y="841" class="name">Dataset-adaptive Policy</text>
+<g transform="translate(1060 895)"><rect width="250" height="65" fill="#fff" stroke="#c9a667" stroke-width="2"/><rect width="250" height="22" fill="#f5e6c5"/><path d="M0 22h250M0 43h250M82 0v65M164 0v65" stroke="#c9a667" stroke-width="2"/><circle cx="42" cy="33" r="7" fill="#ef6b64"/><circle cx="124" cy="33" r="7" fill="#4A90E2"/><circle cx="206" cy="33" r="7" fill="#70c49b"/><path d="M275 32h48" class="amberFlow" marker-end="url(#amberArrow)"/><rect x="360" width="195" height="65" rx="8" fill="#fff5de" stroke="#d39322" stroke-width="2"/><path d="M382 22h120M382 42h78" stroke="#d39322" stroke-width="7" stroke-linecap="round"/></g><text x="1060" y="1008" class="micro muted">signals → strategy table</text>
+
+<!-- generation: robot + document icons -->
+<rect x="1790" y="270" width="525" height="485" rx="22" fill="#fff" stroke="#b6c6d1" stroke-width="4"/>
+<g transform="translate(1880 315)"><path d="M105 0v22" stroke="#4A90E2" stroke-width="7"/><circle cx="105" cy="0" r="8" fill="#4A90E2"/><rect x="0" y="25" width="210" height="150" rx="35" fill="#4A90E2"/><rect x="20" y="48" width="170" height="105" rx="22" fill="#dcecfb"/><circle cx="66" cy="96" r="16" fill="#4A90E2"/><circle cx="144" cy="96" r="16" fill="#4A90E2"/><path d="M67 128q38 25 76 0" fill="none" stroke="#4A90E2" stroke-width="7" stroke-linecap="round"/><circle cx="0" cy="100" r="12" fill="#4A90E2"/><circle cx="210" cy="100" r="12" fill="#4A90E2"/></g>
+<text x="1850" y="540" class="name">LLM</text><text x="1850" y="573" class="sub muted">prompt + prepared evidence</text><path d="M1850 610h400" stroke="#b8c9d5" stroke-width="3" stroke-dasharray="8 8"/><text x="1850" y="650" class="micro muted">grounded prose</text>
+<path d="M2050 690v55" class="flow" marker-end="url(#arrow)"/>
+<!-- SFD --> <rect x="1815" y="790" width="220" height="230" rx="18" fill="#fff" stroke="#9eb5c7" stroke-width="3"/><path d="M1855 830h132l28 28v105h-160Z" fill="#fff" stroke="#4A90E2" stroke-width="4"/><path d="M1987 830v30h28" fill="#dcecfb" stroke="#4A90E2" stroke-width="4"/><path d="M1878 880h88M1878 905h68M1878 930h92" stroke="#4A90E2" stroke-width="6" stroke-linecap="round"/><circle cx="1974" cy="948" r="18" fill="none" stroke="#ef6b64" stroke-width="6"/><path d="M1987 961l16 16" stroke="#ef6b64" stroke-width="6" stroke-linecap="round"/><text x="1855" y="990" class="sub blue" font-weight="700">SFD</text><text x="1855" y="1048" class="micro muted">search-focused</text>
+<!-- UFD --> <rect x="2070" y="790" width="220" height="230" rx="18" fill="#fff" stroke="#9eb5c7" stroke-width="3"/><path d="M2110 830h132l28 28v105h-160Z" fill="#fff" stroke="#4A90E2" stroke-width="4"/><path d="M2242 830v30h28" fill="#dcecfb" stroke="#4A90E2" stroke-width="4"/><circle cx="2190" cy="888" r="18" fill="#4A90E2"/><path d="M2158 934q32-34 64 0v22h-64Z" fill="#4A90E2"/><path d="M2132 968h116" stroke="#9bc4ee" stroke-width="6"/><text x="2110" y="990" class="sub blue" font-weight="700">UFD</text><text x="2110" y="1048" class="micro muted">user-focused</text>
+
+<!-- flow and feedback -->
+<path d="M465 385H525" class="flow" marker-end="url(#arrow)"/><path d="M885 485H975" class="flow" marker-end="url(#arrow)"/><path d="M1685 575H1780" class="flow" marker-end="url(#arrow)"/>
+<path d="M2290 1040V1100H720V775" class="amberFlow dash" marker-end="url(#amberArrow)"/><text x="1315" y="1085" class="micro amberText">feedback loop</text>
+<!-- legend --> <line x1="80" y1="1230" x2="145" y2="1230" class="flow" marker-end="url(#arrow)"/><text x="160" y="1237" class="micro muted">data flow</text><line x1="280" y1="1230" x2="345" y2="1230" class="amberFlow dash"/><text x="360" y="1237" class="micro amberText">research mechanism</text>
+</svg>
