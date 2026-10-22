@@ -1,0 +1,576 @@
+{
+ "rule": "Most-confusable neighbour per subset30 table (local, no API) + confusion triples.",
+ "neighbours": {
+  "0cbb09dc-4012-4f18-900e-6d746bfc10d3": {
+   "neighbour": "3e23114a-2657-4880-8add-f3c24425f937",
+   "tier": 2,
+   "bm25": 369.0723756411988,
+   "bm25_rank": 2,
+   "bm25_top1": "53acdac4-4f73-44fa-ad63-bdfad92472d6",
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     1
+    ]
+   ]
+  },
+  "10811fc1-8ad0-4d8b-bdcd-cde9b43c86e6": {
+   "neighbour": "1ff67fc2-ff44-48ea-8b9b-d19bc71c9e08",
+   "tier": 0,
+   "bm25": 224.23149391910408,
+   "bm25_rank": 1,
+   "bm25_top1": "1ff67fc2-ff44-48ea-8b9b-d19bc71c9e08",
+   "shared_queries": []
+  },
+  "14f56ea0-2392-45ef-8236-7e569e8907bc": {
+   "neighbour": "dde84e96-8559-4a9c-9b96-d349f069dd65",
+   "tier": 0,
+   "bm25": 357.7003353258132,
+   "bm25_rank": 1,
+   "bm25_top1": "dde84e96-8559-4a9c-9b96-d349f069dd65",
+   "shared_queries": []
+  },
+  "19610d2e-f293-46e1-833f-601964817557": {
+   "neighbour": "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+   "tier": 0,
+   "bm25": 454.8298079022678,
+   "bm25_rank": 1,
+   "bm25_top1": "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+   "shared_queries": []
+  },
+  "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3": {
+   "neighbour": "2a208933-c2c5-4f23-9c63-4771358d199d",
+   "tier": 1,
+   "bm25": 187.9934796955824,
+   "bm25_rank": 12,
+   "bm25_top1": "19610d2e-f293-46e1-833f-601964817557",
+   "shared_queries": [
+    [
+     "DS2-E-0029",
+     1,
+     0
+    ]
+   ]
+  },
+  "1cf07054-8055-4120-9d79-eaa6a1b4e08f": {
+   "neighbour": "53acdac4-4f73-44fa-ad63-bdfad92472d6",
+   "tier": 0,
+   "bm25": 227.477026185854,
+   "bm25_rank": 1,
+   "bm25_top1": "53acdac4-4f73-44fa-ad63-bdfad92472d6",
+   "shared_queries": []
+  },
+  "1ff67fc2-ff44-48ea-8b9b-d19bc71c9e08": {
+   "neighbour": "51ea24c0-55da-4d84-9ec6-b80e03aea90b",
+   "tier": 0,
+   "bm25": 241.28396878893167,
+   "bm25_rank": 1,
+   "bm25_top1": "51ea24c0-55da-4d84-9ec6-b80e03aea90b",
+   "shared_queries": []
+  },
+  "201460a5-ac75-422c-99ec-3bceef8d195c": {
+   "neighbour": "5f04aaa3-5cd9-47af-a159-6412ab19375d",
+   "tier": 0,
+   "bm25": 262.85854541874664,
+   "bm25_rank": 1,
+   "bm25_top1": "5f04aaa3-5cd9-47af-a159-6412ab19375d",
+   "shared_queries": []
+  },
+  "20e29a5b-ea49-4102-a5fe-e45da12ca0ad": {
+   "neighbour": "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+   "tier": 1,
+   "bm25": 437.97597911350744,
+   "bm25_rank": 1,
+   "bm25_top1": "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+   "shared_queries": [
+    [
+     "DS2-E-0051",
+     0,
+     2
+    ]
+   ]
+  },
+  "2a208933-c2c5-4f23-9c63-4771358d199d": {
+   "neighbour": "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+   "tier": 1,
+   "bm25": 163.7935734169459,
+   "bm25_rank": 19,
+   "bm25_top1": "4b5bd984-71d8-4d76-b8f5-949532b5b5a7",
+   "shared_queries": [
+    [
+     "DS2-E-0029",
+     0,
+     1
+    ]
+   ]
+  },
+  "2a3cc123-f9f6-4e1d-a03f-3e33056e5021": {
+   "neighbour": "62acddae-6081-4f24-b3ad-b69877c0a8d9",
+   "tier": 0,
+   "bm25": 303.34901658174516,
+   "bm25_rank": 1,
+   "bm25_top1": "62acddae-6081-4f24-b3ad-b69877c0a8d9",
+   "shared_queries": []
+  },
+  "2f1aabc5-904c-4bad-90ba-0e5e949589e8": {
+   "neighbour": "5f04aaa3-5cd9-47af-a159-6412ab19375d",
+   "tier": 2,
+   "bm25": 384.4990481611374,
+   "bm25_rank": 2,
+   "bm25_top1": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+   "shared_queries": [
+    [
+     "DS2-E-0051",
+     2,
+     1
+    ]
+   ]
+  },
+  "3e23114a-2657-4880-8add-f3c24425f937": {
+   "neighbour": "f359e457-7d8c-46ee-876a-abb5340e1168",
+   "tier": 2,
+   "bm25": 420.2726837671799,
+   "bm25_rank": 1,
+   "bm25_top1": "f359e457-7d8c-46ee-876a-abb5340e1168",
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0048",
+     1,
+     1
+    ]
+   ]
+  },
+  "4b5bd984-71d8-4d76-b8f5-949532b5b5a7": {
+   "neighbour": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+   "tier": 0,
+   "bm25": 254.81563454019755,
+   "bm25_rank": 1,
+   "bm25_top1": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+   "shared_queries": []
+  },
+  "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413": {
+   "neighbour": "3e23114a-2657-4880-8add-f3c24425f937",
+   "tier": 1,
+   "bm25": 206.4258196626029,
+   "bm25_rank": 5,
+   "bm25_top1": "b1efbf4b-747a-4bda-9a07-9a124e8ba03b",
+   "shared_queries": [
+    [
+     "DS2-E-0032",
+     1,
+     0
+    ]
+   ]
+  },
+  "51ea24c0-55da-4d84-9ec6-b80e03aea90b": {
+   "neighbour": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+   "tier": 0,
+   "bm25": 243.9881070433134,
+   "bm25_rank": 1,
+   "bm25_top1": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+   "shared_queries": []
+  },
+  "53acdac4-4f73-44fa-ad63-bdfad92472d6": {
+   "neighbour": "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+   "tier": 0,
+   "bm25": 334.21796353820173,
+   "bm25_rank": 1,
+   "bm25_top1": "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+   "shared_queries": []
+  },
+  "5f04aaa3-5cd9-47af-a159-6412ab19375d": {
+   "neighbour": "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+   "tier": 2,
+   "bm25": 391.1807729632557,
+   "bm25_rank": 2,
+   "bm25_top1": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+   "shared_queries": [
+    [
+     "DS2-E-0051",
+     1,
+     2
+    ]
+   ]
+  },
+  "62acddae-6081-4f24-b3ad-b69877c0a8d9": {
+   "neighbour": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "tier": 1,
+   "bm25": 181.38898051908632,
+   "bm25_rank": 18,
+   "bm25_top1": "2a3cc123-f9f6-4e1d-a03f-3e33056e5021",
+   "shared_queries": [
+    [
+     "DS2-E-0032",
+     0,
+     1
+    ]
+   ]
+  },
+  "682835a9-48ce-44f3-a325-ceda77a53975": {
+   "neighbour": "c4ca6131-444b-4ffe-90cf-1482709f62b7",
+   "tier": 0,
+   "bm25": 250.04750942856137,
+   "bm25_rank": 1,
+   "bm25_top1": "c4ca6131-444b-4ffe-90cf-1482709f62b7",
+   "shared_queries": []
+  },
+  "7b64babd-8c66-4dcb-9be7-6bcd2ef35e04": {
+   "neighbour": "201460a5-ac75-422c-99ec-3bceef8d195c",
+   "tier": 0,
+   "bm25": 248.26178487447262,
+   "bm25_rank": 1,
+   "bm25_top1": "201460a5-ac75-422c-99ec-3bceef8d195c",
+   "shared_queries": []
+  },
+  "b1efbf4b-747a-4bda-9a07-9a124e8ba03b": {
+   "neighbour": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "tier": 0,
+   "bm25": 241.1321067521226,
+   "bm25_rank": 1,
+   "bm25_top1": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "shared_queries": []
+  },
+  "be2a86f4-03f6-4e89-90b3-cc122c247b74": {
+   "neighbour": "e83c4ac6-c8b3-4cac-a87c-11385c349c7d",
+   "tier": 0,
+   "bm25": 502.0843864650199,
+   "bm25_rank": 1,
+   "bm25_top1": "e83c4ac6-c8b3-4cac-a87c-11385c349c7d",
+   "shared_queries": []
+  },
+  "c4ca6131-444b-4ffe-90cf-1482709f62b7": {
+   "neighbour": "3e23114a-2657-4880-8add-f3c24425f937",
+   "tier": 1,
+   "bm25": 172.1629463815097,
+   "bm25_rank": 18,
+   "bm25_top1": "682835a9-48ce-44f3-a325-ceda77a53975",
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     0,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     0,
+     1
+    ]
+   ]
+  },
+  "c4e2ce61-6199-419f-aeda-795c9b153872": {
+   "neighbour": "201460a5-ac75-422c-99ec-3bceef8d195c",
+   "tier": 0,
+   "bm25": 232.59761449685956,
+   "bm25_rank": 1,
+   "bm25_top1": "201460a5-ac75-422c-99ec-3bceef8d195c",
+   "shared_queries": []
+  },
+  "dcefd0c1-c0b3-4ede-8dbd-e898ce1e2e10": {
+   "neighbour": "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+   "tier": 0,
+   "bm25": 269.24882839612405,
+   "bm25_rank": 1,
+   "bm25_top1": "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+   "shared_queries": []
+  },
+  "dde84e96-8559-4a9c-9b96-d349f069dd65": {
+   "neighbour": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+   "tier": 0,
+   "bm25": 292.19962242375146,
+   "bm25_rank": 1,
+   "bm25_top1": "14f56ea0-2392-45ef-8236-7e569e8907bc",
+   "shared_queries": []
+  },
+  "e83c4ac6-c8b3-4cac-a87c-11385c349c7d": {
+   "neighbour": "be2a86f4-03f6-4e89-90b3-cc122c247b74",
+   "tier": 0,
+   "bm25": 467.6781109393442,
+   "bm25_rank": 1,
+   "bm25_top1": "be2a86f4-03f6-4e89-90b3-cc122c247b74",
+   "shared_queries": []
+  },
+  "f359e457-7d8c-46ee-876a-abb5340e1168": {
+   "neighbour": "3e23114a-2657-4880-8add-f3c24425f937",
+   "tier": 2,
+   "bm25": 423.3892489224255,
+   "bm25_rank": 1,
+   "bm25_top1": "3e23114a-2657-4880-8add-f3c24425f937",
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0048",
+     1,
+     1
+    ]
+   ]
+  },
+  "fbb92a2a-4b64-4ac8-ba0f-8d608bfc47ec": {
+   "neighbour": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "tier": 0,
+   "bm25": 39.34079932924542,
+   "bm25_rank": 1,
+   "bm25_top1": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "shared_queries": []
+  }
+ },
+ "pairs": [
+  {
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "f359e457-7d8c-46ee-876a-abb5340e1168"
+   ],
+   "tier": 2,
+   "bm25": 420.2726837671799,
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0048",
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+    "5f04aaa3-5cd9-47af-a159-6412ab19375d"
+   ],
+   "tier": 2,
+   "bm25": 384.4990481611374,
+   "shared_queries": [
+    [
+     "DS2-E-0051",
+     2,
+     1
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+    "3e23114a-2657-4880-8add-f3c24425f937"
+   ],
+   "tier": 2,
+   "bm25": 369.0723756411988,
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     1
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     1
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+    "2f1aabc5-904c-4bad-90ba-0e5e949589e8"
+   ],
+   "tier": 1,
+   "bm25": 437.97597911350744,
+   "shared_queries": [
+    [
+     "DS2-E-0051",
+     0,
+     2
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413"
+   ],
+   "tier": 1,
+   "bm25": 206.4258196626029,
+   "shared_queries": [
+    [
+     "DS2-E-0032",
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+    "2a208933-c2c5-4f23-9c63-4771358d199d"
+   ],
+   "tier": 1,
+   "bm25": 187.9934796955824,
+   "shared_queries": [
+    [
+     "DS2-E-0029",
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+    "62acddae-6081-4f24-b3ad-b69877c0a8d9"
+   ],
+   "tier": 1,
+   "bm25": 181.38898051908632,
+   "shared_queries": [
+    [
+     "DS2-E-0032",
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "c4ca6131-444b-4ffe-90cf-1482709f62b7"
+   ],
+   "tier": 1,
+   "bm25": 172.1629463815097,
+   "shared_queries": [
+    [
+     "DS2-E-0001",
+     1,
+     0
+    ],
+    [
+     "DS2-E-0007",
+     1,
+     0
+    ]
+   ]
+  }
+ ],
+ "triples": [
+  {
+   "query": "DS2-E-0051",
+   "better": "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+   "worse": "5f04aaa3-5cd9-47af-a159-6412ab19375d",
+   "rel_better": 2,
+   "rel_worse": 1
+  },
+  {
+   "query": "DS2-E-0051",
+   "better": "2f1aabc5-904c-4bad-90ba-0e5e949589e8",
+   "worse": "20e29a5b-ea49-4102-a5fe-e45da12ca0ad",
+   "rel_better": 2,
+   "rel_worse": 0
+  },
+  {
+   "query": "DS2-E-0032",
+   "better": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "worse": "3e23114a-2657-4880-8add-f3c24425f937",
+   "rel_better": 1,
+   "rel_worse": 0
+  },
+  {
+   "query": "DS2-E-0029",
+   "better": "1bf0f2e9-ee0d-4d99-8d34-e4fbf59fd8b3",
+   "worse": "2a208933-c2c5-4f23-9c63-4771358d199d",
+   "rel_better": 1,
+   "rel_worse": 0
+  },
+  {
+   "query": "DS2-E-0032",
+   "better": "4e4c5dbb-fcd4-4718-afb5-8e11b5b90413",
+   "worse": "62acddae-6081-4f24-b3ad-b69877c0a8d9",
+   "rel_better": 1,
+   "rel_worse": 0
+  },
+  {
+   "query": "DS2-E-0001",
+   "better": "3e23114a-2657-4880-8add-f3c24425f937",
+   "worse": "c4ca6131-444b-4ffe-90cf-1482709f62b7",
+   "rel_better": 1,
+   "rel_worse": 0
+  },
+  {
+   "query": "DS2-E-0007",
+   "better": "3e23114a-2657-4880-8add-f3c24425f937",
+   "worse": "c4ca6131-444b-4ffe-90cf-1482709f62b7",
+   "rel_better": 1,
+   "rel_worse": 0
+  }
+ ],
+ "equal_grade_pairs": [
+  {
+   "query": "DS2-E-0001",
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "f359e457-7d8c-46ee-876a-abb5340e1168"
+   ],
+   "rel": 1
+  },
+  {
+   "query": "DS2-E-0007",
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "f359e457-7d8c-46ee-876a-abb5340e1168"
+   ],
+   "rel": 1
+  },
+  {
+   "query": "DS2-E-0048",
+   "tables": [
+    "3e23114a-2657-4880-8add-f3c24425f937",
+    "f359e457-7d8c-46ee-876a-abb5340e1168"
+   ],
+   "rel": 1
+  },
+  {
+   "query": "DS2-E-0001",
+   "tables": [
+    "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+    "3e23114a-2657-4880-8add-f3c24425f937"
+   ],
+   "rel": 1
+  },
+  {
+   "query": "DS2-E-0007",
+   "tables": [
+    "0cbb09dc-4012-4f18-900e-6d746bfc10d3",
+    "3e23114a-2657-4880-8add-f3c24425f937"
+   ],
+   "rel": 1
+  }
+ ]
+}

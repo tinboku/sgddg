@@ -1,0 +1,351 @@
+{
+ "dataset_id": "dcefd0c1-c0b3-4ede-8dbd-e898ce1e2e10",
+ "topic": "Veteran Patient Satisfaction",
+ "struct_stats": {
+  "dict_refs": 0,
+  "columns": 20,
+  "columns_with_facts": 8,
+  "table_fact_entries": 0,
+  "table_profile_entries": 0
+ },
+ "shared_calls": {
+  "topic": [
+   {
+    "key": "10c4fe47dd08cecd20b25f06f4af3b13c204a52bb5d9b3dd7853c43cb2c24699",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": 0.0,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 5109,
+     "completion_tokens": 4,
+     "total_tokens": 5113
+    }
+   }
+  ],
+  "semantic": [
+   {
+    "key": "6bdc192fbc631b8c307fbb6ae37b6149c318554be9ff8736f3ed03c8c975795e",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 62,
+     "total_tokens": 519
+    }
+   },
+   {
+    "key": "7e313a95592fc02f445693e7c8faa0f75a416d29bb5bcee0429476e55f02335e",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 489,
+     "completion_tokens": 71,
+     "total_tokens": 560
+    }
+   },
+   {
+    "key": "22cc524909c6d334ff2834e9e934570aab13c51259670de5da323651e5e1f5ba",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 455,
+     "completion_tokens": 68,
+     "total_tokens": 523
+    }
+   },
+   {
+    "key": "b0dc571095e2c7778d8658ea3f8f5dc53d2f3d45ed564b1561fbc8d4e820b8b5",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 446,
+     "completion_tokens": 66,
+     "total_tokens": 512
+    }
+   },
+   {
+    "key": "d5a4e8be33ab6613fda684216b1826c7538a56c8a8338ddaf1d8d5403c40c70d",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 456,
+     "completion_tokens": 64,
+     "total_tokens": 520
+    }
+   },
+   {
+    "key": "8898a916a027dc2deaa61891e1277db2ca3925b2b0047c17447d507036f91380",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 66,
+     "total_tokens": 507
+    }
+   },
+   {
+    "key": "8bd14b02a407820f3af662d6f0872d59a242894d105e64efd3f434a9d954d3ca",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 448,
+     "completion_tokens": 64,
+     "total_tokens": 512
+    }
+   },
+   {
+    "key": "4957de6152aca962cb73b114419f721d55b9d4ecd2737160d1c56136dfc0abc4",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 447,
+     "completion_tokens": 64,
+     "total_tokens": 511
+    }
+   },
+   {
+    "key": "331ebec70b767c506013f98db16a777a4ac01c92201dc30bcbd0cb5ed42e60a5",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 442,
+     "completion_tokens": 69,
+     "total_tokens": 511
+    }
+   },
+   {
+    "key": "5ba5afe575d3dd96b20db18e25b94b4008445472ebfd9acb7792f526bae48f6e",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 447,
+     "completion_tokens": 68,
+     "total_tokens": 515
+    }
+   },
+   {
+    "key": "6db3dd039a3e4394b5a34d76fa8f8e9409a94a70c44ccc405fd48b0e92a5c4cb",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 68,
+     "total_tokens": 509
+    }
+   },
+   {
+    "key": "76d2512dacfbd8a2fec0ea2b659b22611bd378190fe5255a437b896001c4ee9f",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 68,
+     "total_tokens": 512
+    }
+   },
+   {
+    "key": "bd75f010f2fa8ba84f667df7d5de36e3d5005ffc398e2d6c48d0c74c0fce71fa",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 68,
+     "total_tokens": 509
+    }
+   },
+   {
+    "key": "f0921211f6947ee7e491d0e3dcb3924d0420166e9f84e261dfd84e405913eb31",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 71,
+     "total_tokens": 515
+    }
+   },
+   {
+    "key": "fec5eac1834389cac1cdd84dfc244410a4dc3b88c40985a56a633e58ec0bb417",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 442,
+     "completion_tokens": 69,
+     "total_tokens": 511
+    }
+   },
+   {
+    "key": "0b73017455526d3a31d6153f2f3eeca32a2c7cbab6799278fa330513d7fd91fb",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 451,
+     "completion_tokens": 69,
+     "total_tokens": 520
+    }
+   },
+   {
+    "key": "54123ffa20fdd3cc47db967347c061539f8fc68cabe43030974ada30d0d52af6",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 69,
+     "total_tokens": 510
+    }
+   },
+   {
+    "key": "fa92dd806eb32b92865cee44dfee3b6f4c669eed8a3448db640be3ffd443d9bf",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 448,
+     "completion_tokens": 71,
+     "total_tokens": 519
+    }
+   },
+   {
+    "key": "278b9d7d1d43627f2e3d30009ffc6946da27c517c2dee4c5c15a318fdc9d0c07",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 69,
+     "total_tokens": 510
+    }
+   },
+   {
+    "key": "d089e2fe179260def4ce8a0067ff4d16e3719841323ef6a34d334ff77c037b4e",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 448,
+     "completion_tokens": 71,
+     "total_tokens": 519
+    }
+   }
+  ]
+ },
+ "lossless_ufd": {
+  "missing": {},
+  "n_atoms": 177,
+  "n_missing": 0
+ },
+ "lossless_sfd": {
+  "missing": {},
+  "n_atoms": 79,
+  "n_missing": 0
+ },
+ "orig": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nVISN,VISN Name,Facility Name,City,Station,ST,Station.1,Complexity,Inpatient Number of Patients African American,Inpatient Patient Satisfacion African American,Inpatient Number of Patients White,Inpatient Patient Satisfaction White,Inpatient Number of Patients Other,Inpatient Patient Satisfaction Other,Outpatient Number of Patients African American,Outpatient Patient Satisfacion African American,Outpatient Number of Patients White,Outpatient Patient Satisfaction White,Outpatient Number of Patients Other,Outpatient Patient Satisfaction Other\n12.0,The Great Lakes Health Care System - VISN 12,William S. Middleton Memorial Veterans Hospital,Madison,607.0,WI,607,1b,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Houston,580.0,TX,580,1a,,80.0,,76.3,,78.6,,75.2,,69.8,,68.7\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Nebraska Western Iowa HCS  Omaha, Grand Is, Lincoln\",Omaha,636.0,NE,636,1c,,81.6,,66.4,,86.7,,78.9,,68.3,,82.2\n18.0,VA Southwest Health Care Network - VISN 18,N Arizona VA HCS,Prescott,649.0,AZ,649,3,,,,,,,,,,,,\n21.0,Sierra Pacific Network - VISN 21,\"VA Palo Alto HCS\nPaloAlto, MenloPk, Livermore\",Palo Alto,640.0,CA,640,1a,,88.2,,84.0,,81.8,,87.3,,85.7,,80.5\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Salem,658.0,VA,658,2,,81.7,,76.7,,72.9,,79.4,,57.5,,73.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,\"VA Pittsburgh HCS\nHeinz, Univ Dr, Highld Dr\",Pittsburgh,646.0,PA,646,1a,,82.8,,74.5,,83.5,,83.0,,72.7,,58.1\n1.0,VA New England Health Care System - VISN 1,\"VA Boston HCS\nW Roxbury, Brockton Jamaica Plns\",West Roxbury,523.0,MA,523,1a,,85.5,,86.2,,75.6,,85.1,,75.4,,91.4\n19.0,Rocky Mountain Network - VISN 19,VAM/ROC,Cheyenne,442.0,WY,442,3,,,,,,,,,,,,\n2.0,VA Healthcare Network Upstate New York - VISN 2,\"VA Western New York HCS Buffalo, Batavia\",Buffalo,528.0,NY,528,1b,,79.1,,70.0,,56.6,,82.3,,56.8,,88.6\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Philadelphia,642.0,PA,642,1b,,71.0,,75.8,,77.8,,79.5,,71.8,,69.4\n11.0,Veterans In Partnership - VISN 11,\"VA Northern Indiana HCS Marion, Ft Wayne\",Marion,610.0,IN,610,3,,,,,,,,78.3,,80.8,,74.5\n17.0,VA Heart of Texas Health Care Network - VISN 17,South Texas Veterans HCS  San Antonio Kerrville,San Antonio,671.0,TX,671,1a,,76.8,,64.9,,73.1,,76.5,,61.3,,70.9\n16.0,South Central VA Health Care Network - VISN 16,G.V. Montgomery VAMC,Jackson,586.0,MS,586,1b,,82.7,,80.7,,64.5,,80.3,,76.9,,95.5\n7.0,VA Southeast Network - VISN 7,VAMC,Atlanta,508.0,GA,508,1a,,73.1,,80.3,,85.6,,81.9,,75.5,,90.7\n15.0,VA Heartland Network - VISN 15,Robert J. Dole VAMC ,Wichita,589.0,KS,589A7,2,,,,,,,,80.2,,54.3,,78.4\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Beckley,517.0,WV,517,3,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,,,\n18.0,VA Southwest Health Care Network - VISN 18,Amarillo VA HCS,Amarillo,504.0,TX,504,2,,,,,,,,83.8,,55.0,,67.1\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,Bay Pines,516.0,FL,516,1a,,87.0,,84.0,,77.4,,85.8,,69.5,,84.8\n5.0,VA Capitol Health Care Network - VISN 5,\"VA Maryland HCS\nBaltimore, Perry Pt\",Baltimore,512.0,MD,512,1b,,77.8,,74.1,,69.5,,79.1,,73.4,,86.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Wilkes-Barre,693.0,PA,693,2,,,,,,,,79.5,,67.1,,61.3\n19.0,Rocky Mountain Network - VISN 19,VA Salt Lake City HCS,Salt Lake City,660.0,UT,660,1b,,,,,,,,,,,,\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Butler,529.0,PA,529,3,,,,,,,,,,,,\n8.0,VA Sunshine Healthcare Network - VISN 8,E Central Florida HCS,Orlando,675.0,FL,675,98,,,,,,,,84.0,,80.7,,73.5\n12.0,The Great Lakes Health Care System - VISN 12,VAMC,Iron Mountain,585.0,MI,585,3,,,,,,,,,,,,\n7.0,VA Southeast Network - VISN 7,Wm. Jennings Bryan Dorn VAMC,Columbia,544.0,SC,544,1c,,74.8,,70.0,,77.7,,77.2,,67.6,,55.5\n11.0,Veterans In Partnership - VISN 11,Richard L. Roudebush VAMC,Indianapolis,583.0,IN,583,1a,,79.5,,77.5,,76.4,,70.7,,78.1,,77.3\n2.0,VA Healthcare Network Upstate New York - VISN 2,Samuel S. Stratton VAMC ,Albany,528.0,NY,528A8,2,,,,,,,,83.4,,80.1,,92.1\n15.0,VA Heartland Network - VISN 15,\"St Louis VAMC\nSt Louis, Jefferson Barracks\",St. Louis,657.0,MO,657,1a,,63.7,,54.6,,48.4,,71.7,,52.2,,58.4\n17.0,VA Heart of Texas Health Care Network - VISN 17,\"Cntrl Texas Veterans HCS\nTemple, Waco, Marlin\",Temple,674.0,TX,674,1c,,79.2,,77.6,,67.3,,73.9,,58.2,,70.5\n22.0,Desert Pacific Healthcare Network - VISN 22,VA Long Beach HCS,Long Beach,600.0,CA,600,1c,,80.7,,77.5,,68.1,,76.4,,64.7,,80.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Erie,562.0,PA,562,3,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Fayetteville,564.0,AR,564,2,,,,,,,,,,,,\n12.0,The Great Lakes Health Care System - VISN 12,Clement J. Zablocki VAMC,Milwaukee,695.0,WI,695,1a,,84.1,,77.2,,77.6,,82.5,,52.5,,80.2\n15.0,VA Heartland Network - VISN 15,Harry S. Truman VAMC,Columbia,589.0,MO,589A4,1c,,,,,,,,79.8,,77.4,,75.5\n9.0,VA Mid South Healthcare Network - VISN 9,VAMC,Lexington,596.0,KY,596,1c,,78.3,,78.6,,92.1,,77.4,,76.8,,77.0\n7.0,VA Southeast Network - VISN 7,\"Central Alabama Veterans HCS \nTuskeegee, Montgomery\",Montgomery,619.0,AL,619,2,,72.2,,76.8,,65.2,,74.5,,66.0,,57.4\n20.0,Northwest Network - VISN 20,Jonathan M. Wainwright Memorial VA Medical Center,Walla Walla,687.0,WA,687,3,,,,,,,,,,,,\n1.0,VA New England Health Care System - VISN 1,VA Connecticut HCS,West Haven,689.0,CT,689,1a,,80.0,,68.6,,73.2,,80.5,,72.0,,69.2\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,VAMC,Northport,632.0,NY,632,2,,,,,,,,86.8,,68.7,,50.7\n19.0,Rocky Mountain Network - VISN 19,VAMC,Sheridan,666.0,WY,666,3,,,,,,,,,,,,\n10.0,VA Health Care System of Ohio - VISN 10,VAMC,Chillicothe,538.0,OH,538,3,,,,,,,,,,,,\n7.0,VA Southeast Network - VISN 7,Carl Vinson VAMC,Dublin,557.0,GA,557,3,,68.5,,69.8,,74.9,,71.5,,60.8,,45.1\n18.0,VA Southwest Health Care Network - VISN 18,Carl T. Hayden VAMC,Phoenix,644.0,AZ,644,1b,,,,,,,,78.8,,79.5,,78.6\n11.0,Veterans In Partnership - VISN 11,VA Illiana HCS,Danville,550.0,IL,550,2,,,,,,,,80.8,,91.5,,73.9\n1.0,VA New England Health Care System - VISN 1,VAMC,Providence,650.0,RI,650,2,,,,,,,,83.8,,76.2,,96.4\n11.0,Veterans In Partnership - VISN 11,John D. Dingell VAMC,Detroit,553.0,MI,553,1c,,77.0,,69.7,,42.1,,77.9,,65.8,,56.4\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Asheville,637.0,NC,637,2,,,,,,,,,,,,\n12.0,The Great Lakes Health Care System - VISN 12,VAMC,North Chicago,556.0,IL,556,2,,,,,,,,86.9,,65.5,,58.9\n20.0,Northwest Network - VISN 20,\"VA Puget Sound HCS\nSeattle, American Lake\",Seattle,663.0,WA,663,1a,,84.6,,84.7,,77.7,,80.8,,79.2,,66.3\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,San Juan,672.0,PR,672,1a,,,,,,,,53.7,,31.8,,68.9\n2.0,VA Healthcare Network Upstate New York - VISN 2,VAMC,Bath,528.0,NY,528A6,3,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAM/ROC,Sioux Falls,438.0,SD,438,2,,,,,,,,,,,,\n19.0,Rocky Mountain Network - VISN 19,VAMC,Grand Junction,575.0,CO,575,2,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Central Iowa HCS\nDesMoines, Knoxville\",Des Moines,636.0,IA,636A6,2,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,\"VA Eastern Kansas HCS\nTopeka, Leavenworth\",Topeka,589.0,KS,589A5,2,,85.2,,75.9,,73.4,,79.2,,62.1,,72.5\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,Louis A. Johnson VAMC,Clarksburg,540.0,WV,540,2,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Black Hills HCS\nFt Meade, Hot Springs\",Fort Meade ,568.0,SD,568,3,,,,,,,,,,,,\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,W.G. (Bill) Hefner VAMC,Salisbury,659.0,NC,659,2,,79.1,,75.5,,80.1,,74.7,,66.5,,61.3\n1.0,VA New England Health Care System - VISN 1,Edith N Rogers Memorial Veterans Hospital,Bedford,518.0,MA,518,3,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,VAMC,Marion,657.0,IL,657A5,2,,,,,,,,74.5,,54.5,,79.1\n20.0,Northwest Network - VISN 20,VA Roseburg HCS,Roseburg,653.0,OR,653,3,,,,,,,,,,,,\n2.0,VA Healthcare Network Upstate New York - VISN 2,VAMC,Canandaigua ,528.0,NY,528A5,3,,,,,,,,87.6,,84.6,,69.6\n9.0,VA Mid South Healthcare Network - VISN 9,VAMC,Memphis,614.0,TN,614,1a,,64.7,,67.8,,52.0,,74.1,,60.6,,60.8\n,,,,,,,,,,,,,,,,,,,\n21.0,Sierra Pacific Network - VISN 21,VA Cntrl California HCS,Fresno,570.0,CA,570,2,,,,,,,,80.1,,64.0,,81.3\n16.0,South Central VA Health Care Network - VISN 16,Overton Brooks VAMC,Shreveport,667.0,LA,667,1c,,77.4,,76.7,,56.4,,76.0,,66.1,,87.1\n17.0,VA Heart of Texas Health Care Network - VISN 17,VA North Texas HCS,Dallas,549.0,TX,549,1a,,72.8,,57.4,,66.2,,73.3,,60.7,,62.1\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,H. Holmes McGuire VAMC,Richmond,652.0,VA,652,1a,,79.5,,72.4,,76.0,,76.0,,65.6,,75.9\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Durham,558.0,NC,558,1a,,81.4,,75.0,,83.3,,78.9,,65.0,,75.1\n23.0,VA Midwest Health Care Network - VISN 23,VAM/RO,Fargo,437.0,ND,437,2,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,Gulf Coast Vets HCS,Biloxi,520.0,MS,520,2,,81.3,,67.3,,47.5,,82.0,,66.8,,87.2\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,VA New Jersey HCS,East Orange,561.0,NJ,561,1b,,80.5,,80.3,,80.9,,83.7,,72.3,,65.2\n19.0,Rocky Mountain Network - VISN 19,VA Montana HCS,Fort Harrison,436.0,MT,436,2,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,VAMC,Kansas City,589.0,MO,589,2,,79.4,,69.9,,84.0,,84.3,,48.9,,56.0\n18.0,VA Southwest Health Care Network - VISN 18,El Paso VA HCS,El Paso,756.0,TX,756,3,,,,,,,,75.7,,63.3,,71.0\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Oklahoma City,635.0,OK,635,1b,,75.7,,72.2,,76.3,,76.3,,52.4,,67.1\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,Miami,546.0,FL,546,1b,,82.5,,80.6,,86.8,,84.0,,66.7,,78.2\n15.0,VA Heartland Network - VISN 15,John J. Pershing VAMC,Poplar Bluff,657.0,MO,657A4,3,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Alexandria,502.0,LA,502,3,,84.0,,80.3,,77.7,,78.4,,72.4,,63.9\n7.0,VA Southeast Network - VISN 7,Ralph H. Johnson VAMC,Charleston,534.0,SC,534,1c,,83.9,,76.5,,69.9,,82.0,,77.3,,75.9\n7.0,VA Southeast Network - VISN 7,VAMC,Birmingham,521.0,AL,521,1b,,80.5,,84.5,,84.4,,74.7,,65.4,,64.3\n18.0,VA Southwest Health Care Network - VISN 18,West Texas VA HCS,Big Spring,519.0,TX,519,3,,,,,,,,71.4,,59.4,,78.3\n10.0,VA Health Care System of Ohio - VISN 10,VAMC,Cincinnati,539.0,OH,539,1b,,84.5,,80.0,,67.2,,82.2,,58.6,,67.0\n20.0,Northwest Network - VISN 20,VAMC,Portland,648.0,OR,648,1a,,,,,,,,,,,,\n5.0,VA Capitol Health Care Network - VISN 5,VAMC,Martinsburg,613.0,WV,613,2,,,,,,,,84.9,,73.8,,64.5\n11.0,Veterans In Partnership - VISN 11,VAMC,Battle Creek,515.0,MI,515,3,,,,,,,,81.1,,64.1,,78.2\n7.0,VA Southeast Network - VISN 7,VAMC,Tuscaloosa,679.0,AL,679,3,,,,,,,,74.1,,58.7,,97.9\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,\"VA Hudson Valley HCS\nMontrose, Castle Pt\",Montrose,620.0,NY,620,3,,,,,,,,84.7,,75.1,,69.0\n11.0,Veterans In Partnership - VISN 11,Aleda E. Lutz VAMC,Saginaw,655.0,MI,655,3,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAMC,Minneapolis,618.0,MN,618,1a,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAMC,St. Cloud,656.0,MN,656,3,,,,,,,,,,,,\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Hampton,590.0,VA,590,2,,68.9,,68.4,,73.1,,75.7,,60.9,,56.4\n1.0,VA New England Health Care System - VISN 1,VAM/ROC,White River Junction,405.0,VT,405,2,,,,,,,,,,,,\n10.0,VA Health Care System of Ohio - VISN 10,Chalmers Wylie Outpt Clinic  ,Columbus,757.0,OH,757,3,,,,,,,,79.3,,90.1,,97.9\n12.0,The Great Lakes Health Care System - VISN 12,\"VA Chicago HCS\n(Jessie Brown)\",\"Chicago, West Side \",537.0,IL,537,1b,,76.5,,75.6,,68.0,,72.1,,71.4,,57.2\n,,,,,,,,,,,,,,,,,,,\n20.0,Northwest Network - VISN 20,VAMC,Boise,531.0,ID,531,2,,,,,,,,,,,,\n\n\nAdditionally, the dataset profile is as follows:\n\nThe key data profile information for this dataset includes:\n**VISN**: Data is of type integer. There are 21 unique values. Coverage spans from 1.0 to 23.0. \n**VISN Name**: Data is of type text. \n**Facility Name**: Data is of type text. There are 78 unique values. \n**City**: Data is of type text. There are 136 unique values. \n**Station**: Data is of type integer. There are 128 unique values. Coverage spans from 402.0 to 693.0. \n**ST**: Data is of type text. There are 52 unique values. \n**Station.1**: Data is of type text. There are 139 unique values. \n**Complexity**: Data is of type text. There are 6 unique values. \n**Inpatient Number of Patients African American**: Data is of type missingdata. \n**Inpatient Patient Satisfacion African American**: Data is of type float. Coverage spans from 63.7 to 89.0. \n**Inpatient Number of Patients White**: Data is of type missingdata. \n**Inpatient Patient Satisfaction White**: Data is of type float. Coverage spans from 54.6 to 94.1. \n**Inpatient Number of Patients Other**: Data is of type missingdata. \n**Inpatient Patient Satisfaction Other**: Data is of type float. Coverage spans from 42.1 to 89.9. \n**Outpatient Number of Patients African American**: Data is of type missingdata. \n**Outpatient Patient Satisfacion African American**: Data is of type float. Coverage spans from 71.5 to 87.5. \n**Outpatient Number of Patients White**: Data is of type missingdata. \n**Outpatient Patient Satisfaction White**: Data is of type float. Coverage spans from 31.8 to 92.9. \n**Outpatient Number of Patients Other**: Data is of type missingdata. \n**Outpatient Patient Satisfaction Other**: Data is of type float. Coverage spans from 50.1 to 97.9. \n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\nThe key semantic information for this dataset includes:\n**VISN**: \n**VISN Name**: Represents organization. Contains spatial data (resolution: Region). Domain-specific type: healthcare. Function/Usage context: aggregation key. \n**Facility Name**: Represents organization. Domain-specific type: healthcare. Function/Usage context: identification. \n**City**: Represents location. Contains spatial data (resolution: City). \n**Station**: Represents station. \n**ST**: Represents location. Contains spatial data (resolution: State). \n**Station.1**: Represents station. \n**Complexity**: Function/Usage context: measurement. \n**Inpatient Number of Patients African American**: Represents demographic. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Inpatient Patient Satisfacion African American**: Represents patient. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Inpatient Number of Patients White**: Represents patient. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Inpatient Patient Satisfaction White**: Represents patient. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Inpatient Number of Patients Other**: Represents patient. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Inpatient Patient Satisfaction Other**: Represents measurement. Domain-specific type: healthcare. Function/Usage context: ranking/scoring. \n**Outpatient Number of Patients African American**: Represents demographic. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Outpatient Patient Satisfacion African American**: Represents patient satisfaction. Domain-specific type: healthcare. Function/Usage context: measurement. \n**Outpatient Number of Patients White**: Represents measurement. Domain-specific type: healthcare. Function/Usage context: aggregation key. \n**Outpatient Patient Satisfaction White**: Represents measurement. Domain-specific type: healthcare. Function/Usage context: ranking/scoring. \n**Outpatient Number of Patients Other**: Represents measurement. Domain-specific type: healthcare. Function/Usage context: aggregation key. \n**Outpatient Patient Satisfaction Other**: Represents measurement. Domain-specific type: healthcare. Function/Usage context: ranking/scoring. \n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Veteran Patient Satisfaction. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n- Geographic scope: City: probably city names (not confirmed); ST (state) includes NY, CA, PA, TX, FL and others (52 distinct)\n- Measures and units: VISN: 1 to 23 (median 11); Station: 402 to 757 (median 590); Inpatient Patient Satisfacion African American: 63.7 to 89 (median 80.1); Inpatient Patient Satisfaction White: 54.6 to 94.1 (median 75.8)\n- Representative categories: VISN Name: VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values); Complexity: 3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset focuses on Veteran Patient Satisfaction, providing insights into healthcare experiences across various facilities in the United States. It includes data on patient demographics, satisfaction ratings, and facility complexity, covering 21 unique VISNs and 78 facilities in cities across multiple states. The dataset captures inpatient and outpatient satisfaction scores for African American, White, and other patient groups, with satisfaction ratings ranging from 42.1 to 94.1. This information can be used to analyze healthcare quality and patient experiences, helping to identify areas for improvement in veteran healthcare services.",
+  "sfd_prompt": "You are given a dataset about the topic Veteran Patient Satisfaction, with the following initial description:\n\nThis dataset focuses on Veteran Patient Satisfaction, providing insights into healthcare experiences across various facilities in the United States. It includes data on patient demographics, satisfaction ratings, and facility complexity, covering 21 unique VISNs and 78 facilities in cities across multiple states. The dataset captures inpatient and outpatient satisfaction scores for African American, White, and other patient groups, with satisfaction ratings ranging from 42.1 to 94.1. This information can be used to analyze healthcare quality and patient experiences, helping to identify areas for improvement in veteran healthcare services.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\n- Geographic scope: ST (state) includes NY, CA, PA, TX, FL and others (52 distinct) (state-level, by state)\n- Measures and units: VISN: 1 to 23 (median 11); Station: 402 to 757 (median 590); Inpatient Patient Satisfacion African American: 63.7 to 89 (median 80.1); Inpatient Patient Satisfaction White: 54.6 to 94.1 (median 75.8)\n- Representative categories: VISN Name: VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values); Complexity: 3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "**Dataset Overview:**\n- This dataset focuses on Veteran Patient Satisfaction, providing insights into healthcare experiences across various facilities in the United States. It includes data on patient demographics, satisfaction ratings, and facility complexity, covering 21 unique VISNs and 78 facilities in cities across multiple states. The dataset captures inpatient and outpatient satisfaction scores for African American, White, and other patient groups, with satisfaction ratings ranging from 42.1 to 94.1. This information can be used to analyze healthcare quality and patient experiences, helping to identify areas for improvement in veteran healthcare services.\n\n**Verified Coverage and Measures:**\n- Geographic scope: ST (state) includes NY, CA, PA, TX, FL and others (52 distinct) (state-level, by state)\n- Measures and units: VISN: 1 to 23 (median 11); Station: 402 to 757 (median 590); Inpatient Patient Satisfaction African American: 63.7 to 89 (median 80.1); Inpatient Patient Satisfaction White: 54.6 to 94.1 (median 75.8)\n- Representative categories: VISN Name: VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values); Complexity: 3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n\n**Key Themes or Topics:**\n- Veteran healthcare\n- Patient satisfaction\n- Healthcare quality assessment\n- Demographic analysis in healthcare\n- Inpatient and outpatient care experiences\n- Facility complexity in healthcare systems\n- Racial disparities in patient satisfaction\n- VISN (Veterans Integrated Service Networks) analysis\n\n**Applications and Use Cases:**\n- Facilitates analysis for healthcare professionals, policymakers, researchers, and veteran service organizations.\n- Useful for specific applications such as healthcare quality improvement, policy formulation, and veteran services enhancement.\n- Enables insights into patterns, trends, and relationships relevant to veteran healthcare experiences and satisfaction levels.\n- Supports strategic planning for resource allocation and facility management within the VA healthcare system.\n\n**Concepts and Synonyms:**\n- Veteran healthcare services/veteran health services\n- Patient satisfaction ratings/patient experience scores\n- Healthcare facility complexity/healthcare system complexity\n- Racial and ethnic disparities in healthcare/racial equity in healthcare\n- VISN networks/Veterans Integrated Service Networks\n- Inpatient care/outpatient care\n- Healthcare quality metrics/quality of care indicators\n\n**Keywords and Themes:**\n- veteran patient satisfaction\n- healthcare experiences\n- demographic data\n- satisfaction ratings\n- facility complexity\n- VISN analysis\n- inpatient satisfaction\n- outpatient satisfaction\n- racial disparities in healthcare\n\n**Additional Context:**\n- Highlights the dataset's relevance to ongoing discussions about improving healthcare services for veterans and addressing disparities in patient satisfaction.\n- Emphasizes its value for interdisciplinary applications, including healthcare policy, sociology, and public health research.\n- Provides a foundation for further studies aimed at enhancing the quality of care provided to veterans across various healthcare facilities in the United States.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "22452ce46639af51567c6efda06ac1fe83c56c1d61f5ac3d73eb98aa0a9e6761",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 6388,
+      "completion_tokens": 109,
+      "total_tokens": 6497
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "1f5589d119a25d123d93d4bf2a0b16adb5639aeb169bec76e4017ee4f27afb84",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 854,
+      "completion_tokens": 674,
+      "total_tokens": 1528
+     }
+    }
+   ]
+  }
+ },
+ "struct": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nVISN,VISN Name,Facility Name,City,Station,ST,Station.1,Complexity,Inpatient Number of Patients African American,Inpatient Patient Satisfacion African American,Inpatient Number of Patients White,Inpatient Patient Satisfaction White,Inpatient Number of Patients Other,Inpatient Patient Satisfaction Other,Outpatient Number of Patients African American,Outpatient Patient Satisfacion African American,Outpatient Number of Patients White,Outpatient Patient Satisfaction White,Outpatient Number of Patients Other,Outpatient Patient Satisfaction Other\n12.0,The Great Lakes Health Care System - VISN 12,William S. Middleton Memorial Veterans Hospital,Madison,607.0,WI,607,1b,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Houston,580.0,TX,580,1a,,80.0,,76.3,,78.6,,75.2,,69.8,,68.7\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Nebraska Western Iowa HCS  Omaha, Grand Is, Lincoln\",Omaha,636.0,NE,636,1c,,81.6,,66.4,,86.7,,78.9,,68.3,,82.2\n18.0,VA Southwest Health Care Network - VISN 18,N Arizona VA HCS,Prescott,649.0,AZ,649,3,,,,,,,,,,,,\n21.0,Sierra Pacific Network - VISN 21,\"VA Palo Alto HCS\nPaloAlto, MenloPk, Livermore\",Palo Alto,640.0,CA,640,1a,,88.2,,84.0,,81.8,,87.3,,85.7,,80.5\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Salem,658.0,VA,658,2,,81.7,,76.7,,72.9,,79.4,,57.5,,73.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,\"VA Pittsburgh HCS\nHeinz, Univ Dr, Highld Dr\",Pittsburgh,646.0,PA,646,1a,,82.8,,74.5,,83.5,,83.0,,72.7,,58.1\n1.0,VA New England Health Care System - VISN 1,\"VA Boston HCS\nW Roxbury, Brockton Jamaica Plns\",West Roxbury,523.0,MA,523,1a,,85.5,,86.2,,75.6,,85.1,,75.4,,91.4\n19.0,Rocky Mountain Network - VISN 19,VAM/ROC,Cheyenne,442.0,WY,442,3,,,,,,,,,,,,\n2.0,VA Healthcare Network Upstate New York - VISN 2,\"VA Western New York HCS Buffalo, Batavia\",Buffalo,528.0,NY,528,1b,,79.1,,70.0,,56.6,,82.3,,56.8,,88.6\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Philadelphia,642.0,PA,642,1b,,71.0,,75.8,,77.8,,79.5,,71.8,,69.4\n11.0,Veterans In Partnership - VISN 11,\"VA Northern Indiana HCS Marion, Ft Wayne\",Marion,610.0,IN,610,3,,,,,,,,78.3,,80.8,,74.5\n17.0,VA Heart of Texas Health Care Network - VISN 17,South Texas Veterans HCS  San Antonio Kerrville,San Antonio,671.0,TX,671,1a,,76.8,,64.9,,73.1,,76.5,,61.3,,70.9\n16.0,South Central VA Health Care Network - VISN 16,G.V. Montgomery VAMC,Jackson,586.0,MS,586,1b,,82.7,,80.7,,64.5,,80.3,,76.9,,95.5\n7.0,VA Southeast Network - VISN 7,VAMC,Atlanta,508.0,GA,508,1a,,73.1,,80.3,,85.6,,81.9,,75.5,,90.7\n15.0,VA Heartland Network - VISN 15,Robert J. Dole VAMC ,Wichita,589.0,KS,589A7,2,,,,,,,,80.2,,54.3,,78.4\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Beckley,517.0,WV,517,3,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,,,\n18.0,VA Southwest Health Care Network - VISN 18,Amarillo VA HCS,Amarillo,504.0,TX,504,2,,,,,,,,83.8,,55.0,,67.1\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,Bay Pines,516.0,FL,516,1a,,87.0,,84.0,,77.4,,85.8,,69.5,,84.8\n5.0,VA Capitol Health Care Network - VISN 5,\"VA Maryland HCS\nBaltimore, Perry Pt\",Baltimore,512.0,MD,512,1b,,77.8,,74.1,,69.5,,79.1,,73.4,,86.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Wilkes-Barre,693.0,PA,693,2,,,,,,,,79.5,,67.1,,61.3\n19.0,Rocky Mountain Network - VISN 19,VA Salt Lake City HCS,Salt Lake City,660.0,UT,660,1b,,,,,,,,,,,,\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Butler,529.0,PA,529,3,,,,,,,,,,,,\n8.0,VA Sunshine Healthcare Network - VISN 8,E Central Florida HCS,Orlando,675.0,FL,675,98,,,,,,,,84.0,,80.7,,73.5\n12.0,The Great Lakes Health Care System - VISN 12,VAMC,Iron Mountain,585.0,MI,585,3,,,,,,,,,,,,\n7.0,VA Southeast Network - VISN 7,Wm. Jennings Bryan Dorn VAMC,Columbia,544.0,SC,544,1c,,74.8,,70.0,,77.7,,77.2,,67.6,,55.5\n11.0,Veterans In Partnership - VISN 11,Richard L. Roudebush VAMC,Indianapolis,583.0,IN,583,1a,,79.5,,77.5,,76.4,,70.7,,78.1,,77.3\n2.0,VA Healthcare Network Upstate New York - VISN 2,Samuel S. Stratton VAMC ,Albany,528.0,NY,528A8,2,,,,,,,,83.4,,80.1,,92.1\n15.0,VA Heartland Network - VISN 15,\"St Louis VAMC\nSt Louis, Jefferson Barracks\",St. Louis,657.0,MO,657,1a,,63.7,,54.6,,48.4,,71.7,,52.2,,58.4\n17.0,VA Heart of Texas Health Care Network - VISN 17,\"Cntrl Texas Veterans HCS\nTemple, Waco, Marlin\",Temple,674.0,TX,674,1c,,79.2,,77.6,,67.3,,73.9,,58.2,,70.5\n22.0,Desert Pacific Healthcare Network - VISN 22,VA Long Beach HCS,Long Beach,600.0,CA,600,1c,,80.7,,77.5,,68.1,,76.4,,64.7,,80.4\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,VAMC,Erie,562.0,PA,562,3,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Fayetteville,564.0,AR,564,2,,,,,,,,,,,,\n12.0,The Great Lakes Health Care System - VISN 12,Clement J. Zablocki VAMC,Milwaukee,695.0,WI,695,1a,,84.1,,77.2,,77.6,,82.5,,52.5,,80.2\n15.0,VA Heartland Network - VISN 15,Harry S. Truman VAMC,Columbia,589.0,MO,589A4,1c,,,,,,,,79.8,,77.4,,75.5\n9.0,VA Mid South Healthcare Network - VISN 9,VAMC,Lexington,596.0,KY,596,1c,,78.3,,78.6,,92.1,,77.4,,76.8,,77.0\n7.0,VA Southeast Network - VISN 7,\"Central Alabama Veterans HCS \nTuskeegee, Montgomery\",Montgomery,619.0,AL,619,2,,72.2,,76.8,,65.2,,74.5,,66.0,,57.4\n20.0,Northwest Network - VISN 20,Jonathan M. Wainwright Memorial VA Medical Center,Walla Walla,687.0,WA,687,3,,,,,,,,,,,,\n1.0,VA New England Health Care System - VISN 1,VA Connecticut HCS,West Haven,689.0,CT,689,1a,,80.0,,68.6,,73.2,,80.5,,72.0,,69.2\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,VAMC,Northport,632.0,NY,632,2,,,,,,,,86.8,,68.7,,50.7\n19.0,Rocky Mountain Network - VISN 19,VAMC,Sheridan,666.0,WY,666,3,,,,,,,,,,,,\n10.0,VA Health Care System of Ohio - VISN 10,VAMC,Chillicothe,538.0,OH,538,3,,,,,,,,,,,,\n7.0,VA Southeast Network - VISN 7,Carl Vinson VAMC,Dublin,557.0,GA,557,3,,68.5,,69.8,,74.9,,71.5,,60.8,,45.1\n18.0,VA Southwest Health Care Network - VISN 18,Carl T. Hayden VAMC,Phoenix,644.0,AZ,644,1b,,,,,,,,78.8,,79.5,,78.6\n11.0,Veterans In Partnership - VISN 11,VA Illiana HCS,Danville,550.0,IL,550,2,,,,,,,,80.8,,91.5,,73.9\n1.0,VA New England Health Care System - VISN 1,VAMC,Providence,650.0,RI,650,2,,,,,,,,83.8,,76.2,,96.4\n11.0,Veterans In Partnership - VISN 11,John D. Dingell VAMC,Detroit,553.0,MI,553,1c,,77.0,,69.7,,42.1,,77.9,,65.8,,56.4\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Asheville,637.0,NC,637,2,,,,,,,,,,,,\n12.0,The Great Lakes Health Care System - VISN 12,VAMC,North Chicago,556.0,IL,556,2,,,,,,,,86.9,,65.5,,58.9\n20.0,Northwest Network - VISN 20,\"VA Puget Sound HCS\nSeattle, American Lake\",Seattle,663.0,WA,663,1a,,84.6,,84.7,,77.7,,80.8,,79.2,,66.3\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,San Juan,672.0,PR,672,1a,,,,,,,,53.7,,31.8,,68.9\n2.0,VA Healthcare Network Upstate New York - VISN 2,VAMC,Bath,528.0,NY,528A6,3,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAM/ROC,Sioux Falls,438.0,SD,438,2,,,,,,,,,,,,\n19.0,Rocky Mountain Network - VISN 19,VAMC,Grand Junction,575.0,CO,575,2,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Central Iowa HCS\nDesMoines, Knoxville\",Des Moines,636.0,IA,636A6,2,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,\"VA Eastern Kansas HCS\nTopeka, Leavenworth\",Topeka,589.0,KS,589A5,2,,85.2,,75.9,,73.4,,79.2,,62.1,,72.5\n4.0,VA Stars & Stripes Healthcare Network - VISN 4,Louis A. Johnson VAMC,Clarksburg,540.0,WV,540,2,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,\"VA Black Hills HCS\nFt Meade, Hot Springs\",Fort Meade ,568.0,SD,568,3,,,,,,,,,,,,\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,W.G. (Bill) Hefner VAMC,Salisbury,659.0,NC,659,2,,79.1,,75.5,,80.1,,74.7,,66.5,,61.3\n1.0,VA New England Health Care System - VISN 1,Edith N Rogers Memorial Veterans Hospital,Bedford,518.0,MA,518,3,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,VAMC,Marion,657.0,IL,657A5,2,,,,,,,,74.5,,54.5,,79.1\n20.0,Northwest Network - VISN 20,VA Roseburg HCS,Roseburg,653.0,OR,653,3,,,,,,,,,,,,\n2.0,VA Healthcare Network Upstate New York - VISN 2,VAMC,Canandaigua ,528.0,NY,528A5,3,,,,,,,,87.6,,84.6,,69.6\n9.0,VA Mid South Healthcare Network - VISN 9,VAMC,Memphis,614.0,TN,614,1a,,64.7,,67.8,,52.0,,74.1,,60.6,,60.8\n,,,,,,,,,,,,,,,,,,,\n21.0,Sierra Pacific Network - VISN 21,VA Cntrl California HCS,Fresno,570.0,CA,570,2,,,,,,,,80.1,,64.0,,81.3\n16.0,South Central VA Health Care Network - VISN 16,Overton Brooks VAMC,Shreveport,667.0,LA,667,1c,,77.4,,76.7,,56.4,,76.0,,66.1,,87.1\n17.0,VA Heart of Texas Health Care Network - VISN 17,VA North Texas HCS,Dallas,549.0,TX,549,1a,,72.8,,57.4,,66.2,,73.3,,60.7,,62.1\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,H. Holmes McGuire VAMC,Richmond,652.0,VA,652,1a,,79.5,,72.4,,76.0,,76.0,,65.6,,75.9\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Durham,558.0,NC,558,1a,,81.4,,75.0,,83.3,,78.9,,65.0,,75.1\n23.0,VA Midwest Health Care Network - VISN 23,VAM/RO,Fargo,437.0,ND,437,2,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,Gulf Coast Vets HCS,Biloxi,520.0,MS,520,2,,81.3,,67.3,,47.5,,82.0,,66.8,,87.2\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,VA New Jersey HCS,East Orange,561.0,NJ,561,1b,,80.5,,80.3,,80.9,,83.7,,72.3,,65.2\n19.0,Rocky Mountain Network - VISN 19,VA Montana HCS,Fort Harrison,436.0,MT,436,2,,,,,,,,,,,,\n15.0,VA Heartland Network - VISN 15,VAMC,Kansas City,589.0,MO,589,2,,79.4,,69.9,,84.0,,84.3,,48.9,,56.0\n18.0,VA Southwest Health Care Network - VISN 18,El Paso VA HCS,El Paso,756.0,TX,756,3,,,,,,,,75.7,,63.3,,71.0\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Oklahoma City,635.0,OK,635,1b,,75.7,,72.2,,76.3,,76.3,,52.4,,67.1\n8.0,VA Sunshine Healthcare Network - VISN 8,VAMC,Miami,546.0,FL,546,1b,,82.5,,80.6,,86.8,,84.0,,66.7,,78.2\n15.0,VA Heartland Network - VISN 15,John J. Pershing VAMC,Poplar Bluff,657.0,MO,657A4,3,,,,,,,,,,,,\n16.0,South Central VA Health Care Network - VISN 16,VAMC,Alexandria,502.0,LA,502,3,,84.0,,80.3,,77.7,,78.4,,72.4,,63.9\n7.0,VA Southeast Network - VISN 7,Ralph H. Johnson VAMC,Charleston,534.0,SC,534,1c,,83.9,,76.5,,69.9,,82.0,,77.3,,75.9\n7.0,VA Southeast Network - VISN 7,VAMC,Birmingham,521.0,AL,521,1b,,80.5,,84.5,,84.4,,74.7,,65.4,,64.3\n18.0,VA Southwest Health Care Network - VISN 18,West Texas VA HCS,Big Spring,519.0,TX,519,3,,,,,,,,71.4,,59.4,,78.3\n10.0,VA Health Care System of Ohio - VISN 10,VAMC,Cincinnati,539.0,OH,539,1b,,84.5,,80.0,,67.2,,82.2,,58.6,,67.0\n20.0,Northwest Network - VISN 20,VAMC,Portland,648.0,OR,648,1a,,,,,,,,,,,,\n5.0,VA Capitol Health Care Network - VISN 5,VAMC,Martinsburg,613.0,WV,613,2,,,,,,,,84.9,,73.8,,64.5\n11.0,Veterans In Partnership - VISN 11,VAMC,Battle Creek,515.0,MI,515,3,,,,,,,,81.1,,64.1,,78.2\n7.0,VA Southeast Network - VISN 7,VAMC,Tuscaloosa,679.0,AL,679,3,,,,,,,,74.1,,58.7,,97.9\n3.0,VA NY/NJ Veterans Healthcare Network - VISN 3,\"VA Hudson Valley HCS\nMontrose, Castle Pt\",Montrose,620.0,NY,620,3,,,,,,,,84.7,,75.1,,69.0\n11.0,Veterans In Partnership - VISN 11,Aleda E. Lutz VAMC,Saginaw,655.0,MI,655,3,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAMC,Minneapolis,618.0,MN,618,1a,,,,,,,,,,,,\n23.0,VA Midwest Health Care Network - VISN 23,VAMC,St. Cloud,656.0,MN,656,3,,,,,,,,,,,,\n6.0,VA Mid-Atlantic Health Care Network - VISN 6,VAMC,Hampton,590.0,VA,590,2,,68.9,,68.4,,73.1,,75.7,,60.9,,56.4\n1.0,VA New England Health Care System - VISN 1,VAM/ROC,White River Junction,405.0,VT,405,2,,,,,,,,,,,,\n10.0,VA Health Care System of Ohio - VISN 10,Chalmers Wylie Outpt Clinic  ,Columbus,757.0,OH,757,3,,,,,,,,79.3,,90.1,,97.9\n12.0,The Great Lakes Health Care System - VISN 12,\"VA Chicago HCS\n(Jessie Brown)\",\"Chicago, West Side \",537.0,IL,537,1b,,76.5,,75.6,,68.0,,72.1,,71.4,,57.2\n,,,,,,,,,,,,,,,,,,,\n20.0,Northwest Network - VISN 20,VAMC,Boise,531.0,ID,531,2,,,,,,,,,,,,\n\n\nAdditionally, the dataset profile is as follows:\n\nStructured profile, one block per column. Keys: profile = data profile, semantic = semantic profile of the column, facts = facts computed from the full table (values separated by \" | \"). TABLE holds table-level entries. &n refers to VALUES.\n[VISN]\n  profile: type=integer; unique_values=21; coverage=1.0 to 23.0\n  facts: range=1 to 23 (median 11)\n[VISN Name]\n  profile: type=text\n  semantic: represents=organization; spatial_resolution=Region; domain=healthcare; usage=aggregation key\n  facts: top_values=VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values)\n[Facility Name]\n  profile: type=text; unique_values=78\n  semantic: represents=organization; domain=healthcare; usage=identification\n[City]\n  profile: type=text; unique_values=136\n  semantic: represents=location; spatial_resolution=City\n  facts: places=probably city names (not confirmed)\n[Station]\n  profile: type=integer; unique_values=128; coverage=402.0 to 693.0\n  semantic: represents=station\n  facts: range=402 to 757 (median 590)\n[ST]\n  profile: type=text; unique_values=52\n  semantic: represents=location; spatial_resolution=State\n  facts: places=ST (state) includes NY, CA, PA, TX, FL and others (52 distinct)\n[Station.1]\n  profile: type=text; unique_values=139\n  semantic: represents=station\n[Complexity]\n  profile: type=text; unique_values=6\n  semantic: usage=measurement\n  facts: top_values=3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n[Inpatient Number of Patients African American]\n  profile: type=missingdata\n  semantic: represents=demographic; domain=healthcare; usage=measurement\n[Inpatient Patient Satisfacion African American]\n  profile: type=float; coverage=63.7 to 89.0\n  semantic: represents=patient; domain=healthcare; usage=measurement\n  facts: range=63.7 to 89 (median 80.1)\n[Inpatient Number of Patients White]\n  profile: type=missingdata\n  semantic: represents=patient; domain=healthcare; usage=measurement\n[Inpatient Patient Satisfaction White]\n  profile: type=float; coverage=54.6 to 94.1\n  semantic: represents=patient; domain=healthcare; usage=measurement\n  facts: range=54.6 to 94.1 (median 75.8)\n[Inpatient Number of Patients Other]\n  profile: type=missingdata\n  semantic: represents=patient; domain=healthcare; usage=measurement\n[Inpatient Patient Satisfaction Other]\n  profile: type=float; coverage=42.1 to 89.9\n  semantic: represents=measurement; domain=healthcare; usage=ranking/scoring\n[Outpatient Number of Patients African American]\n  profile: type=missingdata\n  semantic: represents=demographic; domain=healthcare; usage=measurement\n[Outpatient Patient Satisfacion African American]\n  profile: type=float; coverage=71.5 to 87.5\n  semantic: represents=patient satisfaction; domain=healthcare; usage=measurement\n[Outpatient Number of Patients White]\n  profile: type=missingdata\n  semantic: represents=measurement; domain=healthcare; usage=aggregation key\n[Outpatient Patient Satisfaction White]\n  profile: type=float; coverage=31.8 to 92.9\n  semantic: represents=measurement; domain=healthcare; usage=ranking/scoring\n[Outpatient Number of Patients Other]\n  profile: type=missingdata\n  semantic: represents=measurement; domain=healthcare; usage=aggregation key\n[Outpatient Patient Satisfaction Other]\n  profile: type=float; coverage=50.1 to 97.9\n  semantic: represents=measurement; domain=healthcare; usage=ranking/scoring\n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n(Given as the \"semantic\" entries of each column in the structured profile above.)\n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Veteran Patient Satisfaction. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n(Given as the \"facts\" entries of TABLE and of each column in the structured profile above.)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset focuses on Veteran Patient Satisfaction, providing insights into the experiences of patients across various healthcare facilities within the Veterans Affairs system. It includes information on patient demographics, satisfaction ratings, and the complexity of care at different facilities. The dataset features 21 unique VISNs and 78 distinct facility names, covering a wide range of cities and states. Each column represents specific aspects of patient care, such as inpatient and outpatient satisfaction scores for different demographic groups. This dataset can be utilized to analyze trends in patient satisfaction among veterans, identify areas for improvement, and inform healthcare policy decisions.",
+  "sfd_prompt": "You are given a dataset about the topic Veteran Patient Satisfaction, with the following initial description:\n\nThis dataset focuses on Veteran Patient Satisfaction, providing insights into the experiences of patients across various healthcare facilities within the Veterans Affairs system. It includes information on patient demographics, satisfaction ratings, and the complexity of care at different facilities. The dataset features 21 unique VISNs and 78 distinct facility names, covering a wide range of cities and states. Each column represents specific aspects of patient care, such as inpatient and outpatient satisfaction scores for different demographic groups. This dataset can be utilized to analyze trends in patient satisfaction among veterans, identify areas for improvement, and inform healthcare policy decisions.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\n[VISN]\n  facts: range=1 to 23 (median 11)\n[VISN Name]\n  facts: top_values=VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values)\n[Station]\n  facts: range=402 to 757 (median 590)\n[ST]\n  facts: places=ST (state) includes NY, CA, PA, TX, FL and others (52 distinct) (state-level, by state)\n[Complexity]\n  facts: top_values=3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n[Inpatient Patient Satisfacion African American]\n  facts: range=63.7 to 89 (median 80.1)\n[Inpatient Patient Satisfaction White]\n  facts: range=54.6 to 94.1 (median 75.8)\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\n- This dataset focuses on Veteran Patient Satisfaction, providing insights into the experiences of patients across various healthcare facilities within the Veterans Affairs system. It includes information on patient demographics, satisfaction ratings, and the complexity of care at different facilities. The dataset features 21 unique VISNs and 78 distinct facility names, covering a wide range of cities and states. Each column represents specific aspects of patient care, such as inpatient and outpatient satisfaction scores for different demographic groups. This dataset can be utilized to analyze trends in patient satisfaction among veterans, identify areas for improvement, and inform healthcare policy decisions.\n\nVerified Coverage and Measures:\n- VISN range: 1 to 23 (median 11)\n- VISN Names: VA Stars & Stripes Healthcare Network - VISN 4 (7% of 139 non-blank), South Central VA Health Care Network - VISN 16, VA New England Health Care System - VISN 1, VA Southeast Network - VISN 7, Northwest Network - VISN 20 (21 distinct values)\n- Station range: 402 to 757 (median 590)\n- States (ST): includes NY, CA, PA, TX, FL and others (52 distinct)\n- Complexity values: top values include 3 (27% of 139 non-blank), 2, 1a, 1c, 1b (6 distinct values)\n- Inpatient Patient Satisfaction African American: range 63.7 to 89 (median 80.1)\n- Inpatient Patient Satisfaction White: range 54.6 to 94.1 (median 75.8)\n\nKey Themes or Topics:\n- Veteran healthcare\n- Patient satisfaction\n- Healthcare quality assessment\n- Demographic disparities in healthcare\n- Inpatient and outpatient care experiences\n- Veterans Affairs healthcare system\n- Healthcare facility performance\n\nApplications and Use Cases:\n- Analyzes patient satisfaction trends for veterans to inform healthcare policy.\n- Identifies areas for improvement in veteran healthcare services.\n- Supports research on demographic impacts on patient satisfaction.\n- Assists healthcare administrators in evaluating facility performance.\n- Guides policymakers in decision-making regarding veteran healthcare funding and resources.\n\nConcepts and Synonyms:\n- Veteran health services/veteran healthcare\n- Patient experience/patient care experience\n- Satisfaction ratings/quality of care ratings\n- Healthcare facilities/medical facilities\n- Demographics/patient demographics\n- Inpatient care/outpatient care\n- Quality improvement/healthcare improvement\n\nKeywords and Themes:\n- Veteran Patient Satisfaction\n- Veterans Affairs\n- Healthcare quality\n- Patient demographics\n- Satisfaction scores\n- Inpatient satisfaction\n- Outpatient satisfaction\n- Healthcare facilities\n- VISN (Veterans Integrated Service Networks)\n\nAdditional Context:\n- This dataset is crucial for understanding the unique challenges faced by veterans in accessing healthcare services.\n- It provides valuable insights for improving healthcare delivery and outcomes for veteran populations.\n- The dataset can be integrated with other health-related datasets to enhance research on veteran health issues and policy implications.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "6353bc7e4e1a1fa8ec271c420238e9ba28289a0b6f0c88aa3b01ff89e7422539",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 6231,
+      "completion_tokens": 114,
+      "total_tokens": 6345
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "37a27a62714d0a9a968589e2126401e7904da23f9541b70c71ad2f0da37f1a4a",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 888,
+      "completion_tokens": 606,
+      "total_tokens": 1494
+     }
+    }
+   ]
+  }
+ }
+}

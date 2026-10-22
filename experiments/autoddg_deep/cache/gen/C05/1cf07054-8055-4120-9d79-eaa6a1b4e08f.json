@@ -1,0 +1,171 @@
+{
+ "dataset_id": "1cf07054-8055-4120-9d79-eaa6a1b4e08f",
+ "topic": "CDC Page Views",
+ "struct_stats": {
+  "dict_refs": 0,
+  "columns": 5,
+  "columns_with_facts": 5,
+  "table_fact_entries": 1,
+  "table_profile_entries": 0
+ },
+ "shared_calls": {
+  "topic": [
+   {
+    "key": "e5232583d0e42f4f73b341a9b2c1d3376f09508d1dce588ef921304ba1fcb5c9",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": 0.0,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 1576,
+     "completion_tokens": 3,
+     "total_tokens": 1579
+    }
+   }
+  ],
+  "semantic": [
+   {
+    "key": "ac361a344df6f0c05924b0d17ba4fbfaad0f877fced2a354a3110d4a6b8c7fa9",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 67,
+     "total_tokens": 508
+    }
+   },
+   {
+    "key": "7a236e957f41cd3adcafb2a2c4c8e920be6900db98af79d0ab0e0f636b62758c",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 446,
+     "completion_tokens": 67,
+     "total_tokens": 513
+    }
+   },
+   {
+    "key": "ee56513048efb2f75bf3addeaae6629f3e3d58dbc4181f777d4936acb7e0f35e",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 451,
+     "completion_tokens": 67,
+     "total_tokens": 518
+    }
+   },
+   {
+    "key": "fb60b5aaa1b135df2f705d76fb2d09eba673c182e0e6d508e2d9d0c206dab9da",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 69,
+     "total_tokens": 526
+    }
+   },
+   {
+    "key": "5977dbf0687de5536d0cbc9595bdf459f1c290748535bb27175f7c45d189cbef",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 69,
+     "total_tokens": 526
+    }
+   }
+  ]
+ },
+ "lossless_ufd": {
+  "missing": {},
+  "n_atoms": 73,
+  "n_missing": 0
+ },
+ "lossless_sfd": {
+  "missing": {},
+  "n_atoms": 45,
+  "n_missing": 0
+ },
+ "orig": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nMonth,Sort,Year,Page Views,Page Visits\nJune,6,2006,31159556,5909716\nMay,5,2008,39700218,11254531\nMay,5,2025,48203830,25555133\nJanuary,1,2010,51357254,18893813\nNovember,11,2014,88408415,\nOctober,10,2009,104993467,31788911\nOctober,10,2004,25487071,2565787\nJuly,7,2013,60502032,22356508\nJuly,7,2020,310159256,150717264\nNovember,11,2023,100440676,56830951\nJanuary,1,2006,33046267,4890619\nNovember,11,2016,86941536,30227710\nAugust,8,2016,109791194,33130748\nDecember,12,2005,24344114,5093269\nFebruary,2,2008,44725756,9025372\nFebruary,2,2012,64667049,11052009\nMay,5,2024,74235520,41107152\nMarch,3,2015,85489321,\nSeptember,9,2024,73527985,38261227\nNovember,11,2017,74962237,29138341\nJanuary,1,2007,40789088,7231595\nMarch,3,2012,61073099,13147340\nDecember,12,2011,71713502,11439450\nJune,6,2014,73107873,\nApril,4,2020,474161614,230632881\nJuly,7,2015,76147057,\nAugust,8,2017,66530831,23484194\nNovember,11,2009,79202117,34112452\nJanuary,1,2011,38884048,19846650\nFebruary,2,2007,40261277,8003130\nJune,6,2022,156970313,\"92,512,443\"\nJuly,7,2006,29695599,7960202\nJune,6,2021,194919107,113661916\nJune,6,2024,56883091,30508711\nJanuary,1,2021,292726716,159666819\nAugust,8,2006,33455892,8151005\nApril,4,2009,98247134,12440508\nFebruary,2,2010,48868406,21274430\nDecember,12,2017,63277568,24391767\nNovember,11,2021,218919947,\"220,539,518\"\nApril,4,2012,60010264,14715354\nJune,6,2025,43604154,23173640\nAugust,8,2009,57479540,13413869\nNovember,11,2007,44574805,9760902\nNovember,11,2003,4770724,1677243\nAugust,8,2005,23454406,5423061\nMay,5,2016,114678570,32832268\nAugust,8,2003,6201906,1807820\nOctober,10,2007,49792008,9540102\nJanuary,1,2005,23707171,2877284\nJuly,7,2014,76814806,\nFebruary,2,2009,45406200,10154046\nNovember,11,2015,93966584,\nSeptember,9,2004,17481590,2651441\nJanuary,1,2013,76553256,12778037\nJanuary,1,2016,109453661,\nApril,4,2010,48575516,39414194\nMarch,3,2014,84225073,20983540\nAugust,8,2004,14340230,2632668\nMarch,3,2017,82576635,30162048\nMay,5,2006,38138628,8395294\nApril,4,2005,27185712,5504770\nJuly,7,2023,86299656,74067302\nOctober,10,2019,111292015,36820099\nFebruary,2,2016,122943253,40280306\nSeptember,9,2010,49405844,22901363\nFebruary,2,2004,11362126,1807820\nFebruary,2,2019,86913634,30799585\nAugust,8,2013,60934848,17731008\nApril,4,2017,71650769,25504003\nOctober,10,2017,78774412,30423066\nDecember,12,2013,63527980,19718807\nMay,5,2018,64251978,26319394\nNovember,11,2019,110680462,34535417\nJune,6,2012,52529229,10854097\nNovember,11,2005,35884024,5527116\nJanuary,1,2025,74072781,36948944\nNovember,11,2010,41764892,23417164\nJuly,7,2005,21541241,5178138\nSeptember,9,2019,101691816,34312813\nFebruary,2,2005,25933912,3268240\nJune,6,2004,12762423,2738544\nOctober,10,2020,217881138,115075582\nApril,4,2016,120380510,33365044\nMay,5,2023,104306945,89058530\nSeptember,9,2005,30642864,6476017\nDecember,12,2007,31675915,9076816\nApril,4,2007,39914935,10251072\nFebruary,2,2011,39293507,20373759\nApril,4,2011,41686507,17995286\nJune,6,2005,22676284,3963978\nNovember,11,2020,230597388,126202594\nOctober,10,2011,62420968,12518273\nDecember,12,2009,50985229,20197127\nAugust,8,2007,34615736,9469478\nMarch,3,2019,99595793,35005321\nApril,4,2004,11632495,1896823\nSeptember,9,2017,70907131,26287510\nDecember,12,2021,264200892,\"154,448,544\"\nFebruary,2,2018,74271998,28343343\n\n\nAdditionally, the dataset profile is as follows:\n\nThe key data profile information for this dataset includes:\n**Month**: Data is of type text. There are 12 unique values. \n**Sort**: Data is of type integer. There are 12 unique values. Coverage spans from 1.0 to 12.0. \n**Year**: Data is of type text. There are 23 unique values. \n**Page Views**: Data is of type integer. There are 266 unique values. Coverage spans from 11632495.0 to 310159256.0. \n**Page Visits**: Data is of type text. There are 240 unique values. \n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n**Temporal coverage** for columns Year with resolution year, covering from 2003-01-01 to 2025-01-01.\nThe key semantic information for this dataset includes:\n**Month**: Represents temporal entity. Contains temporal data (resolution: Month). \n**Sort**: Function/Usage context: ranking/scoring. \n**Year**: Represents temporal entity. Contains temporal data (resolution: Year). \n**Page Views**: Represents measurement. Domain-specific type: general. Function/Usage context: aggregation key. \n**Page Visits**: Represents general. Domain-specific type: web analytics. Function/Usage context: measurement. \n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: CDC Page Views. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n- Identity: 267 rows, 5 columns\n- Temporal scope: Year: 2003 to 2025; Year: consecutive time points are one year apart\n- Measures and units: Sort: 1 to 12 (median 7); Page Views: 318355 to 1075594920 (median 70644944); Page Visits: 40122 to 464305872 (median 22287094)\n- Representative categories: Month: July (9%), August, September, February, March (12 distinct values); Sort: 7 (9%), 8, 9, 2, 3 (12 distinct values)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly page views and visits, with data organized by month and year. The dataset features 12 unique months and 23 unique years, providing a comprehensive temporal coverage. The Page Views and Page Visits columns serve as key metrics for web traffic analysis, allowing for aggregation and measurement of user engagement. This dataset can be utilized for understanding trends in public health information access and evaluating the effectiveness of CDC outreach efforts over time.",
+  "sfd_prompt": "You are given a dataset about the topic CDC Page Views, with the following initial description:\n\nThis dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly page views and visits, with data organized by month and year. The dataset features 12 unique months and 23 unique years, providing a comprehensive temporal coverage. The Page Views and Page Visits columns serve as key metrics for web traffic analysis, allowing for aggregation and measurement of user engagement. This dataset can be utilized for understanding trends in public health information access and evaluating the effectiveness of CDC outreach efforts over time.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\n- Identity: 267 rows, 5 columns\n- Temporal scope: Year: 2003 to 2025; Year: consecutive time points are one year apart (annual time points, yearly time points)\n- Measures and units: Sort: 1 to 12 (median 7); Page Views: 318355 to 1075594920 (median 70644944); Page Visits: 40122 to 464305872 (median 22287094)\n- Representative categories: Month: July (9%), August, September, February, March (12 distinct values); Sort: 7 (9%), 8, 9, 2, 3 (12 distinct values)\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\nThis dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly page views and visits, with data organized by month and year. The dataset features 12 unique months and 23 unique years, providing a comprehensive temporal coverage. The Page Views and Page Visits columns serve as key metrics for web traffic analysis, allowing for aggregation and measurement of user engagement. This dataset can be utilized for understanding trends in public health information access and evaluating the effectiveness of CDC outreach efforts over time.\n\nVerified Coverage and Measures:\n- Identity: 267 rows, 5 columns\n- Temporal scope: Year: 2003 to 2025; Year: consecutive time points are one year apart (annual time points, yearly time points)\n- Measures and units: Sort: 1 to 12 (median 7); Page Views: 318355 to 1075594920 (median 70644944); Page Visits: 40122 to 464305872 (median 22287094)\n- Representative categories: Month: July (9%), August, September, February, March (12 distinct values); Sort: 7 (9%), 8, 9, 2, 3 (12 distinct values)\n\nKey Themes or Topics:\n- Public health information access\n- Web analytics and user engagement\n- CDC outreach effectiveness\n- Digital health communication\n- Trends in health information dissemination\n- Online public health resources\n\nApplications and Use Cases:\n- Facilitates analysis for public health professionals, researchers, and policymakers.\n- Useful for evaluating the impact of CDC campaigns and public health initiatives.\n- Enables insights into user behavior and engagement with health information online.\n- Supports statistical modeling and forecasting of web traffic trends.\n- Assists in the development of strategies for improving public health communication.\n\nConcepts and Synonyms:\n- Page views/web traffic\n- User engagement/website visits\n- Health communication/public health outreach\n- Digital analytics/web metrics\n- Temporal analysis/time series data\n- Online health resources/e-health information\n\nKeywords and Themes:\n- CDC\n- Page views\n- Web analytics\n- Public health\n- User engagement\n- Health information access\n- Digital outreach\n- Temporal data analysis\n\nAdditional Context:\n- Highlights the dataset's relevance to understanding the dynamics of public health information access during significant health events (e.g., pandemics).\n- Emphasizes its value for interdisciplinary applications, integrating web analytics with public health research.\n- Provides insights into how digital platforms can enhance or hinder public health communication efforts.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "06df2b3983f5782a39e90e350d0c7545fc252b9753c1c013e68f54bb59ba7836",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 2244,
+      "completion_tokens": 115,
+      "total_tokens": 2359
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "bb6df87af1403fe9f1edd97e5ef4f8fb6e495d2c8b728ad5bca3767da57aa321",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 788,
+      "completion_tokens": 524,
+      "total_tokens": 1312
+     }
+    }
+   ]
+  }
+ },
+ "struct": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nMonth,Sort,Year,Page Views,Page Visits\nJune,6,2006,31159556,5909716\nMay,5,2008,39700218,11254531\nMay,5,2025,48203830,25555133\nJanuary,1,2010,51357254,18893813\nNovember,11,2014,88408415,\nOctober,10,2009,104993467,31788911\nOctober,10,2004,25487071,2565787\nJuly,7,2013,60502032,22356508\nJuly,7,2020,310159256,150717264\nNovember,11,2023,100440676,56830951\nJanuary,1,2006,33046267,4890619\nNovember,11,2016,86941536,30227710\nAugust,8,2016,109791194,33130748\nDecember,12,2005,24344114,5093269\nFebruary,2,2008,44725756,9025372\nFebruary,2,2012,64667049,11052009\nMay,5,2024,74235520,41107152\nMarch,3,2015,85489321,\nSeptember,9,2024,73527985,38261227\nNovember,11,2017,74962237,29138341\nJanuary,1,2007,40789088,7231595\nMarch,3,2012,61073099,13147340\nDecember,12,2011,71713502,11439450\nJune,6,2014,73107873,\nApril,4,2020,474161614,230632881\nJuly,7,2015,76147057,\nAugust,8,2017,66530831,23484194\nNovember,11,2009,79202117,34112452\nJanuary,1,2011,38884048,19846650\nFebruary,2,2007,40261277,8003130\nJune,6,2022,156970313,\"92,512,443\"\nJuly,7,2006,29695599,7960202\nJune,6,2021,194919107,113661916\nJune,6,2024,56883091,30508711\nJanuary,1,2021,292726716,159666819\nAugust,8,2006,33455892,8151005\nApril,4,2009,98247134,12440508\nFebruary,2,2010,48868406,21274430\nDecember,12,2017,63277568,24391767\nNovember,11,2021,218919947,\"220,539,518\"\nApril,4,2012,60010264,14715354\nJune,6,2025,43604154,23173640\nAugust,8,2009,57479540,13413869\nNovember,11,2007,44574805,9760902\nNovember,11,2003,4770724,1677243\nAugust,8,2005,23454406,5423061\nMay,5,2016,114678570,32832268\nAugust,8,2003,6201906,1807820\nOctober,10,2007,49792008,9540102\nJanuary,1,2005,23707171,2877284\nJuly,7,2014,76814806,\nFebruary,2,2009,45406200,10154046\nNovember,11,2015,93966584,\nSeptember,9,2004,17481590,2651441\nJanuary,1,2013,76553256,12778037\nJanuary,1,2016,109453661,\nApril,4,2010,48575516,39414194\nMarch,3,2014,84225073,20983540\nAugust,8,2004,14340230,2632668\nMarch,3,2017,82576635,30162048\nMay,5,2006,38138628,8395294\nApril,4,2005,27185712,5504770\nJuly,7,2023,86299656,74067302\nOctober,10,2019,111292015,36820099\nFebruary,2,2016,122943253,40280306\nSeptember,9,2010,49405844,22901363\nFebruary,2,2004,11362126,1807820\nFebruary,2,2019,86913634,30799585\nAugust,8,2013,60934848,17731008\nApril,4,2017,71650769,25504003\nOctober,10,2017,78774412,30423066\nDecember,12,2013,63527980,19718807\nMay,5,2018,64251978,26319394\nNovember,11,2019,110680462,34535417\nJune,6,2012,52529229,10854097\nNovember,11,2005,35884024,5527116\nJanuary,1,2025,74072781,36948944\nNovember,11,2010,41764892,23417164\nJuly,7,2005,21541241,5178138\nSeptember,9,2019,101691816,34312813\nFebruary,2,2005,25933912,3268240\nJune,6,2004,12762423,2738544\nOctober,10,2020,217881138,115075582\nApril,4,2016,120380510,33365044\nMay,5,2023,104306945,89058530\nSeptember,9,2005,30642864,6476017\nDecember,12,2007,31675915,9076816\nApril,4,2007,39914935,10251072\nFebruary,2,2011,39293507,20373759\nApril,4,2011,41686507,17995286\nJune,6,2005,22676284,3963978\nNovember,11,2020,230597388,126202594\nOctober,10,2011,62420968,12518273\nDecember,12,2009,50985229,20197127\nAugust,8,2007,34615736,9469478\nMarch,3,2019,99595793,35005321\nApril,4,2004,11632495,1896823\nSeptember,9,2017,70907131,26287510\nDecember,12,2021,264200892,\"154,448,544\"\nFebruary,2,2018,74271998,28343343\n\n\nAdditionally, the dataset profile is as follows:\n\nStructured profile, one block per column. Keys: profile = data profile, semantic = semantic profile of the column, facts = facts computed from the full table (values separated by \" | \"). TABLE holds table-level entries. &n refers to VALUES.\nTABLE\n  facts: size=267 rows, 5 columns\n[Month]\n  profile: type=text; unique_values=12\n  semantic: represents=temporal entity; temporal_resolution=Month\n  facts: top_values=July (9%), August, September, February, March (12 distinct values)\n[Sort]\n  profile: type=integer; unique_values=12; coverage=1.0 to 12.0\n  semantic: usage=ranking/scoring\n  facts: range=1 to 12 (median 7) | top_values=7 (9%), 8, 9, 2, 3 (12 distinct values)\n[Year]\n  profile: type=text; unique_values=23; temporal_coverage=resolution year, 2003-01-01 to 2025-01-01\n  semantic: represents=temporal entity; temporal_resolution=Year\n  facts: span=2003 to 2025 | spacing=consecutive time points are one year apart\n[Page Views]\n  profile: type=integer; unique_values=266; coverage=11632495.0 to 310159256.0\n  semantic: represents=measurement; domain=general; usage=aggregation key\n  facts: range=318355 to 1075594920 (median 70644944)\n[Page Visits]\n  profile: type=text; unique_values=240\n  semantic: represents=general; domain=web analytics; usage=measurement\n  facts: range=40122 to 464305872 (median 22287094)\n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n(Given as the \"semantic\" entries of each column in the structured profile above.)\n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: CDC Page Views. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n(Given as the \"facts\" entries of TABLE and of each column in the structured profile above.)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly records of page views and page visits, providing insights into user engagement with CDC content. The columns represent temporal entities, with \"Month\" and \"Year\" indicating the time of data collection, while \"Page Views\" and \"Page Visits\" serve as key metrics for measuring web traffic. This dataset can be utilized for analyzing trends in public health information access, evaluating the effectiveness of CDC outreach efforts, and understanding user behavior over time.",
+  "sfd_prompt": "You are given a dataset about the topic CDC Page Views, with the following initial description:\n\nThis dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly records of page views and page visits, providing insights into user engagement with CDC content. The columns represent temporal entities, with \"Month\" and \"Year\" indicating the time of data collection, while \"Page Views\" and \"Page Visits\" serve as key metrics for measuring web traffic. This dataset can be utilized for analyzing trends in public health information access, evaluating the effectiveness of CDC outreach efforts, and understanding user behavior over time.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\nTABLE\n  facts: size=267 rows, 5 columns\n[Month]\n  facts: top_values=July (9%), August, September, February, March (12 distinct values)\n[Sort]\n  facts: range=1 to 12 (median 7) | top_values=7 (9%), 8, 9, 2, 3 (12 distinct values)\n[Year]\n  facts: span=2003 to 2025 | spacing=consecutive time points are one year apart (annual time points, yearly time points)\n[Page Views]\n  facts: range=318355 to 1075594920 (median 70644944)\n[Page Visits]\n  facts: range=40122 to 464305872 (median 22287094)\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "**Dataset Overview:**\nThis dataset, titled \"CDC Page Views,\" contains 267 rows and 5 columns, capturing web analytics data from 2003 to 2025. It includes monthly records of page views and page visits, providing insights into user engagement with CDC content. The columns represent temporal entities, with \"Month\" and \"Year\" indicating the time of data collection, while \"Page Views\" and \"Page Visits\" serve as key metrics for measuring web traffic. This dataset can be utilized for analyzing trends in public health information access, evaluating the effectiveness of CDC outreach efforts, and understanding user behavior over time.\n\n**Verified Coverage and Measures:**\n- Size: 267 rows, 5 columns\n- Month: Top values include July (9%), August, September, February, March (12 distinct values)\n- Year: Span from 2003 to 2025; spacing is consecutive time points (annual time points, yearly time points)\n- Page Views: Range from 318,355 to 1,075,594,920 (median 70,644,944)\n- Page Visits: Range from 40,122 to 464,305,872 (median 22,287,094)\n\n**Key Themes or Topics:**\n- Public Health Communication\n- Digital Engagement Metrics\n- Web Analytics in Health Information\n- User Behavior Analysis\n- CDC Outreach and Impact Assessment\n\n**Applications and Use Cases:**\n- Analyzing trends in public health information access for researchers and public health officials\n- Evaluating the effectiveness of CDC campaigns and outreach efforts for policymakers\n- Understanding user engagement patterns for digital content strategists\n- Informing public health communication strategies based on user behavior insights\n- Supporting statistical modeling and forecasting in public health research\n\n**Concepts and Synonyms:**\n- Web Traffic Analysis / Website Analytics\n- User Engagement / User Interaction\n- Public Health Information Access / Health Communication\n- Digital Content Performance / Online Engagement Metrics\n- Outreach Effectiveness / Campaign Evaluation\n\n**Keywords and Themes:**\n- CDC\n- Page Views\n- Page Visits\n- Web Analytics\n- Public Health\n- User Engagement\n- Digital Outreach\n- Health Information Access\n- Trend Analysis\n- User Behavior\n\n**Additional Context:**\n- This dataset is relevant for addressing challenges in public health communication, particularly in understanding how effectively health information is disseminated and accessed by the public.\n- It provides valuable insights for interdisciplinary applications, integrating web analytics with public health research and communication strategies.\n- The dataset can be used to inform future public health initiatives and improve the accessibility of health information online.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "944a160d6155d0ab1c7365a1303916180afa3606be02a41cba7c1d19512a001a",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 2261,
+      "completion_tokens": 120,
+      "total_tokens": 2381
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "fd1a713494ca0f176413ef3354e5233ae9c8698f494a0ec9ff10ce4a4605747f",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 812,
+      "completion_tokens": 525,
+      "total_tokens": 1337
+     }
+    }
+   ]
+  }
+ }
+}

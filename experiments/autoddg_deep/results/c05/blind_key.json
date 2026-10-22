@@ -1,0 +1,50 @@
+{
+ "10811fc1-8ad0-4d8b-bdcd-cde9b43c86e6": {
+  "A": "orig",
+  "B": "struct"
+ },
+ "1ff67fc2-ff44-48ea-8b9b-d19bc71c9e08": {
+  "A": "orig",
+  "B": "struct"
+ },
+ "3e23114a-2657-4880-8add-f3c24425f937": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "4b5bd984-71d8-4d76-b8f5-949532b5b5a7": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "682835a9-48ce-44f3-a325-ceda77a53975": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "be2a86f4-03f6-4e89-90b3-cc122c247b74": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "c4e2ce61-6199-419f-aeda-795c9b153872": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "dcefd0c1-c0b3-4ede-8dbd-e898ce1e2e10": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "dde84e96-8559-4a9c-9b96-d349f069dd65": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "14f56ea0-2392-45ef-8236-7e569e8907bc": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "1cf07054-8055-4120-9d79-eaa6a1b4e08f": {
+  "A": "struct",
+  "B": "orig"
+ },
+ "2a208933-c2c5-4f23-9c63-4771358d199d": {
+  "A": "struct",
+  "B": "orig"
+ }
+}

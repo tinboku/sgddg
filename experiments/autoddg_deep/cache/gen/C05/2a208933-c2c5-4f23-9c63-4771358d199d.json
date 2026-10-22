@@ -1,0 +1,195 @@
+{
+ "dataset_id": "2a208933-c2c5-4f23-9c63-4771358d199d",
+ "topic": "Airport Utility Consumption",
+ "struct_stats": {
+  "dict_refs": 0,
+  "columns": 7,
+  "columns_with_facts": 7,
+  "table_fact_entries": 1,
+  "table_profile_entries": 0
+ },
+ "shared_calls": {
+  "topic": [
+   {
+    "key": "f9e2f4048b24cf8ad359f6d0f68a2256c12f8d768510521039f66c715a459ab2",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": 0.0,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 2102,
+     "completion_tokens": 3,
+     "total_tokens": 2105
+    }
+   }
+  ],
+  "semantic": [
+   {
+    "key": "f629ab0585f6c362692f8cac668d7544a37567224d40c543c9d09babe3b993d6",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 451,
+     "completion_tokens": 67,
+     "total_tokens": 518
+    }
+   },
+   {
+    "key": "ec843db4e273227de66fe9ae3a1e860380b078baf5c8e2f97f35ba4e36bfb9a0",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 447,
+     "completion_tokens": 64,
+     "total_tokens": 511
+    }
+   },
+   {
+    "key": "2d65caeb31c252195510e69c576cec18405e4c657d041e10ba2979421d8f2f03",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 67,
+     "total_tokens": 508
+    }
+   },
+   {
+    "key": "b78d94da42a4363cbb86d29aea55b7c865bc1bd76a4dcf1cfd2c7ffe8f595920",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 442,
+     "completion_tokens": 69,
+     "total_tokens": 511
+    }
+   },
+   {
+    "key": "693f3a604768cb9b322f3d7aae20514d812c3c057878e9bcacb5a998682d54a0",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 441,
+     "completion_tokens": 64,
+     "total_tokens": 505
+    }
+   },
+   {
+    "key": "0f23bb63328cd4857469599f815996edad11ee0bf0ff29ba3fd40ac8b4141947",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 449,
+     "completion_tokens": 69,
+     "total_tokens": 518
+    }
+   },
+   {
+    "key": "cf2b7a2b91a18cdb83ba8f5f0bdc95ddbdccd5d57ad50b82fb745ded46a5facb",
+    "cache_hit": true,
+    "model": "gpt-4o-mini",
+    "temperature_passed": null,
+    "temperature_effective": 0.0,
+    "usage": {
+     "prompt_tokens": 463,
+     "completion_tokens": 66,
+     "total_tokens": 529
+    }
+   }
+  ]
+ },
+ "lossless_ufd": {
+  "missing": {},
+  "n_atoms": 86,
+  "n_missing": 0
+ },
+ "lossless_sfd": {
+  "missing": {},
+  "n_atoms": 53,
+  "n_missing": 0
+ },
+ "orig": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nYear,Month Number,Month,Utility,Owner,Units,Usage\n2016,10,Oct,Electricity,Tenant,kWh,13503024.0\n2016,5,May,Electricity,Commission,kWh,14555165.9\n2017,9,Sep,Water,Tenant,Million Gallons,13.212672\n2015,2,Feb,Passengers,Campus,PAX,3248534.0\n2013,6,Jun,Gas,Tenant,Therms,43407.37054\n2018,5,May,Passengers,Campus,PAX,5027789.0\n2018,12,Dec,Gas,Commission,Therms,257613.4961\n2018,4,Apr,Water,Tenant,Million Gallons,13.43782\n2013,6,Jun,Electricity,Tenant,kWh,13648306.0\n2013,8,Aug,Gas,Commission,Therms,231452.008\n2016,6,Jun,Water,Commission,Million Gallons,19.90054\n2016,3,Mar,Gas,Commission,Therms,302528.5623\n2018,3,Mar,Water,Commission,Million Gallons,18.10534\n2014,9,Sep,Gas,Commission,Therms,179861.3953\n2013,11,Nov,Gas,Tenant,Therms,51129.43924\n2018,9,Sep,Water,Tenant,Million Gallons,13.952444\n2018,7,Jul,Electricity,Commission,kWh,14841736.2\n2013,3,Mar,Electricity,Commission,kWh,13769470.0\n2014,5,May,Electricity,Tenant,kWh,13297563.0\n2018,11,Nov,Water,Commission,Million Gallons,18.616224\n2013,9,Sep,Electricity,Tenant,kWh,13683284.0\n2014,11,Nov,Gas,Commission,Therms,236044.0\n2014,3,Mar,Passengers,Campus,PAX,3771574.0\n2015,10,Oct,Gas,Tenant,Therms,36071.5513\n2017,4,Apr,Water,Tenant,Million Gallons,11.809424\n2018,7,Jul,Gas,Tenant,Therms,64127.76084\n2017,4,Apr,Electricity,Tenant,kWh,12572789.0\n2016,5,May,Water,Tenant,Million Gallons,13.339832\n2018,7,Jul,Water,Tenant,Million Gallons,14.819376\n2016,1,Jan,Water,Tenant,Million Gallons,10.907336\n2015,9,Sep,Electricity,Tenant,kWh,12606205.0\n2015,7,Jul,Gas,Tenant,Therms,36651.39887\n2013,1,Jan,Gas,Tenant,Therms,49393.0\n2016,9,Sep,Gas,Commission,Therms,233196.178\n2018,2,Feb,Electricity,Commission,kWh,12457948.7\n2013,6,Jun,Water,Commission,Million Gallons,18.87204\n2013,10,Oct,Gas,Tenant,Therms,44849.0\n2015,4,Apr,Passengers,Campus,PAX,4022770.0\n2015,2,Feb,Water,Tenant,Million Gallons,14.378804\n2019,3,Mar,Electricity,Commission,kWh,13436346.8\n2013,11,Nov,Passengers,Campus,PAX,3470482.0\n2015,10,Oct,Water,Commission,Million Gallons,17.590716\n2019,8,Aug,Water,Tenant,Million Gallons,15.12082\n2015,12,Dec,Water,Tenant,Million Gallons,13.119172\n2019,8,Aug,Electricity,Commission,kWh,15639474.5\n2013,12,Dec,Passengers,Campus,PAX,3814276.0\n2017,8,Aug,Water,Commission,Million Gallons,26.30342\n2014,6,Jun,Electricity,Tenant,kWh,13297563.0\n2019,2,Feb,Water,Commission,Million Gallons,16.864408\n2019,4,Apr,Electricity,Tenant,kWh,12130339.9\n2016,2,Feb,Passengers,Campus,PAX,3543751.0\n2017,1,Jan,Electricity,Commission,kWh,13192246.5\n2014,11,Nov,Water,Tenant,Million Gallons,15.509032\n2013,7,Jul,Water,Commission,Million Gallons,15.85386\n2019,5,May,Gas,Commission,Therms,275100.4009\n2014,9,Sep,Electricity,Commission,kWh,14836903.0\n2013,8,Aug,Water,Tenant,Million Gallons,16.991568\n2014,12,Dec,Water,Commission,Million Gallons,13.698872\n2014,6,Jun,Water,Commission,Million Gallons,24.071388\n2019,3,Mar,Water,Commission,Million Gallons,18.048492\n2017,1,Jan,Electricity,Tenant,kWh,12800970.0\n2014,7,Jul,Gas,Tenant,Therms,41604.81861\n2019,5,May,Water,Commission,Million Gallons,20.34186\n2013,4,Apr,Passengers,Campus,PAX,3609543.0\n2015,12,Dec,Water,Commission,Million Gallons,14.627888\n2015,1,Jan,Water,Tenant,Million Gallons,15.190384\n2016,1,Jan,Water,Commission,Million Gallons,12.683088\n2013,10,Oct,Passengers,Campus,PAX,3926441.0\n2013,1,Jan,Electricity,Tenant,kWh,14002156.0\n2014,2,Feb,Water,Tenant,Million Gallons,17.800156\n2017,7,Jul,Passengers,Campus,PAX,5497819.0\n2017,9,Sep,Gas,Tenant,Therms,37944.60606\n2014,1,Jan,Electricity,Tenant,kWh,13449294.0\n2016,3,Mar,Water,Commission,Million Gallons,14.258376\n2013,6,Jun,Electricity,Commission,kWh,13983776.0\n2015,4,Apr,Water,Tenant,Million Gallons,14.629384\n2017,9,Sep,Gas,Commission,Therms,166549.753\n2017,1,Jan,Passengers,Campus,PAX,3893455.0\n2017,10,Oct,Water,Tenant,Million Gallons,14.0063\n2014,4,Apr,Passengers,Campus,PAX,3887382.0\n2017,2,Feb,Water,Tenant,Million Gallons,11.176616\n2019,1,Jan,Gas,Commission,Therms,292060.9192\n2017,11,Nov,Gas,Commission,Therms,324060.4858\n2014,8,Aug,Water,Tenant,Million Gallons,16.166524\n2016,7,Jul,Water,Tenant,Million Gallons,12.766116\n2017,9,Sep,Passengers,Campus,PAX,4736759.0\n2014,2,Feb,Passengers,Campus,PAX,3081846.0\n2015,5,May,Electricity,Tenant,kWh,13452023.0\n2016,9,Sep,Gas,Tenant,Therms,41347.45001\n2015,3,Mar,Electricity,Commission,kWh,14206768.0\n2017,9,Sep,Electricity,Tenant,kWh,12252318.0\n2015,7,Jul,Gas,Commission,Therms,204610.7627\n2017,11,Nov,Electricity,Commission,kWh,13558539.6\n2013,5,May,Electricity,Tenant,kWh,13646478.0\n2014,4,Apr,Gas,Commission,Therms,250218.0\n2018,1,Jan,Gas,Tenant,Therms,57669.90155\n2016,4,Apr,Electricity,Tenant,kWh,13319650.0\n2014,4,Apr,Electricity,Tenant,kWh,13449294.0\n2018,6,Jun,Gas,Commission,Therms,224816.451\n2016,6,Jun,Passengers,Campus,PAX,4922320.0\n\n\nAdditionally, the dataset profile is as follows:\n\nThe key data profile information for this dataset includes:\n**Year**: Data is of type text. There are 7 unique values. \n**Month Number**: Data is of type integer. There are 12 unique values. Coverage spans from 1.0 to 12.0. \n**Month**: Data is of type text. There are 12 unique values. \n**Utility**: Data is of type text. There are 4 unique values. \n**Owner**: Data is of type text. There are 3 unique values. \n**Units**: Data is of type text. There are 4 unique values. \n**Usage**: Data is of type float. Coverage spans from 12.766116 to 15358398.0. \n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n**Temporal coverage** for columns Year with resolution year, covering from 2013-01-01 to 2019-01-01.\nThe key semantic information for this dataset includes:\n**Year**: Represents temporal entity. Contains temporal data (resolution: Year). \n**Month Number**: Contains temporal data (resolution: Month). \n**Month**: Represents temporal entity. Contains temporal data (resolution: Month). \n**Utility**: Represents utility type. Domain-specific type: general. Function/Usage context: measurement. \n**Owner**: Represents organization. \n**Units**: Represents measurement unit. Domain-specific type: general. Function/Usage context: measurement. \n**Usage**: Domain-specific type: general. Function/Usage context: measurement. \n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Airport Utility Consumption. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n- Identity: 560 rows, 7 columns\n- Temporal scope: Year: 2013 to 2019; Year: consecutive time points are one year apart\n- Measures and units: Usage: 10.91 to 16421214 (median 254967); units listed in Units: Therms, kWh, Million Gallons, PAX\n- Representative categories: Month Number: 1 (9%), 2, 3, 4, 5 (12 distinct values); Month: Jan (9%), Feb, Mar, Apr, May (12 distinct values); Utility: Gas (29%), Electricity, Water, Passengers; Owner: Commission (43%), Tenant, Campus\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset contains 560 rows and 7 columns, focusing on airport utility consumption from 2013 to 2019. It includes measurements of electricity, water, gas, and passenger counts, with usage recorded in various units such as kWh, Million Gallons, and Therms. The data is organized by year and month, providing a temporal resolution that allows for analysis of trends over time. This dataset can be used to assess utility consumption patterns at airports, aiding in resource management and sustainability efforts. It features contributions from different owners, including tenants and commissions, reflecting diverse operational contexts.",
+  "sfd_prompt": "You are given a dataset about the topic Airport Utility Consumption, with the following initial description:\n\nThis dataset contains 560 rows and 7 columns, focusing on airport utility consumption from 2013 to 2019. It includes measurements of electricity, water, gas, and passenger counts, with usage recorded in various units such as kWh, Million Gallons, and Therms. The data is organized by year and month, providing a temporal resolution that allows for analysis of trends over time. This dataset can be used to assess utility consumption patterns at airports, aiding in resource management and sustainability efforts. It features contributions from different owners, including tenants and commissions, reflecting diverse operational contexts.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\n- Identity: 560 rows, 7 columns\n- Temporal scope: Year: 2013 to 2019; Year: consecutive time points are one year apart (annual time points, yearly time points)\n- Measures and units: Usage: 10.91 to 16421214 (median 254967); units listed in Units: Therms, kWh, Million Gallons, PAX\n- Representative categories: Month Number: 1 (9%), 2, 3, 4, 5 (12 distinct values); Month: Jan (9%), Feb, Mar, Apr, May (12 distinct values); Utility: Gas (29%), Electricity, Water, Passengers; Owner: Commission (43%), Tenant, Campus\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\n- This dataset contains 560 rows and 7 columns, focusing on airport utility consumption from 2013 to 2019. It includes measurements of electricity, water, gas, and passenger counts, with usage recorded in various units such as kWh, Million Gallons, and Therms. The data is organized by year and month, providing a temporal resolution that allows for analysis of trends over time. This dataset can be used to assess utility consumption patterns at airports, aiding in resource management and sustainability efforts. It features contributions from different owners, including tenants and commissions, reflecting diverse operational contexts.\n\nVerified Coverage and Measures:\n- Identity: 560 rows, 7 columns\n- Temporal scope: Year: 2013 to 2019; Year: consecutive time points are one year apart (annual time points, yearly time points)\n- Measures and units: Usage: 10.91 to 16421214 (median 254967); units listed in Units: Therms, kWh, Million Gallons, PAX\n- Representative categories: Month Number: 1 (9%), 2, 3, 4, 5 (12 distinct values); Month: Jan (9%), Feb, Mar, Apr, May (12 distinct values); Utility: Gas (29%), Electricity, Water, Passengers; Owner: Commission (43%), Tenant, Campus\n\nKey Themes or Topics:\n- Airport utility consumption\n- Energy management\n- Water resource management\n- Environmental sustainability\n- Infrastructure efficiency\n- Transportation and logistics\n- Resource allocation\n- Operational efficiency in aviation\n\nApplications and Use Cases:\n- Facilitates analysis for airport management professionals, policymakers, researchers, or stakeholders in the aviation sector.\n- Useful for specific applications, such as energy consumption analysis, water usage optimization, sustainability assessments, and operational cost reduction.\n- Enables insights into patterns, trends, and relationships relevant to airport utility consumption, aiding in strategic planning and resource management.\n\nConcepts and Synonyms:\n- Utility consumption/energy usage\n- Airport operations/aviation management\n- Sustainability/environmental impact\n- Resource management/efficiency\n- Passenger counts/traffic volume\n- Energy efficiency/water conservation\n- Data analysis/statistical modeling\n- Temporal analysis/time series data\n\nKeywords and Themes:\n- airport utility consumption\n- energy usage\n- water consumption\n- gas usage\n- sustainability efforts\n- operational efficiency\n- resource management\n- environmental analysis\n- temporal trends\n- aviation infrastructure\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges in managing airport resources and sustainability initiatives.\n- Emphasizes its value for interdisciplinary applications, integrating insights from environmental science, engineering, and transportation studies.\n- Supports research into the impact of passenger traffic on utility consumption and the effectiveness of sustainability measures in the aviation industry.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "ec2512405763a736eeab6242f5df67d54985d87bde850a03b4b1779cbf8701a7",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 2807,
+      "completion_tokens": 118,
+      "total_tokens": 2925
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "36b56b934a33d253ba6cb48dbfee4bb967bbbd534cc88a1f69d13ea1f6731ffe",
+     "cache_hit": true,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 801,
+      "completion_tokens": 566,
+      "total_tokens": 1367
+     }
+    }
+   ]
+  }
+ },
+ "struct": {
+  "ufd_prompt": "Answer the question using the following information.\n\nFirst, consider the dataset sample:\n\nYear,Month Number,Month,Utility,Owner,Units,Usage\n2016,10,Oct,Electricity,Tenant,kWh,13503024.0\n2016,5,May,Electricity,Commission,kWh,14555165.9\n2017,9,Sep,Water,Tenant,Million Gallons,13.212672\n2015,2,Feb,Passengers,Campus,PAX,3248534.0\n2013,6,Jun,Gas,Tenant,Therms,43407.37054\n2018,5,May,Passengers,Campus,PAX,5027789.0\n2018,12,Dec,Gas,Commission,Therms,257613.4961\n2018,4,Apr,Water,Tenant,Million Gallons,13.43782\n2013,6,Jun,Electricity,Tenant,kWh,13648306.0\n2013,8,Aug,Gas,Commission,Therms,231452.008\n2016,6,Jun,Water,Commission,Million Gallons,19.90054\n2016,3,Mar,Gas,Commission,Therms,302528.5623\n2018,3,Mar,Water,Commission,Million Gallons,18.10534\n2014,9,Sep,Gas,Commission,Therms,179861.3953\n2013,11,Nov,Gas,Tenant,Therms,51129.43924\n2018,9,Sep,Water,Tenant,Million Gallons,13.952444\n2018,7,Jul,Electricity,Commission,kWh,14841736.2\n2013,3,Mar,Electricity,Commission,kWh,13769470.0\n2014,5,May,Electricity,Tenant,kWh,13297563.0\n2018,11,Nov,Water,Commission,Million Gallons,18.616224\n2013,9,Sep,Electricity,Tenant,kWh,13683284.0\n2014,11,Nov,Gas,Commission,Therms,236044.0\n2014,3,Mar,Passengers,Campus,PAX,3771574.0\n2015,10,Oct,Gas,Tenant,Therms,36071.5513\n2017,4,Apr,Water,Tenant,Million Gallons,11.809424\n2018,7,Jul,Gas,Tenant,Therms,64127.76084\n2017,4,Apr,Electricity,Tenant,kWh,12572789.0\n2016,5,May,Water,Tenant,Million Gallons,13.339832\n2018,7,Jul,Water,Tenant,Million Gallons,14.819376\n2016,1,Jan,Water,Tenant,Million Gallons,10.907336\n2015,9,Sep,Electricity,Tenant,kWh,12606205.0\n2015,7,Jul,Gas,Tenant,Therms,36651.39887\n2013,1,Jan,Gas,Tenant,Therms,49393.0\n2016,9,Sep,Gas,Commission,Therms,233196.178\n2018,2,Feb,Electricity,Commission,kWh,12457948.7\n2013,6,Jun,Water,Commission,Million Gallons,18.87204\n2013,10,Oct,Gas,Tenant,Therms,44849.0\n2015,4,Apr,Passengers,Campus,PAX,4022770.0\n2015,2,Feb,Water,Tenant,Million Gallons,14.378804\n2019,3,Mar,Electricity,Commission,kWh,13436346.8\n2013,11,Nov,Passengers,Campus,PAX,3470482.0\n2015,10,Oct,Water,Commission,Million Gallons,17.590716\n2019,8,Aug,Water,Tenant,Million Gallons,15.12082\n2015,12,Dec,Water,Tenant,Million Gallons,13.119172\n2019,8,Aug,Electricity,Commission,kWh,15639474.5\n2013,12,Dec,Passengers,Campus,PAX,3814276.0\n2017,8,Aug,Water,Commission,Million Gallons,26.30342\n2014,6,Jun,Electricity,Tenant,kWh,13297563.0\n2019,2,Feb,Water,Commission,Million Gallons,16.864408\n2019,4,Apr,Electricity,Tenant,kWh,12130339.9\n2016,2,Feb,Passengers,Campus,PAX,3543751.0\n2017,1,Jan,Electricity,Commission,kWh,13192246.5\n2014,11,Nov,Water,Tenant,Million Gallons,15.509032\n2013,7,Jul,Water,Commission,Million Gallons,15.85386\n2019,5,May,Gas,Commission,Therms,275100.4009\n2014,9,Sep,Electricity,Commission,kWh,14836903.0\n2013,8,Aug,Water,Tenant,Million Gallons,16.991568\n2014,12,Dec,Water,Commission,Million Gallons,13.698872\n2014,6,Jun,Water,Commission,Million Gallons,24.071388\n2019,3,Mar,Water,Commission,Million Gallons,18.048492\n2017,1,Jan,Electricity,Tenant,kWh,12800970.0\n2014,7,Jul,Gas,Tenant,Therms,41604.81861\n2019,5,May,Water,Commission,Million Gallons,20.34186\n2013,4,Apr,Passengers,Campus,PAX,3609543.0\n2015,12,Dec,Water,Commission,Million Gallons,14.627888\n2015,1,Jan,Water,Tenant,Million Gallons,15.190384\n2016,1,Jan,Water,Commission,Million Gallons,12.683088\n2013,10,Oct,Passengers,Campus,PAX,3926441.0\n2013,1,Jan,Electricity,Tenant,kWh,14002156.0\n2014,2,Feb,Water,Tenant,Million Gallons,17.800156\n2017,7,Jul,Passengers,Campus,PAX,5497819.0\n2017,9,Sep,Gas,Tenant,Therms,37944.60606\n2014,1,Jan,Electricity,Tenant,kWh,13449294.0\n2016,3,Mar,Water,Commission,Million Gallons,14.258376\n2013,6,Jun,Electricity,Commission,kWh,13983776.0\n2015,4,Apr,Water,Tenant,Million Gallons,14.629384\n2017,9,Sep,Gas,Commission,Therms,166549.753\n2017,1,Jan,Passengers,Campus,PAX,3893455.0\n2017,10,Oct,Water,Tenant,Million Gallons,14.0063\n2014,4,Apr,Passengers,Campus,PAX,3887382.0\n2017,2,Feb,Water,Tenant,Million Gallons,11.176616\n2019,1,Jan,Gas,Commission,Therms,292060.9192\n2017,11,Nov,Gas,Commission,Therms,324060.4858\n2014,8,Aug,Water,Tenant,Million Gallons,16.166524\n2016,7,Jul,Water,Tenant,Million Gallons,12.766116\n2017,9,Sep,Passengers,Campus,PAX,4736759.0\n2014,2,Feb,Passengers,Campus,PAX,3081846.0\n2015,5,May,Electricity,Tenant,kWh,13452023.0\n2016,9,Sep,Gas,Tenant,Therms,41347.45001\n2015,3,Mar,Electricity,Commission,kWh,14206768.0\n2017,9,Sep,Electricity,Tenant,kWh,12252318.0\n2015,7,Jul,Gas,Commission,Therms,204610.7627\n2017,11,Nov,Electricity,Commission,kWh,13558539.6\n2013,5,May,Electricity,Tenant,kWh,13646478.0\n2014,4,Apr,Gas,Commission,Therms,250218.0\n2018,1,Jan,Gas,Tenant,Therms,57669.90155\n2016,4,Apr,Electricity,Tenant,kWh,13319650.0\n2014,4,Apr,Electricity,Tenant,kWh,13449294.0\n2018,6,Jun,Gas,Commission,Therms,224816.451\n2016,6,Jun,Passengers,Campus,PAX,4922320.0\n\n\nAdditionally, the dataset profile is as follows:\n\nStructured profile, one block per column. Keys: profile = data profile, semantic = semantic profile of the column, facts = facts computed from the full table (values separated by \" | \"). TABLE holds table-level entries. &n refers to VALUES.\nTABLE\n  facts: size=560 rows, 7 columns\n[Year]\n  profile: type=text; unique_values=7; temporal_coverage=resolution year, 2013-01-01 to 2019-01-01\n  semantic: represents=temporal entity; temporal_resolution=Year\n  facts: span=2013 to 2019 | spacing=consecutive time points are one year apart\n[Month Number]\n  profile: type=integer; unique_values=12; coverage=1.0 to 12.0\n  semantic: temporal_resolution=Month\n  facts: top_values=1 (9%), 2, 3, 4, 5 (12 distinct values)\n[Month]\n  profile: type=text; unique_values=12\n  semantic: represents=temporal entity; temporal_resolution=Month\n  facts: top_values=Jan (9%), Feb, Mar, Apr, May (12 distinct values)\n[Utility]\n  profile: type=text; unique_values=4\n  semantic: represents=utility type; domain=general; usage=measurement\n  facts: top_values=Gas (29%), Electricity, Water, Passengers\n[Owner]\n  profile: type=text; unique_values=3\n  semantic: represents=organization\n  facts: top_values=Commission (43%), Tenant, Campus\n[Units]\n  profile: type=text; unique_values=4\n  semantic: represents=measurement unit; domain=general; usage=measurement\n  facts: unit=units listed in Units: Therms, kWh, Million Gallons, PAX\n[Usage]\n  profile: type=float; coverage=12.766116 to 15358398.0\n  semantic: domain=general; usage=measurement\n  facts: range=10.91 to 16421214 (median 254967)\n\nBased on this profile, please add sentence(s) to enrich the dataset description.\n\nFurthermore, the semantic profile of the dataset columns is as follows:\n(Given as the \"semantic\" entries of each column in the structured profile above.)\n\nBased on this information, please add sentence(s) discussing the semantic profile in the description.\n\nMoreover, the dataset topic is: Airport Utility Consumption. Based on this topic, please add sentence(s) describing what this dataset can be used for.\n\nThe following facts were computed from the full table. A qualifier inside a fact (such as \"of 80% parseable values\", \"excluding 3 values\", \"of 70 non-blank\") is part of that fact; facts marked \"likely\" or \"probably\" are less certain, so keep that word. If facts are listed for them, state the observation unit and the spatial and temporal coverage in the first sentence, using these exact names and years. Do not add places or years not listed, and do not add other coverage, numeric values, units or granularity that are neither listed below nor visible in the data. A property not listed below is unknown, not absent: do not say the table lacks it. You may still relate the dataset to its topic, likely uses, related concepts and synonyms, as long as these are not presented as facts about the table's contents.\n(Given as the \"facts\" entries of TABLE and of each column in the structured profile above.)\n\nQuestion: Based on the information above and the requirements, provide a dataset description in sentences. Use only natural, readable sentences without special formatting.\n\nAnswer:\n\nTarget length: approximately 100 words.",
+  "ufd": "This dataset on Airport Utility Consumption contains 560 rows and 7 columns, capturing utility usage data from 2013 to 2019. It includes measurements of Electricity, Water, Gas, and Passengers, with usage recorded in various units such as kWh, Million Gallons, and Therms. The dataset features a structured profile with unique values for each column, representing temporal entities like Year and Month, as well as utility types and measurement units. This dataset can be utilized for analyzing trends in utility consumption at airports, aiding in resource management and sustainability efforts.",
+  "sfd_prompt": "You are given a dataset about the topic Airport Utility Consumption, with the following initial description:\n\nThis dataset on Airport Utility Consumption contains 560 rows and 7 columns, capturing utility usage data from 2013 to 2019. It includes measurements of Electricity, Water, Gas, and Passengers, with usage recorded in various units such as kWh, Million Gallons, and Therms. The dataset features a structured profile with unique values for each column, representing temporal entities like Year and Month, as well as utility types and measurement units. This dataset can be utilized for analyzing trends in utility consumption at airports, aiding in resource management and sustainability efforts.\n\nPlease expand the description by including the exact topic. Additionally, add as many related concepts, synonyms, and relevant terms as possible based on the initial description and the topic.\n\nUnlike the initial description, which is focused on presentation and readability, the expanded description is intended to be indexed at the backend of a dataset search engine to improve searchability.\n\nTherefore, focus less on readability and more on including all relevant terms related to the topic. Make sure to include any variations of the key terms and concepts that could help improve retrieval in search results.\n\nThe following facts were computed from the full table:\n\nTABLE\n  facts: size=560 rows, 7 columns\n[Year]\n  facts: span=2013 to 2019 | spacing=consecutive time points are one year apart (annual time points, yearly time points)\n[Month Number]\n  facts: top_values=1 (9%), 2, 3, 4, 5 (12 distinct values)\n[Month]\n  facts: top_values=Jan (9%), Feb, Mar, Apr, May (12 distinct values)\n[Utility]\n  facts: top_values=Gas (29%), Electricity, Water, Passengers\n[Owner]\n  facts: top_values=Commission (43%), Tenant, Campus\n[Units]\n  facts: unit=units listed in Units: Therms, kWh, Million Gallons, PAX\n[Usage]\n  facts: range=10.91 to 16421214 (median 254967)\n\nInclude them in the \"Verified Coverage and Measures\" section.\n\nPlease follow the structure of the following example template:\nDataset Overview:\n- Please keep the exact initial description of the dataset as shown in beginning the prompt.\n\nVerified Coverage and Measures:\n- The facts given above, as written.\n\nKey Themes or Topics:\n- Central focus on a broad area of interest (e.g., urban planning, socio-economic factors, environmental analysis).\n- Data spans multiple subtopics or related areas that contribute to a holistic understanding of the primary theme.\nExample:\n- theme1/topic1\n- theme2/topic2\n- theme3/topic3\n\nApplications and Use Cases:\n- Facilitates analysis for professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications, such as planning, engineering, policy formulation, or statistical modeling.\n- Enables insights into patterns, trends, and relationships relevant to the domain.\nExample:\n- application1/usecase1\n- application2/usecase2\n- application3/usecase3\n\nConcepts and Synonyms:\n- Includes related concepts, terms, and variations to ensure comprehensive coverage of the topic.\n- Synonyms and alternative phrases improve searchability and retrieval effectiveness.\nExample:\n- concept1/synonym1\n- concept2/synonym2\n- concept3/synonym3\n\nKeywords and Themes:\n- Lists relevant keywords and themes for indexing, categorization, and enhancing discoverability.\n- Keywords reflect the dataset's content, scope, and relevance to the domain.\nExample:\n- keyword1\n- keyword2\n- keyword3\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges or questions in the domain.\n- May emphasize its value for interdisciplinary applications or integration with related datasets.\nExample:\n- context1\n- context2\n- context3\n",
+  "sfd": "Dataset Overview:\n- This dataset on Airport Utility Consumption contains 560 rows and 7 columns, capturing utility usage data from 2013 to 2019. It includes measurements of Electricity, Water, Gas, and Passengers, with usage recorded in various units such as kWh, Million Gallons, and Therms. The dataset features a structured profile with unique values for each column, representing temporal entities like Year and Month, as well as utility types and measurement units. This dataset can be utilized for analyzing trends in utility consumption at airports, aiding in resource management and sustainability efforts.\n\nVerified Coverage and Measures:\n- Size: 560 rows, 7 columns\n- Year: span from 2013 to 2019 | spacing: consecutive time points are one year apart (annual time points, yearly time points)\n- Month Number: top values include 1 (9%), 2, 3, 4, 5 (12 distinct values)\n- Month: top values include Jan (9%), Feb, Mar, Apr, May (12 distinct values)\n- Utility: top values include Gas (29%), Electricity, Water, Passengers\n- Owner: top values include Commission (43%), Tenant, Campus\n- Units: Therms, kWh, Million Gallons, PAX\n- Usage: range from 10.91 to 16,421,214 (median 254,967)\n\nKey Themes or Topics:\n- Airport operations\n- Utility consumption analysis\n- Environmental sustainability\n- Resource management\n- Energy efficiency\n- Water resource management\n- Gas consumption trends\n- Passenger impact on utility usage\n\nApplications and Use Cases:\n- Facilitates analysis for airport management professionals, policymakers, researchers, or stakeholders.\n- Useful for specific applications such as airport planning, energy management, environmental policy formulation, or statistical modeling of utility consumption.\n- Enables insights into patterns, trends, and relationships relevant to airport utility usage and sustainability efforts.\n\nConcepts and Synonyms:\n- Airport utility consumption / airport resource usage\n- Energy consumption / energy usage\n- Water usage / water consumption\n- Gas usage / gas consumption\n- Passenger statistics / passenger data\n- Sustainability metrics / environmental impact measures\n- Utility management / resource optimization\n\nKeywords and Themes:\n- Airport utilities\n- Energy consumption data\n- Water consumption data\n- Gas consumption data\n- Sustainability in aviation\n- Utility trends\n- Environmental analysis\n- Resource management in airports\n\nAdditional Context:\n- Highlights the dataset's relevance to specific challenges in managing airport resources efficiently and sustainably.\n- Emphasizes its value for interdisciplinary applications, integrating insights from environmental science, engineering, and urban planning.\n- Supports research into the impact of passenger volume on utility consumption and the effectiveness of sustainability initiatives in the aviation sector.",
+  "calls": {
+   "ufd": [
+    {
+     "key": "9a2e8ab29dcca647246f9ee96fd954bd041bb6b7f726f01bfcd0a6de3b6c7a8a",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 2822,
+      "completion_tokens": 113,
+      "total_tokens": 2935
+     }
+    }
+   ],
+   "sfd": [
+    {
+     "key": "9e1b26f95d42b95796b0d82a02870554f688f8d6937f6077079c91147377dc1d",
+     "cache_hit": false,
+     "model": "gpt-4o-mini",
+     "temperature_passed": 0.0,
+     "temperature_effective": 0.0,
+     "usage": {
+      "prompt_tokens": 832,
+      "completion_tokens": 556,
+      "total_tokens": 1388
+     }
+    }
+   ]
+  }
+ }
+}

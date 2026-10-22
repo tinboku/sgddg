@@ -1,0 +1,514 @@
+{
+ "runs": [
+  "r1",
+  "r2"
+ ],
+ "n_tables": 29,
+ "excluded": [
+  "fbb92a2a-4b64-4ac8-ba0f-8d608bfc47ec"
+ ],
+ "per_arm": {
+  "orig/r1": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 187,
+    "tail_named_semantic": 2,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 3,
+    "ufd_numbers": 81,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 81,
+    "important": 84,
+    "ufd_important_missed": 76,
+    "sfd_important_missed": 76
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 0,
+     "prompt": 318170,
+     "completion": 45744,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 288018,
+     "completion": 3391,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 17771,
+     "completion": 12829,
+     "new_prompt": 0,
+     "new_completion": 0
+    }
+   }
+  },
+  "orig/r2": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 187,
+    "tail_named_semantic": 2,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 1,
+    "ufd_numbers": 85,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 85,
+    "important": 84,
+    "ufd_important_missed": 74,
+    "sfd_important_missed": 74
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 695,
+     "prompt": 318170,
+     "completion": 45779,
+     "new_prompt": 317296,
+     "new_completion": 45651
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 29,
+     "prompt": 288183,
+     "completion": 3360,
+     "new_prompt": 288183,
+     "new_completion": 3360
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 29,
+     "prompt": 17740,
+     "completion": 12765,
+     "new_prompt": 17740,
+     "new_completion": 12765
+    }
+   }
+  },
+  "freq/r1": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 0,
+    "tail_named_semantic": 0,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 3,
+    "ufd_numbers": 92,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 92,
+    "important": 84,
+    "ufd_important_missed": 72,
+    "sfd_important_missed": 72
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 684,
+     "prompt": 333960,
+     "completion": 46621,
+     "new_prompt": 328252,
+     "new_completion": 45763
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 28,
+     "prompt": 290377,
+     "completion": 3412,
+     "new_prompt": 289863,
+     "new_completion": 3285
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 27,
+     "prompt": 17792,
+     "completion": 12897,
+     "new_prompt": 16553,
+     "new_completion": 11897
+    }
+   }
+  },
+  "freq/r2": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 0,
+    "tail_named_semantic": 0,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 4,
+    "ufd_numbers": 86,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 86,
+    "important": 84,
+    "ufd_important_missed": 76,
+    "sfd_important_missed": 76
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 684,
+     "prompt": 333960,
+     "completion": 46589,
+     "new_prompt": 328252,
+     "new_completion": 45733
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 28,
+     "prompt": 290315,
+     "completion": 3437,
+     "new_prompt": 289801,
+     "new_completion": 3310
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 28,
+     "prompt": 17817,
+     "completion": 12993,
+     "new_prompt": 17195,
+     "new_completion": 12542
+    }
+   }
+  },
+  "dist/r1": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 201,
+    "tail_named_semantic": 0,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 4,
+    "ufd_numbers": 89,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 89,
+    "important": 84,
+    "ufd_important_missed": 75,
+    "sfd_important_missed": 75
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 675,
+     "prompt": 320323,
+     "completion": 46399,
+     "new_prompt": 310482,
+     "new_completion": 44958
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 28,
+     "prompt": 289805,
+     "completion": 3407,
+     "new_prompt": 289291,
+     "new_completion": 3280
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 25,
+     "prompt": 17787,
+     "completion": 12970,
+     "new_prompt": 15310,
+     "new_completion": 11114
+    }
+   }
+  },
+  "dist/r2": {
+   "tail": {
+    "cat_cols": 303,
+    "tail_in_sample": 201,
+    "tail_named_semantic": 0,
+    "tail_named_ufd": 0,
+    "tail_named_sfd": 0
+   },
+   "freq": {
+    "cue_sentences": 0,
+    "with_value": 0,
+    "consistent": 0,
+    "inconsistent": []
+   },
+   "faithful": {
+    "ufd_unsupported": 2,
+    "ufd_numbers": 89,
+    "sfd_unsupported": 0,
+    "sfd_numbers": 89,
+    "important": 84,
+    "ufd_important_missed": 74,
+    "sfd_important_missed": 74
+   },
+   "tokens": {
+    "topic": {
+     "calls": 29,
+     "new_calls": 0,
+     "prompt": 260998,
+     "completion": 115,
+     "new_prompt": 0,
+     "new_completion": 0
+    },
+    "semantic": {
+     "calls": 697,
+     "new_calls": 675,
+     "prompt": 320323,
+     "completion": 46365,
+     "new_prompt": 310482,
+     "new_completion": 44910
+    },
+    "ufd": {
+     "calls": 29,
+     "new_calls": 28,
+     "prompt": 289710,
+     "completion": 3310,
+     "new_prompt": 289196,
+     "new_completion": 3183
+    },
+    "sfd": {
+     "calls": 29,
+     "new_calls": 24,
+     "prompt": 17690,
+     "completion": 12939,
+     "new_prompt": 14620,
+     "new_completion": 10701
+    }
+   }
+  }
+ },
+ "label_diff": {
+  "orig/r1 vs freq/r1": {
+   "cols": 697,
+   "any": 411,
+   "complex_cols": 478,
+   "complex_any": 301,
+   "by_field": {
+    "entity": 163,
+    "domain": 162,
+    "usage": 304,
+    "temporal": 36,
+    "spatial": 11
+   }
+  },
+  "orig/r1 vs dist/r1": {
+   "cols": 697,
+   "any": 341,
+   "complex_cols": 478,
+   "complex_any": 239,
+   "by_field": {
+    "entity": 185,
+    "domain": 160,
+    "usage": 225,
+    "temporal": 34,
+    "spatial": 9
+   }
+  },
+  "orig/r2 vs freq/r2": {
+   "cols": 697,
+   "any": 423,
+   "complex_cols": 478,
+   "complex_any": 309,
+   "by_field": {
+    "entity": 180,
+    "domain": 151,
+    "usage": 321,
+    "temporal": 46,
+    "spatial": 13
+   }
+  },
+  "orig/r2 vs dist/r2": {
+   "cols": 697,
+   "any": 357,
+   "complex_cols": 478,
+   "complex_any": 260,
+   "by_field": {
+    "entity": 175,
+    "domain": 171,
+    "usage": 255,
+    "temporal": 43,
+    "spatial": 15
+   }
+  },
+  "orig/r1 vs orig/r2": {
+   "cols": 697,
+   "any": 163,
+   "complex_cols": 478,
+   "complex_any": 107,
+   "by_field": {
+    "entity": 68,
+    "domain": 56,
+    "usage": 106,
+    "temporal": 11,
+    "spatial": 9
+   }
+  },
+  "freq/r1 vs freq/r2": {
+   "cols": 697,
+   "any": 181,
+   "complex_cols": 478,
+   "complex_any": 135,
+   "by_field": {
+    "entity": 98,
+    "domain": 62,
+    "usage": 106,
+    "temporal": 35,
+    "spatial": 5
+   }
+  },
+  "dist/r1 vs dist/r2": {
+   "cols": 697,
+   "any": 200,
+   "complex_cols": 478,
+   "complex_any": 144,
+   "by_field": {
+    "entity": 107,
+    "domain": 64,
+    "usage": 138,
+    "temporal": 26,
+    "spatial": 7
+   }
+  },
+  "freq/r1 vs dist/r1": {
+   "cols": 697,
+   "any": 395,
+   "complex_cols": 478,
+   "complex_any": 292,
+   "by_field": {
+    "entity": 180,
+    "domain": 135,
+    "usage": 281,
+    "temporal": 36,
+    "spatial": 8
+   }
+  },
+  "freq/r2 vs dist/r2": {
+   "cols": 697,
+   "any": 374,
+   "complex_cols": 478,
+   "complex_any": 277,
+   "by_field": {
+    "entity": 169,
+    "domain": 113,
+    "usage": 275,
+    "temporal": 45,
+    "spatial": 12
+   }
+  }
+ },
+ "strategy_mix": {
+  "freq/r1": {
+   "top_frequency": 684,
+   "all_blank": 13
+  },
+  "freq/r2": {
+   "top_frequency": 684,
+   "all_blank": 13
+  },
+  "dist/r1": {
+   "head3_tail2": 177,
+   "small_domain": 99,
+   "numeric_quantiles": 268,
+   "all_blank": 13,
+   "mixed_format": 140
+  },
+  "dist/r2": {
+   "head3_tail2": 177,
+   "small_domain": 99,
+   "numeric_quantiles": 268,
+   "all_blank": 13,
+   "mixed_format": 140
+  }
+ },
+ "ufd_identical": {
+  "orig/r1 vs freq/r1": 2,
+  "orig/r1 vs dist/r1": 2,
+  "orig/r2 vs freq/r2": 1,
+  "orig/r2 vs dist/r2": 4,
+  "orig/r1 vs orig/r2": 2,
+  "freq/r1 vs freq/r2": 3,
+  "dist/r1 vs dist/r2": 3,
+  "freq/r1 vs dist/r1": 4,
+  "freq/r2 vs dist/r2": 2
+ }
+}
